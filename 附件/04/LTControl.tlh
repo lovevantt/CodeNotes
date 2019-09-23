@@ -1,0 +1,5982 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (29258bf5).
+//
+// LTControl.tlh
+//
+// C++ source equivalent of Win32 type library ..\..\lib\LTControl.tlb
+// compiler-generated file created 11/28/12 at 15:56:32 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// User-injected statements
+//
+
+#pragma pack(4)
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("e73780a2-025c-11d5-bbb7-00508b35b332"))
+/* interface */ ILTConnect;
+struct __declspec(uuid("58db561d-0186-11d5-bbb6-00508b35b332"))
+/* interface */ ILTCommandSync;
+struct NivelResultT;
+struct ReturnDataT;
+struct PacketHeaderT;
+struct SingleMeasResultT;
+struct ProbeStationaryResultT;
+struct SearchParamsDataT;
+struct AdmParamsDataT;
+struct SystemSettingsDataT;
+struct SystemUnitsDataT;
+struct StationOrientationDataT;
+struct TransformationDataT;
+struct EnvironmentDataT;
+struct RefractionDataT;
+struct BoxRegionDataT;
+struct SphereRegionDataT;
+struct StationaryModeDataT;
+struct GridModeDataT;
+struct ContinuousTimeModeDataT;
+struct ContinuousDistanceModeDataT;
+struct SphereCenterModeDataT;
+struct CircleCenterModeDataT;
+struct SingleMeasResult2T;
+struct TransformationPointT;
+struct TransformationInputDataT;
+struct CameraParamsDataT;
+struct ExternTriggerParamsT;
+struct __declspec(uuid("05022814-3b56-11d5-929a-168cd7000000"))
+/* dispinterface */ _ILTCommandSyncEvents;
+struct __declspec(uuid("58db561f-0186-11d5-bbb6-00508b35b332"))
+/* interface */ ILTCommandAsync;
+struct __declspec(uuid("58db5621-0186-11d5-bbb6-00508b35b332"))
+/* dispinterface */ _ILTCommandAsyncEvents;
+typedef enum ES_MeasurementStatus TLBExport1;
+typedef struct ErrorResponseT TLBExport2;
+struct ErrorResponseT;
+typedef struct BasicCommandRT TLBExport3;
+struct BasicCommandRT;
+typedef struct ReflectorPosResultT TLBExport4;
+struct ReflectorPosResultT;
+typedef struct MeasValueT TLBExport5;
+struct MeasValueT;
+typedef struct MultiMeasResultT TLBExport6;
+struct MultiMeasResultT;
+typedef struct ProbeMeasValueT TLBExport7;
+struct ProbeMeasValueT;
+typedef struct ProbeContinuousResultT TLBExport8;
+struct ProbeContinuousResultT;
+typedef struct ESVersionNumberT TLBExport9;
+struct ESVersionNumberT;
+typedef struct GetCoordinateSystemTypeRT TLBExport10;
+struct GetCoordinateSystemTypeRT;
+typedef struct GetTemperatureRangeRT TLBExport11;
+struct GetTemperatureRangeRT;
+typedef struct GetMeasurementModeRT TLBExport12;
+struct GetMeasurementModeRT;
+typedef struct GetStationaryModeParamsRT TLBExport13;
+struct GetStationaryModeParamsRT;
+typedef struct GetContinuousTimeModeParamsRT TLBExport14;
+struct GetContinuousTimeModeParamsRT;
+typedef struct GetContinuousDistanceModeParamsRT TLBExport15;
+struct GetContinuousDistanceModeParamsRT;
+typedef struct GetSphereCenterModeParamsRT TLBExport16;
+struct GetSphereCenterModeParamsRT;
+typedef struct GetCircleCenterModeParamsRT TLBExport17;
+struct GetCircleCenterModeParamsRT;
+typedef struct GetGridModeParamsRT TLBExport18;
+struct GetGridModeParamsRT;
+typedef struct GetSystemSettingsRT TLBExport19;
+struct GetSystemSettingsRT;
+typedef struct GetUnitsRT TLBExport20;
+struct GetUnitsRT;
+typedef struct GetSystemStatusRT TLBExport21;
+struct GetSystemStatusRT;
+typedef struct GetTrackerStatusRT TLBExport22;
+struct GetTrackerStatusRT;
+typedef struct GetReflectorsRT TLBExport23;
+struct GetReflectorsRT;
+typedef struct GetReflectorRT TLBExport24;
+struct GetReflectorRT;
+typedef struct GetEnvironmentParamsRT TLBExport25;
+struct GetEnvironmentParamsRT;
+typedef struct GetRefractionParamsRT TLBExport26;
+struct GetRefractionParamsRT;
+typedef struct GetStationOrientationParamsRT TLBExport27;
+struct GetStationOrientationParamsRT;
+typedef struct GetTransformationParamsRT TLBExport28;
+struct GetTransformationParamsRT;
+typedef struct GetBoxRegionParamsRT TLBExport29;
+struct GetBoxRegionParamsRT;
+typedef struct GetSphereRegionParamsRT TLBExport30;
+struct GetSphereRegionParamsRT;
+typedef struct SystemStatusChangeT TLBExport31;
+struct SystemStatusChangeT;
+typedef struct LookForTargetRT TLBExport32;
+struct LookForTargetRT;
+typedef struct GetDirectionRT TLBExport33;
+struct GetDirectionRT;
+typedef struct GetSearchParamsRT TLBExport34;
+struct GetSearchParamsRT;
+typedef struct GetAdmParamsRT TLBExport35;
+struct GetAdmParamsRT;
+typedef struct CallOrientToGravityRT TLBExport36;
+struct CallOrientToGravityRT;
+typedef struct CallIntermediateCompensationRT TLBExport37;
+struct CallIntermediateCompensationRT;
+typedef struct CallTransformationRT TLBExport38;
+struct CallTransformationRT;
+typedef struct GetTransformationInputParamsRT TLBExport39;
+struct GetTransformationInputParamsRT;
+typedef struct GetTransformedPointsRT TLBExport40;
+struct GetTransformedPointsRT;
+typedef struct GetStatisticModeRT TLBExport41;
+struct GetStatisticModeRT;
+typedef struct MeasValue2T TLBExport42;
+struct MeasValue2T;
+typedef struct MultiMeasResult2T TLBExport43;
+struct MultiMeasResult2T;
+typedef struct GetStillImageRT TLBExport44;
+struct GetStillImageRT;
+typedef struct GetCameraParamsRT TLBExport45;
+struct GetCameraParamsRT;
+typedef struct GetCompensationRT TLBExport46;
+struct GetCompensationRT;
+typedef struct GetCompensationsRT TLBExport47;
+struct GetCompensationsRT;
+typedef struct CheckBirdBathRT TLBExport48;
+struct CheckBirdBathRT;
+typedef struct GetTrackerDiagnosticsRT TLBExport49;
+struct GetTrackerDiagnosticsRT;
+typedef struct GetADMInfoRT TLBExport50;
+struct GetADMInfoRT;
+typedef struct GetNivelInfoRT TLBExport51;
+struct GetNivelInfoRT;
+typedef struct GetTPInfoRT TLBExport52;
+struct GetTPInfoRT;
+typedef struct GetLaserOnTimerRT TLBExport53;
+struct GetLaserOnTimerRT;
+typedef struct ProbePosResultT TLBExport54;
+struct ProbePosResultT;
+typedef struct ConvertDisplayCoordinatesRT TLBExport55;
+struct ConvertDisplayCoordinatesRT;
+typedef struct GetTriggerSourceRT TLBExport56;
+struct GetTriggerSourceRT;
+typedef struct GetFaceRT TLBExport57;
+struct GetFaceRT;
+typedef struct GetCamerasRT TLBExport58;
+struct GetCamerasRT;
+typedef struct GetCameraRT TLBExport59;
+struct GetCameraRT;
+typedef struct GetMeasurementCameraModeRT TLBExport60;
+struct GetMeasurementCameraModeRT;
+typedef struct GetProbesRT TLBExport61;
+struct GetProbesRT;
+typedef struct GetProbeRT TLBExport62;
+struct GetProbeRT;
+typedef struct GetTipAdaptersRT TLBExport63;
+struct GetTipAdaptersRT;
+typedef struct GetTipAdapterRT TLBExport64;
+struct GetTipAdapterRT;
+typedef struct GetTCamToTrackerCompensationsRT TLBExport65;
+struct GetTCamToTrackerCompensationsRT;
+typedef struct GetTCamToTrackerCompensationRT TLBExport66;
+struct GetTCamToTrackerCompensationRT;
+typedef struct GetProbeCompensationsRT TLBExport67;
+struct GetProbeCompensationsRT;
+typedef struct GetProbeCompensationRT TLBExport68;
+struct GetProbeCompensationRT;
+typedef struct GetTipToProbeCompensationsRT TLBExport69;
+struct GetTipToProbeCompensationsRT;
+typedef struct GetTipToProbeCompensationRT TLBExport70;
+struct GetTipToProbeCompensationRT;
+typedef struct GetExternTriggerParamsRT TLBExport71;
+struct GetExternTriggerParamsRT;
+typedef struct GetErrorEllipsoidRT TLBExport72;
+struct GetErrorEllipsoidRT;
+typedef struct GetMeasurementCameraInfoRT TLBExport73;
+struct GetMeasurementCameraInfoRT;
+typedef struct GetMeasurementProbeInfoRT TLBExport74;
+struct GetMeasurementProbeInfoRT;
+typedef enum ES_ProbeConfigButton TLBExport75;
+typedef enum ES_ProbeConfigTip TLBExport76;
+typedef enum ES_MeasurementStatusInfo TLBExport77;
+typedef struct GetCompensations2RT TLBExport78;
+struct GetCompensations2RT;
+typedef struct GetCurrentPrismPositionRT TLBExport79;
+struct GetCurrentPrismPositionRT;
+typedef struct GetOverviewCameraInfoRT TLBExport80;
+struct GetOverviewCameraInfoRT;
+typedef struct GetTriggerBoardInfoRT TLBExport81;
+struct GetTriggerBoardInfoRT;
+typedef struct GetADMInfo2RT TLBExport82;
+struct GetADMInfo2RT;
+typedef struct GetTrackerInfoRT TLBExport83;
+struct GetTrackerInfoRT;
+typedef struct GetNivelInfo2RT TLBExport84;
+struct GetNivelInfo2RT;
+typedef struct GetTipToProbeCompensations2RT TLBExport85;
+struct GetTipToProbeCompensations2RT;
+typedef enum ES_QuickReleaseStatus TLBExport86;
+typedef struct GetATRInfoRT TLBExport87;
+struct GetATRInfoRT;
+typedef struct GetMeteoStationInfoRT TLBExport88;
+struct GetMeteoStationInfoRT;
+typedef struct GetAT4xxInfoRT TLBExport89;
+struct GetAT4xxInfoRT;
+struct /* coclass */ LTConnect;
+struct /* coclass */ LTCommandSync;
+struct /* coclass */ LTCommandAsync;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ILTConnect, __uuidof(ILTConnect));
+_COM_SMARTPTR_TYPEDEF(ILTCommandSync, __uuidof(ILTCommandSync));
+_COM_SMARTPTR_TYPEDEF(_ILTCommandSyncEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ILTCommandAsync, __uuidof(ILTCommandAsync));
+_COM_SMARTPTR_TYPEDEF(_ILTCommandAsyncEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("e73780a2-025c-11d5-bbb7-00508b35b332"))
+ILTConnect : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetILTCommandAsync))
+    IUnknownPtr ILTCommandAsync;
+    __declspec(property(get=GetILTCommandSync))
+    IUnknownPtr ILTCommandSync;
+    __declspec(property(get=GetLastResultStatus))
+    enum ES_ResultStatus LastResultStatus;
+    __declspec(property(get=GetVersion))
+    long Version;
+    __declspec(property(put=PutExceptionHandlingPolicy))
+    long ExceptionHandlingPolicy;
+    __declspec(property(get=GetBuildNumber))
+    long BuildNumber;
+    __declspec(property(get=GetMajorVersion))
+    long MajorVersion;
+    __declspec(property(get=GetMinorVersion))
+    long MinorVersion;
+    __declspec(property(get=GetIsConnected))
+    VARIANT_BOOL IsConnected;
+    __declspec(property(put=PutForceSingleConnection))
+    VARIANT_BOOL ForceSingleConnection;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetILTCommandAsync ( );
+    IUnknownPtr GetILTCommandSync ( );
+    enum ES_ResultStatus GetLastResultStatus ( );
+    HRESULT ConnectEmbeddedSystem (
+        _bstr_t address,
+        long port );
+    HRESULT DisconnectEmbeddedSystem ( );
+    HRESULT SelectNotificationMethod (
+        enum LTC_NotifyMethod notifyMethod,
+        long targetHandle,
+        long cookie );
+    HRESULT GetData (
+        VARIANT * data );
+    HRESULT ContinuousDataGetHeaderInfo (
+        VARIANT * data,
+        long * numberOfResults,
+        enum ES_MeasMode * measMode,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT ContinuousPointGetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        long * time1,
+        long * time2,
+        double * val1,
+        double * val2,
+        double * val3 );
+    HRESULT ContinuousProbeDataGetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        enum ES_TriggerStatus * triggerStatus,
+        long * rotationStatus,
+        long * time1,
+        long * time2,
+        double * position1,
+        double * position2,
+        double * position3,
+        double * stdDevPosition1,
+        double * stdDevPosition2,
+        double * stdDevPosition3,
+        double * stdDevPositionTotal,
+        double * covarPosition12,
+        double * covarPosition13,
+        double * covarPosition23,
+        double * quaternion0,
+        double * quaternion1,
+        double * quaternion2,
+        double * quaternion3,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ,
+        double * stdDevRotationAngleX,
+        double * stdDevRotationAngleY,
+        double * stdDevRotationAngleZ,
+        double * stdDevRotationAngleTotal,
+        double * covarRotationAngleXY,
+        double * covarRotationAngleXZ,
+        double * covarRotationAngleYZ );
+    HRESULT ContinuousPoint2GetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        long * time1,
+        long * time2,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23 );
+    HRESULT StillImageGetFile (
+        VARIANT * packetData,
+        long * fileSize,
+        VARIANT * fileData );
+    HRESULT WriteDiskFile (
+        VARIANT * fileData,
+        _bstr_t diskFileName );
+    long GetVersion ( );
+    double GetConstant (
+        enum LTC_Constant constant );
+    HRESULT ContinuousProbeDataGetHeaderInfo (
+        VARIANT * data,
+        long * numberOfResults,
+        enum ES_MeasMode * measMode,
+        long * probeID,
+        long * fieldNumber,
+        enum ES_MeasurementTipStatus * tipStatus,
+        long * tipAdpaterID,
+        long * tipAdapterInterafce,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    void PutExceptionHandlingPolicy (
+        long _arg1 );
+    long GetBuildNumber ( );
+    long GetMajorVersion ( );
+    long GetMinorVersion ( );
+    VARIANT_BOOL GetIsConnected ( );
+    void PutForceSingleConnection (
+        VARIANT_BOOL _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ILTCommandAsync (
+        IUnknown * * pVal ) = 0;
+    virtual HRESULT __stdcall get_ILTCommandSync (
+        IUnknown * * pVal ) = 0;
+    virtual HRESULT __stdcall get_LastResultStatus (
+        enum ES_ResultStatus * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ConnectEmbeddedSystem (
+        BSTR address,
+        long port ) = 0;
+    virtual HRESULT __stdcall raw_DisconnectEmbeddedSystem ( ) = 0;
+    virtual HRESULT __stdcall raw_SelectNotificationMethod (
+        enum LTC_NotifyMethod notifyMethod,
+        long targetHandle,
+        long cookie ) = 0;
+    virtual HRESULT __stdcall raw_GetData (
+        VARIANT * data ) = 0;
+    virtual HRESULT __stdcall raw_ContinuousDataGetHeaderInfo (
+        VARIANT * data,
+        long * numberOfResults,
+        enum ES_MeasMode * measMode,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_ContinuousPointGetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        long * time1,
+        long * time2,
+        double * val1,
+        double * val2,
+        double * val3 ) = 0;
+    virtual HRESULT __stdcall raw_ContinuousProbeDataGetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        enum ES_TriggerStatus * triggerStatus,
+        long * rotationStatus,
+        long * time1,
+        long * time2,
+        double * position1,
+        double * position2,
+        double * position3,
+        double * stdDevPosition1,
+        double * stdDevPosition2,
+        double * stdDevPosition3,
+        double * stdDevPositionTotal,
+        double * covarPosition12,
+        double * covarPosition13,
+        double * covarPosition23,
+        double * quaternion0,
+        double * quaternion1,
+        double * quaternion2,
+        double * quaternion3,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ,
+        double * stdDevRotationAngleX,
+        double * stdDevRotationAngleY,
+        double * stdDevRotationAngleZ,
+        double * stdDevRotationAngleTotal,
+        double * covarRotationAngleXY,
+        double * covarRotationAngleXZ,
+        double * covarRotationAngleYZ ) = 0;
+    virtual HRESULT __stdcall raw_ContinuousPoint2GetAt (
+        VARIANT * data,
+        long index,
+        enum ES_MeasurementStatus * status,
+        long * time1,
+        long * time2,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23 ) = 0;
+    virtual HRESULT __stdcall raw_StillImageGetFile (
+        VARIANT * packetData,
+        long * fileSize,
+        VARIANT * fileData ) = 0;
+    virtual HRESULT __stdcall raw_WriteDiskFile (
+        VARIANT * fileData,
+        BSTR diskFileName ) = 0;
+    virtual HRESULT __stdcall get_Version (
+        long * pVersion ) = 0;
+    virtual HRESULT __stdcall raw_GetConstant (
+        enum LTC_Constant constant,
+        double * value ) = 0;
+    virtual HRESULT __stdcall raw_ContinuousProbeDataGetHeaderInfo (
+        VARIANT * data,
+        long * numberOfResults,
+        enum ES_MeasMode * measMode,
+        long * probeID,
+        long * fieldNumber,
+        enum ES_MeasurementTipStatus * tipStatus,
+        long * tipAdpaterID,
+        long * tipAdapterInterafce,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall put_ExceptionHandlingPolicy (
+        long _arg1 ) = 0;
+    virtual HRESULT __stdcall get_BuildNumber (
+        long * pBuildNumber ) = 0;
+    virtual HRESULT __stdcall get_MajorVersion (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_MinorVersion (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_IsConnected (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_ForceSingleConnection (
+        VARIANT_BOOL _arg1 ) = 0;
+};
+
+enum ES_ResultStatus
+{
+    ES_RS_AllOK = 0,
+    ES_RS_ServerBusy = 1,
+    ES_RS_NotImplemented = 2,
+    ES_RS_WrongParameter = 3,
+    ES_RS_WrongParameter1 = 4,
+    ES_RS_WrongParameter2 = 5,
+    ES_RS_WrongParameter3 = 6,
+    ES_RS_WrongParameter4 = 7,
+    ES_RS_WrongParameter5 = 8,
+    ES_RS_WrongParameter6 = 9,
+    ES_RS_WrongParameter7 = 10,
+    ES_RS_Parameter1OutOfRangeOK = 11,
+    ES_RS_Parameter1OutOfRangeNOK = 12,
+    ES_RS_Parameter2OutOfRangeOK = 13,
+    ES_RS_Parameter2OutOfRangeNOK = 14,
+    ES_RS_Parameter3OutOfRangeOK = 15,
+    ES_RS_Parameter3OutOfRangeNOK = 16,
+    ES_RS_Parameter4OutOfRangeOK = 17,
+    ES_RS_Parameter4OutOfRangeNOK = 18,
+    ES_RS_Parameter5OutOfRangeOK = 19,
+    ES_RS_Parameter5OutOfRangeNOK = 20,
+    ES_RS_Parameter6OutOfRangeOK = 21,
+    ES_RS_Parameter6OutOfRangeNOK = 22,
+    ES_RS_WrongCurrentReflector = 23,
+    ES_RS_NoCircleCenterFound = 24,
+    ES_RS_NoSphereCenterFound = 25,
+    ES_RS_NoTPFound = 26,
+    ES_RS_NoWeathermonitorFound = 27,
+    ES_RS_NoLastMeasuredPoint = 28,
+    ES_RS_NoVideoCamera = 29,
+    ES_RS_NoAdm = 30,
+    ES_RS_NoNivel = 31,
+    ES_RS_WrongTPFirmware = 32,
+    ES_RS_DataBaseNotFound = 33,
+    ES_RS_LicenseExpired = 34,
+    ES_RS_UsageConflict = 35,
+    ES_RS_Unknown = 36,
+    ES_RS_NoDistanceSet = 37,
+    ES_RS_NoTrackerConnected = 38,
+    ES_RS_TrackerNotInitialized = 39,
+    ES_RS_ModuleNotStarted = 40,
+    ES_RS_ModuleTimedOut = 41,
+    ES_RS_ErrorReadingModuleDb = 42,
+    ES_RS_ErrorWritingModuleDb = 43,
+    ES_RS_NotInCameraPosition = 44,
+    ES_RS_TPHasServiceFirmware = 45,
+    ES_RS_TPExternalControl = 46,
+    ES_RS_WrongParameter8 = 47,
+    ES_RS_WrongParameter9 = 48,
+    ES_RS_WrongParameter10 = 49,
+    ES_RS_WrongParameter11 = 50,
+    ES_RS_WrongParameter12 = 51,
+    ES_RS_WrongParameter13 = 52,
+    ES_RS_WrongParameter14 = 53,
+    ES_RS_WrongParameter15 = 54,
+    ES_RS_WrongParameter16 = 55,
+    ES_RS_NoSuchCompensation = 56,
+    ES_RS_MeteoDataOutOfRange = 57,
+    ES_RS_InCompensationMode = 58,
+    ES_RS_InternalProcessActive = 59,
+    ES_RS_NoCopyProtectionDongleFound = 60,
+    ES_RS_ModuleNotActivated = 61,
+    ES_RS_ModuleWrongVersion = 62,
+    ES_RS_DemoDongleExpired = 63,
+    ES_RS_ParameterImportFromProbeFailed = 64,
+    ES_RS_ParameterExportToProbeFailed = 65,
+    ES_RS_TrkCompMeasCameraMismatch = 66,
+    ES_RS_NoMeasurementCamera = 67,
+    ES_RS_NoActiveMeasurementCamera = 68,
+    ES_RS_NoMeasurementCamerasInDb = 69,
+    ES_RS_NoCameraToTrackerCompSet = 70,
+    ES_RS_NoCameraToTrackerCompInDb = 71,
+    ES_RS_ProblemStoringCameraToTrackerFactorySet = 72,
+    ES_RS_ProblemWithCameraInternalCalibration = 73,
+    ES_RS_CommunicationWithMeasurementCameraFailed = 74,
+    ES_RS_NoMeasurementProbe = 75,
+    ES_RS_NoActiveMeasurementProbe = 76,
+    ES_RS_NoMeasurementProbesInDb = 77,
+    ES_RS_NoMeasurementProbeCompSet = 78,
+    ES_RS_NoMeasurementProbeCompInDb = 79,
+    ES_RS_ProblemStoringProbeFactorySet = 80,
+    ES_RS_WrongActiveMeasurementProbeCompInDb = 81,
+    ES_RS_CommunicationWithMeasurementProbeFailed = 82,
+    ES_RS_NoMeasurementTip = 83,
+    ES_RS_NoActiveMeasurementTip = 84,
+    ES_RS_NoMeasurementTipsInDb = 85,
+    ES_RS_NoMeasurementTipCompInDb = 86,
+    ES_RS_NoMeasurementTipCompSet = 87,
+    ES_RS_ProblemStoringTipAssembly = 88,
+    ES_RS_ProblemReadingCompensationDb = 89,
+    ES_RS_NoDataToImport = 90,
+    ES_RS_ProblemSettingTriggerSource = 91,
+    ES_RS_6DModeNotAllowed = 92,
+    ES_RS_Bad6DResult = 93,
+    ES_RS_NoTemperatureFromWM = 94,
+    ES_RS_NoPressureFromWM = 95,
+    ES_RS_NoHumidityFromWM = 96,
+    ES_RS_6DMeasurementFace2NotAllowed = 97,
+    ES_RS_InvalidInputData = 98,
+    ES_RS_NoTriggerBoard = 99,
+    ES_RS_NoMeasurementShankCompSet = 10001,
+    ES_RS_NoValidADMCompensation = 10002,
+    ES_RS_PressureSensorProblem = 10003,
+    ES_RS_MeasurementStatusNotReady = 10004,
+    ES_RS_AIFMStartUpBusy = 10005,
+    ES_RS_InvalidTipAdapter = 10006,
+    ES_RS_NoAtr = 10007,
+    ES_RS_NoOVC = 10008,
+    ES_RS_NoStationaryResult = 10009,
+    ES_RS_SensorNotLeveled = 10010,
+    ES_RS_MultiConnectionsNotAllowed = 10011
+};
+
+enum LTC_NotifyMethod
+{
+    LTC_NM_None = 0,
+    LTC_NM_Event = 1,
+    LTC_NM_WM_CopyData = 2,
+    LTC_NM_WM_Notify = 3
+};
+
+enum ES_MeasMode
+{
+    ES_MM_Stationary = 0,
+    ES_MM_ContinuousTime = 1,
+    ES_MM_ContinuousDistance = 2,
+    ES_MM_Grid = 3,
+    ES_MM_SphereCenter = 4,
+    ES_MM_CircleCenter = 5,
+    ES_MM_6DStationary = 6,
+    ES_MM_6DContinuousTime = 7,
+    ES_MM_6DContinuousDistance = 8,
+    ES_MM_6DGrid = 9,
+    ES_MM_6DSphereCenter = 10,
+    ES_MM_6DCircleCenter = 11
+};
+
+enum ES_MeasurementStatus
+{
+    ES_MS_AllOK = 0,
+    ES_MS_SpeedWarning = 1,
+    ES_MS_SpeedExeeded = 2,
+    ES_MS_PrismError = 3,
+    ES_MS_TriggerTimeViolation = 4
+};
+
+enum ES_TriggerStatus
+{
+    ES_TS_TriggerNotPressed = 0,
+    ES_TS_TriggerPressed = 1
+};
+
+enum LTC_Constant
+{
+    LTC_C_FixedStdDev = 0,
+    LTC_C_UnknownStdDev = 1,
+    LTC_C_ApproxStdDev = 2,
+    LTC_C_LengthFactorMeter = 3,
+    LTC_C_LengthFactorMillimeter = 4,
+    LTC_C_LengthFactorMicron = 5,
+    LTC_C_LengthFactorInch = 6,
+    LTC_C_LengthFactorFoot = 7,
+    LTC_C_LengthFactorYard = 8,
+    LTC_C_AngleFactorRadian = 9,
+    LTC_C_AngleFactorGon = 10,
+    LTC_C_AngleFactorDegree = 11,
+    LTC_C_PressureFactorMbar = 12,
+    LTC_C_PressureFactorHPascal = 13,
+    LTC_C_PressureFactorKPascal = 14,
+    LTC_C_PressureFactorMmHg = 15,
+    LTC_C_PressureFactorPsi = 16,
+    LTC_C_PressureFactorInH2O = 17,
+    LTC_C_PressureFactorInHg = 18,
+    LTC_C_TemperatureFactorCelsius = 19,
+    LTC_C_TemperatureOffsetCelsius = 20,
+    LTC_C_TemperatureFactorFahrenheit = 21,
+    LTC_C_TemperatureOffsetFahrenheit = 22
+};
+
+enum ES_MeasurementTipStatus
+{
+    ES_PTS_TipOK = 0,
+    ES_PTS_UnknownTip = 1,
+    ES_PTS_MultipleTipsAttached = 2
+};
+
+struct __declspec(uuid("58db561d-0186-11d5-bbb6-00508b35b332"))
+ILTCommandSync : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(put=PutUseIncreasedTimeouts))
+    VARIANT_BOOL UseIncreasedTimeouts;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Initialize ( );
+    HRESULT ReleaseMotors ( );
+    HRESULT ActivateCameraView ( );
+    HRESULT Park ( );
+    HRESULT SwitchLaser (
+        VARIANT_BOOL isOn );
+    HRESULT ExitApplication ( );
+    HRESULT GoBirdBath ( );
+    HRESULT ChangeFace ( );
+    HRESULT GoPosition (
+        double val1,
+        double val2,
+        double val3,
+        VARIANT_BOOL useADM );
+    HRESULT GoPositionHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance,
+        VARIANT_BOOL useADM );
+    HRESULT PositionRelativeHV (
+        double hzAngle,
+        double vtAngle );
+    HRESULT PointLaser (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT PointLaserHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance );
+    HRESULT FindReflector (
+        double approxDist );
+    HRESULT StartNivelMeasurement (
+        enum ES_NivelStatus * nivelStatus,
+        double * xTilt,
+        double * yTilt,
+        double * nivelTemperature );
+    HRESULT StartNivelMeasurementEx (
+        struct NivelResultT * result );
+    HRESULT StartContinuousPointMeasurement ( );
+    HRESULT StartContinuousProbeMeasurement ( );
+    HRESULT MeasureStationaryPoint (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * pointingError1,
+        double * pointingError2,
+        double * pointingError3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT MeasureStationaryPointEx (
+        struct SingleMeasResultT * result );
+    HRESULT MeasureStationaryProbeData (
+        enum ES_TriggerStatus * triggerStatus,
+        long * rotationStatus,
+        long * probeID,
+        long * fieldNumber,
+        enum ES_MeasurementTipStatus * tipStatus,
+        long * tipAdapterID,
+        long * tipAdapterInterface,
+        double * position1,
+        double * position2,
+        double * position3,
+        double * stdDevPosition1,
+        double * stdDevPosition2,
+        double * stdDevPosition3,
+        double * stdDevPositionTotal,
+        double * covarPosition12,
+        double * covarPosition13,
+        double * covarPosition23,
+        double * aprioriStdDevPosition1,
+        double * aprioriStdDevPosition2,
+        double * aprioriStdDevPosition3,
+        double * aprioriStdDevPositionTotal,
+        double * aprioriCovarPosition12,
+        double * aprioriCovarPosition13,
+        double * aprioriCovarPosition23,
+        double * quaternion0,
+        double * quaternion1,
+        double * quaternion2,
+        double * quaternion3,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ,
+        double * stdDevRotationAngleX,
+        double * stdDevRotationAngleY,
+        double * stdDevRotationAngleZ,
+        double * stdDevRotationAngleTotal,
+        double * covarRotationAngleXY,
+        double * covarRotationAngleXZ,
+        double * covarRotationAngleYZ,
+        double * aprioriStdDevRotationAngleX,
+        double * aprioriStdDevRotationAngleY,
+        double * aprioriStdDevRotationAngleZ,
+        double * aprioriStdDevRotationAngleTotal,
+        double * aprioriCovarRotationAngleXY,
+        double * aprioriCovarRotationAngleXZ,
+        double * aprioriCovarRotationAngleYZ,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT MeasureStationaryProbeDataEx (
+        struct ProbeStationaryResultT * result );
+    HRESULT StopContinuousMeasurement ( );
+    HRESULT MoveHV (
+        long horizontalSpeed,
+        long verticalSpeed );
+    HRESULT MoveLeft ( );
+    HRESULT MoveRight ( );
+    HRESULT MoveUp ( );
+    HRESULT MoveDown ( );
+    HRESULT StopMove ( );
+    HRESULT GoNivelPosition (
+        enum ES_NivelPosition nivelPosition );
+    HRESULT GoLastMeasuredPoint ( );
+    HRESULT GetSystemStatus (
+        enum ES_ResultStatus * LastResultStatus,
+        enum ES_TrackerProcessorStatus * trackerProcessorStatus,
+        enum ES_LaserProcessorStatus * laserStatus,
+        enum ES_ADMStatus * admStatus,
+        long * majorVersionNumber,
+        long * minorVersionNumber,
+        long * BuildNumber,
+        enum ES_WeatherMonitorStatus * weatherMonitorStatus,
+        long * flagsValue,
+        long * trackerSerialNumber );
+    HRESULT GetTrackerStatus (
+        enum ES_TrackerStatus * trackerStatus );
+    HRESULT GetReflectors ( );
+    HRESULT SetReflector (
+        long reflectorID );
+    HRESULT GetReflector (
+        long * reflectorID );
+    HRESULT SetSearchParams (
+        double searchRadius,
+        long timeOut );
+    HRESULT GetSearchParams (
+        double * searchRadius,
+        long * timeOut );
+    HRESULT SetSearchParamsEx (
+        struct SearchParamsDataT * data );
+    HRESULT GetSearchParamsEx (
+        struct SearchParamsDataT * data );
+    HRESULT SetAdmParams (
+        double targetStabilityTolerance,
+        long retryTimeFrame,
+        long numberOfRetrys );
+    HRESULT GetAdmParams (
+        double * targetStabilityTolerance,
+        long * retryTimeFrame,
+        long * numberOfRetrys );
+    HRESULT SetAdmParamsEx (
+        struct AdmParamsDataT * data );
+    HRESULT GetAdmParamsEx (
+        struct AdmParamsDataT * data );
+    HRESULT SetSystemSettings (
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        VARIANT_BOOL applyTransformationParams,
+        VARIANT_BOOL applyStationOrientationParams,
+        VARIANT_BOOL keepLastPosition,
+        VARIANT_BOOL sendUnsolicitedMessages,
+        VARIANT_BOOL sendReflectorPositionData,
+        VARIANT_BOOL tryMeasurementMode,
+        VARIANT_BOOL hasNivel,
+        VARIANT_BOOL hasVideoCamera );
+    HRESULT GetSystemSettings (
+        enum ES_WeatherMonitorStatus * weatherMonitorStatus,
+        VARIANT_BOOL * applyTransformationParams,
+        VARIANT_BOOL * applyStationOrientationParams,
+        VARIANT_BOOL * keepLastPosition,
+        VARIANT_BOOL * sendUnsolicitedMessages,
+        VARIANT_BOOL * sendReflectorPositionData,
+        VARIANT_BOOL * tryMeasurementMode,
+        VARIANT_BOOL * hasNivel,
+        VARIANT_BOOL * hasVideoCamera );
+    HRESULT SetSystemSettingsEx (
+        struct SystemSettingsDataT * data );
+    HRESULT GetSystemSettingsEx (
+        struct SystemSettingsDataT * data );
+    HRESULT SetUnits (
+        enum ES_LengthUnit lengthUnit,
+        enum ES_AngleUnit angleUnit,
+        enum ES_TemperatureUnit temperatureUnit,
+        enum ES_PressureUnit pressureUnit,
+        enum ES_HumidityUnit humidityUnit );
+    HRESULT GetUnits (
+        enum ES_LengthUnit * lengthUnit,
+        enum ES_AngleUnit * angleUnit,
+        enum ES_TemperatureUnit * temperatureUnit,
+        enum ES_PressureUnit * pressureUnit,
+        enum ES_HumidityUnit * humidityUnit );
+    HRESULT SetUnitsEx (
+        struct SystemUnitsDataT * data );
+    HRESULT GetUnitsEx (
+        struct SystemUnitsDataT * data );
+    HRESULT SetStationOrientationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3 );
+    HRESULT GetStationOrientationParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * rot1,
+        double * rot2,
+        double * rot3 );
+    HRESULT SetStationOrientationParamsEx (
+        struct StationOrientationDataT * data );
+    HRESULT GetStationOrientationParamsEx (
+        struct StationOrientationDataT * data );
+    HRESULT SetTransformationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3,
+        double scale );
+    HRESULT GetTransformationParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * rot1,
+        double * rot2,
+        double * rot3,
+        double * scale );
+    HRESULT SetTransformationParamsEx (
+        struct TransformationDataT * data );
+    HRESULT GetTransformationParamsEx (
+        struct TransformationDataT * data );
+    HRESULT SetTemperatureRange (
+        enum ES_TrackerTemperatureRange temperatureRange );
+    HRESULT GetTemperatureRange (
+        enum ES_TrackerTemperatureRange * temperatureRange );
+    HRESULT SetEnvironmentParams (
+        double temperature,
+        double pressure,
+        double humidity );
+    HRESULT GetEnvironmentParams (
+        double * temperature,
+        double * pressure,
+        double * humidity );
+    HRESULT SetEnvironmentParamsEx (
+        struct EnvironmentDataT * data );
+    HRESULT GetEnvironmentParamsEx (
+        struct EnvironmentDataT * data );
+    HRESULT SetRefractionParams (
+        double ifmRefractionIndex,
+        double admRefractionIndex );
+    HRESULT GetRefractionParams (
+        double * ifmRefractionIndex,
+        double * admRefractionIndex );
+    HRESULT SetRefractionParamsEx (
+        struct RefractionDataT * data );
+    HRESULT GetRefractionParamsEx (
+        struct RefractionDataT * data );
+    HRESULT SetMeasurementMode (
+        enum ES_MeasMode measMode );
+    HRESULT GetMeasurementMode (
+        enum ES_MeasMode * measMode );
+    HRESULT SetBoxRegionParams (
+        double pt1Val1,
+        double pt1Val2,
+        double pt1Val3,
+        double pt2Val1,
+        double pt2Val2,
+        double pt2Val3 );
+    HRESULT GetBoxRegionParams (
+        double * pt1Val1,
+        double * pt1Val2,
+        double * pt1Val3,
+        double * pt2Val1,
+        double * pt2Val2,
+        double * pt2Val3 );
+    HRESULT SetBoxRegionParamsEx (
+        struct BoxRegionDataT * data );
+    HRESULT GetBoxRegionParamsEx (
+        struct BoxRegionDataT * data );
+    HRESULT SetSphereRegionParams (
+        double ptVal1,
+        double ptVal2,
+        double ptVal3,
+        double radius );
+    HRESULT GetSphereRegionParams (
+        double * ptVal1,
+        double * ptVal2,
+        double * ptVal3,
+        double * radius );
+    HRESULT SetSphereRegionParamsEx (
+        struct SphereRegionDataT * data );
+    HRESULT GetSphereRegionParamsEx (
+        struct SphereRegionDataT * data );
+    HRESULT SetStationaryModeParams (
+        long time,
+        VARIANT_BOOL useADM );
+    HRESULT GetStationaryModeParams (
+        long * time,
+        VARIANT_BOOL * useADM );
+    HRESULT SetStationaryModeParamsEx (
+        struct StationaryModeDataT * data );
+    HRESULT GetStationaryModeParamsEx (
+        struct StationaryModeDataT * data );
+    HRESULT SetGridModeParams (
+        double val1,
+        double val2,
+        double val3,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetGridModeParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType );
+    HRESULT SetGridModeParamsEx (
+        struct GridModeDataT * data );
+    HRESULT GetGridModeParamsEx (
+        struct GridModeDataT * data );
+    HRESULT SetContinuousTimeModeParams (
+        long timeSeparation,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetContinuousTimeModeParams (
+        long * timeSeparation,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType );
+    HRESULT SetContinuousTimeModeParamsEx (
+        struct ContinuousTimeModeDataT * data );
+    HRESULT GetContinuousTimeModeParamsEx (
+        struct ContinuousTimeModeDataT * data );
+    HRESULT SetContinuousDistanceModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetContinuousDistanceModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType );
+    HRESULT SetContinuousDistanceModeParamsEx (
+        struct ContinuousDistanceModeDataT * data );
+    HRESULT GetContinuousDistanceModeParamsEx (
+        struct ContinuousDistanceModeDataT * data );
+    HRESULT SetSphereCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT GetSphereCenterModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * fixRadius,
+        double * radius );
+    HRESULT SetSphereCenterModeParamsEx (
+        struct SphereCenterModeDataT * data );
+    HRESULT GetSphereCenterModeParamsEx (
+        struct SphereCenterModeDataT * data );
+    HRESULT SetCircleCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT GetCircleCenterModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * fixRadius,
+        double * radius );
+    HRESULT SetCircleCenterModeParamsEx (
+        struct CircleCenterModeDataT * data );
+    HRESULT GetCircleCenterModeParamsEx (
+        struct CircleCenterModeDataT * data );
+    HRESULT SetCoordinateSystemType (
+        enum ES_CoordinateSystemType coordSysType );
+    HRESULT GetCoordinateSystemType (
+        enum ES_CoordinateSystemType * coordSysType );
+    HRESULT LookForTarget (
+        double val1,
+        double val2,
+        double val3,
+        double searchRadius,
+        double * hzAngle,
+        double * vtAngle );
+    HRESULT GetDirection (
+        double * hzAngle,
+        double * vtAngle );
+    HRESULT MeasureStationaryPoint2 (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * covar12,
+        double * covar13,
+        double * covar23,
+        double * pointingErrorH,
+        double * pointingErrorV,
+        double * pointingErrorD,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT MeasureStationaryPoint2Ex (
+        struct SingleMeasResult2T * result );
+    HRESULT CallOrientToGravity (
+        double * omega,
+        double * phi );
+    HRESULT ClearTransformationNominalPointList ( );
+    HRESULT ClearTransformationActualPointList ( );
+    HRESULT AddTransformationNominalPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 );
+    HRESULT AddTransformationNominalPointEx (
+        struct TransformationPointT * data );
+    HRESULT AddTransformationActualPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 );
+    HRESULT AddTransformationActualPointEx (
+        struct TransformationPointT * data );
+    HRESULT SetTransformationInputParams (
+        enum ES_TransResultType transResultType,
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd );
+    HRESULT GetTransformationInputParams (
+        enum ES_TransResultType * transResultType,
+        double * transVal1,
+        double * transVal2,
+        double * transVal3,
+        double * rotVal1,
+        double * rotVal2,
+        double * rotVal3,
+        double * scale,
+        double * transStdVal1,
+        double * transStdVal2,
+        double * transStdVal3,
+        double * rotStdVal1,
+        double * rotStdVal2,
+        double * rotStdVal3,
+        double * scaleStd );
+    HRESULT SetTransformationInputParamsEx (
+        struct TransformationInputDataT * data );
+    HRESULT GetTransformationInputParamsEx (
+        struct TransformationInputDataT * data );
+    HRESULT CallTransformation (
+        double * transVal1,
+        double * transVal2,
+        double * transVal3,
+        double * rotVal1,
+        double * rotVal2,
+        double * rotVal3,
+        double * scale,
+        double * transStdVal1,
+        double * transStdVal2,
+        double * transStdVal3,
+        double * rotStdVal1,
+        double * rotStdVal2,
+        double * rotStdVal3,
+        double * scaleStd,
+        double * RMS,
+        double * maxDev,
+        double * varianceFactor );
+    HRESULT GetTransformedPoints ( );
+    HRESULT ClearDrivePointList ( );
+    HRESULT AddDrivePoint (
+        long reflectorID,
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT CallIntermediateCompensation (
+        double * totalRMS,
+        double * maxDev,
+        long * warningFlags );
+    HRESULT SetCompensation (
+        long compensationId );
+    HRESULT SetStatisticMode (
+        enum ES_StatisticMode stationaryMeasurements,
+        enum ES_StatisticMode continuousMeasurements );
+    HRESULT GetStatisticMode (
+        enum ES_StatisticMode * stationaryMeasurements,
+        enum ES_StatisticMode * continuousMeasurements );
+    HRESULT SetCameraParams (
+        long contrast,
+        long brightness,
+        long saturation );
+    HRESULT GetCameraParams (
+        long * contrast,
+        long * brightness,
+        long * saturation );
+    HRESULT SetCameraParamsEx (
+        struct CameraParamsDataT * data );
+    HRESULT GetCameraParamsEx (
+        struct CameraParamsDataT * data );
+    HRESULT GetStillImage (
+        enum ES_StillImageFileType imageFileType,
+        long * fileSize,
+        VARIANT * fileData );
+    HRESULT GetCompensation (
+        long * compensationId );
+    HRESULT GetCompensations ( );
+    HRESULT GetCompensations2 ( );
+    HRESULT CheckBirdBath (
+        double * initialHzAngle,
+        double * initialVtAngle,
+        double * initialDistance,
+        double * hzAngleDiff,
+        double * vtAngleDiff,
+        double * distanceDiff );
+    HRESULT GetTrackerDiagnostics (
+        double * trkPhotoSensorXVal,
+        double * trkPhotoSensorYVal,
+        double * trkPhotoSensorIVal,
+        double * refPhotoSensorXVal,
+        double * refPhotoSensorYVal,
+        double * refPhotoSensorIVal,
+        double * ADConverterRange,
+        double * servoControlPointX,
+        double * servoControlPointY,
+        double * laserLightRatio,
+        long * laserControlMode,
+        double * sensorInsideTemperature,
+        long * LCPRunTime,
+        long * laserTubeRunTime );
+    HRESULT GetADMInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber );
+    HRESULT GetTPInfo (
+        long * TPBootMajorVersionNumber,
+        long * TPBootMinorVersionNumber,
+        long * TPFirmWareMajorVersionNumber,
+        long * TPFirmWareMinorVersionNumber,
+        long * LCPFirmWareMajorVersionNumber,
+        long * LCPFirmWareMinorVersionNumber,
+        enum ES_TrackerProcessorType * trackerprocessorType,
+        enum ES_TPMicroProcessorType * microProcessorType,
+        long * microProcessorClockSpeed,
+        enum ES_LTSensorType * laserTrackerSensorType );
+    HRESULT GetNivelInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber );
+    HRESULT SetLaserOnTimer (
+        long timeOffsetHour,
+        long timeOffsetMinute );
+    HRESULT GetLaserOnTimer (
+        long * timeOffsetHour,
+        long * timeOffsetMinute );
+    HRESULT ConvertDisplayCoordinates (
+        enum ES_DisplayCoordinateConversionType conversionType,
+        double val1,
+        double val2,
+        double val3,
+        double * resVal1,
+        double * resVal2,
+        double * resVal3 );
+    HRESULT GoBirdBath2 (
+        VARIANT_BOOL clockwise );
+    HRESULT SetTriggerSource (
+        enum ES_TriggerSource triggerSource );
+    HRESULT GetTriggerSource (
+        enum ES_TriggerSource * triggerSource );
+    HRESULT GetFace (
+        enum ES_TrackerFace * trackerFace );
+    HRESULT GetCameras ( );
+    HRESULT GetCamera (
+        long * cameraID,
+        VARIANT_BOOL * isMeasCameraMounted );
+    HRESULT SetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode cameraMode );
+    HRESULT GetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode * cameraMode );
+    HRESULT GetProbes ( );
+    HRESULT GetProbe (
+        long * probeID );
+    HRESULT GetTipAdapters ( );
+    HRESULT GetTipAdapter (
+        long * tipAdapterID,
+        long * tipAdapterInterface );
+    HRESULT GetTCamToTrackerCompensations ( );
+    HRESULT SetTCamToTrackerCompensation (
+        long tCamToTrackerCompensationID );
+    HRESULT GetTCamToTrackerCompensation (
+        long * tCamToTrackerCompensationID );
+    HRESULT GetProbeCompensations ( );
+    HRESULT SetProbeCompensation (
+        long probeCompensationID );
+    HRESULT GetProbeCompensation (
+        long * probeCompensationID );
+    HRESULT GetTipToProbeCompensations ( );
+    HRESULT GetTipToProbeCompensation (
+        long * tipToProbeCompensationID );
+    HRESULT SetExternTriggerParams (
+        enum ES_ClockTransition clockTransition,
+        enum ES_TriggerMode triggerMode,
+        enum ES_TriggerStartSignal startSignal,
+        long minimalTimeDelay );
+    HRESULT GetExternTriggerParams (
+        enum ES_ClockTransition * clockTransition,
+        enum ES_TriggerMode * triggerMode,
+        enum ES_TriggerStartSignal * startSignal,
+        long * minimalTimeDelay );
+    HRESULT SetExternTriggerParamsEx (
+        struct ExternTriggerParamsT * extTriggerPrams );
+    HRESULT GetExternTriggerParamsEx (
+        struct ExternTriggerParamsT * extTriggerPrams );
+    HRESULT GetErrorEllipsoid (
+        double coord1,
+        double coord2,
+        double coord3,
+        double stdDev1,
+        double stdDev2,
+        double stdDev3,
+        double covar12,
+        double covar13,
+        double covar23,
+        double * stdDevX,
+        double * stdDevY,
+        double * stdDevZ,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ );
+    HRESULT GetMeasurementCameraInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber,
+        enum ES_MeasurementCameraType * cameraType,
+        BSTR * cameraName,
+        long * compensationIdNumber,
+        long * zoomSerialNumber,
+        long * zoomAdjustmentIdNumber,
+        long * zoom2DCompensationIdNumber,
+        long * zoomProjCenterCompIdNumber,
+        double * maxDistance,
+        double * minDistance,
+        long * nrOfPixelsX,
+        long * nrOfPixelsY,
+        double * pixelSizeX,
+        double * pixelSizeY,
+        long * maxDataRate );
+    HRESULT GetMeasurementProbeInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber,
+        enum ES_ProbeType * probeType,
+        long * compensationIdNumber,
+        long * activeField,
+        enum ES_ProbeConnectionType * connectionType,
+        long * numberOfTipAdapters,
+        enum ES_ProbeButtonType * probeButtonType,
+        long * numberOfFields,
+        VARIANT_BOOL * hasWideAngleReceiver,
+        long * numberOfTipDataSets,
+        long * numberOfMelodies,
+        long * numberOfLoudnesSteps );
+    HRESULT SetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long parameter );
+    HRESULT GetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long * parameter );
+    HRESULT GetMeasurementStatusInfo (
+        long * measurementStatusInfo );
+    HRESULT GetCurrentPrismPosition (
+        double * val1,
+        double * val2,
+        double * val3 );
+    HRESULT SetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double parameter );
+    HRESULT GetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double * parameter );
+    HRESULT GetObjectTemperature (
+        double * objectTemperature );
+    HRESULT GetTriggerBoardInfo (
+        enum ES_TriggerCardType * triggerCardType,
+        long * FPGAVersion,
+        long * maxTriggerFrequency,
+        long * errorCode );
+    HRESULT GetOverviewCameraInfo (
+        enum ES_OverviewCameraType * cameraType,
+        BSTR * cameraName,
+        VARIANT_BOOL * isColorCamera,
+        double * focalLength,
+        double * horizontalChipSize,
+        double * verticalChipSize,
+        VARIANT_BOOL * mirrorImageHz,
+        VARIANT_BOOL * mirrorImageVt );
+    HRESULT ClearCommandQueue (
+        enum ES_ClearCommandQueueType __MIDL__ILTCommandSync0000 );
+    HRESULT GetADMInfo2 (
+        enum ES_ADMType * admType,
+        BSTR * ADMName,
+        long * serialNumber,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        double * maxDistance,
+        double * minDistance,
+        long * maxDataRate,
+        double * accuracyADMDistance );
+    HRESULT GetTrackerInfo (
+        enum ES_LTSensorType * trackerType,
+        BSTR * trackerName,
+        long * serialNumber,
+        long * compensationIdNumber,
+        VARIANT_BOOL * hasADM,
+        VARIANT_BOOL * hasOverviewCamera,
+        VARIANT_BOOL * hasNivel,
+        double * nivelMountOffset,
+        double * maxDistance,
+        double * minDistance,
+        long * maxDataRate,
+        long * numberOfFaces,
+        double * hzAngleRange,
+        double * vtAngleRange,
+        enum ES_TrkAccuracyModel * accuracyModel,
+        long * majLCPFirmwareVersion,
+        long * minLCPFirmwareVersion );
+    HRESULT GetNivelInfo2 (
+        enum ES_NivelType * nivelType,
+        BSTR * nivelName,
+        long * serialNumber,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        double * measurementRange,
+        double * measurementAccuracyOffset,
+        double * measurementAccuracyFactor );
+    HRESULT RestoreStartupConditions ( );
+    HRESULT GoAndMeasureStationaryPoint (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * pointingError1,
+        double * pointingError2,
+        double * pointingError3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT GoAndMeasureStationaryPointEx (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        struct SingleMeasResultT * result );
+    HRESULT GoAndMeasureStationaryPoint2 (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * covar12,
+        double * covar13,
+        double * covar23,
+        double * pointingErrorH,
+        double * pointingErrorV,
+        double * pointingErrorD,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode );
+    HRESULT GoAndMeasureStationaryPoint2Ex (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        struct SingleMeasResult2T * result );
+    HRESULT GetTipToProbeCompensations2 ( );
+    HRESULT SetTipAdapter (
+        long tipAdapterID );
+    HRESULT GetATRInfo (
+        enum ES_ATRType * atrType,
+        BSTR * atrName,
+        long * majorFirmwareVersion,
+        long * minorFirmwareVersion,
+        long * buildFirmwareVersion,
+        long * hardwareVersion,
+        long * errorCode,
+        long * FPGAVersion,
+        double * maxDistance,
+        double * minDistance,
+        double * fieldOfView,
+        double * maxTrackingSpeed );
+    HRESULT GetMeteoStationInfo (
+        enum ES_MeteoStationType * meteoStationType,
+        BSTR * identifier,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber );
+    HRESULT GetAT4xxInfo (
+        enum ES_LTSensorType * trackerType,
+        BSTR * trackerName,
+        long * serialNumber,
+        long * majorFirmwareVersion,
+        long * minorFirmwareVersion,
+        long * processorBoardFWBuildNumber,
+        long * sensorBoardFWBuildNumber,
+        long * majorOSVersion,
+        long * minorOSVersion,
+        long * majorServerSoftwareVersion,
+        long * minorServerSoftwareVersion,
+        long * serverSoftwareBuildNumber,
+        enum ES_WLANType * wlanType,
+        enum ES_TPMicroProcessorType * xscaleType,
+        long * minMeasureTime,
+        double * minDistance,
+        double * maxDistance,
+        double * stdDevDistOffsetADM,
+        double * stdDevAngleConst,
+        double * stdDevAngleOffset,
+        double * stdDevAngleFactor );
+    HRESULT CallATRCompensation (
+        enum ES_ATR_Module atrModule,
+        double * X0,
+        double * Y0,
+        double * stdDevX0,
+        double * stdDevY0,
+        double * scale,
+        double * rollAngle,
+        double * asymmetry,
+        double * distance );
+    void PutUseIncreasedTimeouts (
+        VARIANT_BOOL _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Initialize ( ) = 0;
+    virtual HRESULT __stdcall raw_ReleaseMotors ( ) = 0;
+    virtual HRESULT __stdcall raw_ActivateCameraView ( ) = 0;
+    virtual HRESULT __stdcall raw_Park ( ) = 0;
+    virtual HRESULT __stdcall raw_SwitchLaser (
+        VARIANT_BOOL isOn ) = 0;
+    virtual HRESULT __stdcall raw_ExitApplication ( ) = 0;
+    virtual HRESULT __stdcall raw_GoBirdBath ( ) = 0;
+    virtual HRESULT __stdcall raw_ChangeFace ( ) = 0;
+    virtual HRESULT __stdcall raw_GoPosition (
+        double val1,
+        double val2,
+        double val3,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_GoPositionHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_PositionRelativeHV (
+        double hzAngle,
+        double vtAngle ) = 0;
+    virtual HRESULT __stdcall raw_PointLaser (
+        double val1,
+        double val2,
+        double val3 ) = 0;
+    virtual HRESULT __stdcall raw_PointLaserHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance ) = 0;
+    virtual HRESULT __stdcall raw_FindReflector (
+        double approxDist ) = 0;
+    virtual HRESULT __stdcall raw_StartNivelMeasurement (
+        enum ES_NivelStatus * nivelStatus,
+        double * xTilt,
+        double * yTilt,
+        double * nivelTemperature ) = 0;
+    virtual HRESULT __stdcall raw_StartNivelMeasurementEx (
+        struct NivelResultT * result ) = 0;
+    virtual HRESULT __stdcall raw_StartContinuousPointMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_StartContinuousProbeMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryPoint (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * pointingError1,
+        double * pointingError2,
+        double * pointingError3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryPointEx (
+        struct SingleMeasResultT * result ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryProbeData (
+        enum ES_TriggerStatus * triggerStatus,
+        long * rotationStatus,
+        long * probeID,
+        long * fieldNumber,
+        enum ES_MeasurementTipStatus * tipStatus,
+        long * tipAdapterID,
+        long * tipAdapterInterface,
+        double * position1,
+        double * position2,
+        double * position3,
+        double * stdDevPosition1,
+        double * stdDevPosition2,
+        double * stdDevPosition3,
+        double * stdDevPositionTotal,
+        double * covarPosition12,
+        double * covarPosition13,
+        double * covarPosition23,
+        double * aprioriStdDevPosition1,
+        double * aprioriStdDevPosition2,
+        double * aprioriStdDevPosition3,
+        double * aprioriStdDevPositionTotal,
+        double * aprioriCovarPosition12,
+        double * aprioriCovarPosition13,
+        double * aprioriCovarPosition23,
+        double * quaternion0,
+        double * quaternion1,
+        double * quaternion2,
+        double * quaternion3,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ,
+        double * stdDevRotationAngleX,
+        double * stdDevRotationAngleY,
+        double * stdDevRotationAngleZ,
+        double * stdDevRotationAngleTotal,
+        double * covarRotationAngleXY,
+        double * covarRotationAngleXZ,
+        double * covarRotationAngleYZ,
+        double * aprioriStdDevRotationAngleX,
+        double * aprioriStdDevRotationAngleY,
+        double * aprioriStdDevRotationAngleZ,
+        double * aprioriStdDevRotationAngleTotal,
+        double * aprioriCovarRotationAngleXY,
+        double * aprioriCovarRotationAngleXZ,
+        double * aprioriCovarRotationAngleYZ,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryProbeDataEx (
+        struct ProbeStationaryResultT * result ) = 0;
+    virtual HRESULT __stdcall raw_StopContinuousMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveHV (
+        long horizontalSpeed,
+        long verticalSpeed ) = 0;
+    virtual HRESULT __stdcall raw_MoveLeft ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveRight ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveUp ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveDown ( ) = 0;
+    virtual HRESULT __stdcall raw_StopMove ( ) = 0;
+    virtual HRESULT __stdcall raw_GoNivelPosition (
+        enum ES_NivelPosition nivelPosition ) = 0;
+    virtual HRESULT __stdcall raw_GoLastMeasuredPoint ( ) = 0;
+    virtual HRESULT __stdcall raw_GetSystemStatus (
+        enum ES_ResultStatus * LastResultStatus,
+        enum ES_TrackerProcessorStatus * trackerProcessorStatus,
+        enum ES_LaserProcessorStatus * laserStatus,
+        enum ES_ADMStatus * admStatus,
+        long * majorVersionNumber,
+        long * minorVersionNumber,
+        long * BuildNumber,
+        enum ES_WeatherMonitorStatus * weatherMonitorStatus,
+        long * flagsValue,
+        long * trackerSerialNumber ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerStatus (
+        enum ES_TrackerStatus * trackerStatus ) = 0;
+    virtual HRESULT __stdcall raw_GetReflectors ( ) = 0;
+    virtual HRESULT __stdcall raw_SetReflector (
+        long reflectorID ) = 0;
+    virtual HRESULT __stdcall raw_GetReflector (
+        long * reflectorID ) = 0;
+    virtual HRESULT __stdcall raw_SetSearchParams (
+        double searchRadius,
+        long timeOut ) = 0;
+    virtual HRESULT __stdcall raw_GetSearchParams (
+        double * searchRadius,
+        long * timeOut ) = 0;
+    virtual HRESULT __stdcall raw_SetSearchParamsEx (
+        struct SearchParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetSearchParamsEx (
+        struct SearchParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetAdmParams (
+        double targetStabilityTolerance,
+        long retryTimeFrame,
+        long numberOfRetrys ) = 0;
+    virtual HRESULT __stdcall raw_GetAdmParams (
+        double * targetStabilityTolerance,
+        long * retryTimeFrame,
+        long * numberOfRetrys ) = 0;
+    virtual HRESULT __stdcall raw_SetAdmParamsEx (
+        struct AdmParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetAdmParamsEx (
+        struct AdmParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetSystemSettings (
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        VARIANT_BOOL applyTransformationParams,
+        VARIANT_BOOL applyStationOrientationParams,
+        VARIANT_BOOL keepLastPosition,
+        VARIANT_BOOL sendUnsolicitedMessages,
+        VARIANT_BOOL sendReflectorPositionData,
+        VARIANT_BOOL tryMeasurementMode,
+        VARIANT_BOOL hasNivel,
+        VARIANT_BOOL hasVideoCamera ) = 0;
+    virtual HRESULT __stdcall raw_GetSystemSettings (
+        enum ES_WeatherMonitorStatus * weatherMonitorStatus,
+        VARIANT_BOOL * applyTransformationParams,
+        VARIANT_BOOL * applyStationOrientationParams,
+        VARIANT_BOOL * keepLastPosition,
+        VARIANT_BOOL * sendUnsolicitedMessages,
+        VARIANT_BOOL * sendReflectorPositionData,
+        VARIANT_BOOL * tryMeasurementMode,
+        VARIANT_BOOL * hasNivel,
+        VARIANT_BOOL * hasVideoCamera ) = 0;
+    virtual HRESULT __stdcall raw_SetSystemSettingsEx (
+        struct SystemSettingsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetSystemSettingsEx (
+        struct SystemSettingsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetUnits (
+        enum ES_LengthUnit lengthUnit,
+        enum ES_AngleUnit angleUnit,
+        enum ES_TemperatureUnit temperatureUnit,
+        enum ES_PressureUnit pressureUnit,
+        enum ES_HumidityUnit humidityUnit ) = 0;
+    virtual HRESULT __stdcall raw_GetUnits (
+        enum ES_LengthUnit * lengthUnit,
+        enum ES_AngleUnit * angleUnit,
+        enum ES_TemperatureUnit * temperatureUnit,
+        enum ES_PressureUnit * pressureUnit,
+        enum ES_HumidityUnit * humidityUnit ) = 0;
+    virtual HRESULT __stdcall raw_SetUnitsEx (
+        struct SystemUnitsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetUnitsEx (
+        struct SystemUnitsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetStationOrientationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3 ) = 0;
+    virtual HRESULT __stdcall raw_GetStationOrientationParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * rot1,
+        double * rot2,
+        double * rot3 ) = 0;
+    virtual HRESULT __stdcall raw_SetStationOrientationParamsEx (
+        struct StationOrientationDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetStationOrientationParamsEx (
+        struct StationOrientationDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3,
+        double scale ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * rot1,
+        double * rot2,
+        double * rot3,
+        double * scale ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationParamsEx (
+        struct TransformationDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationParamsEx (
+        struct TransformationDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetTemperatureRange (
+        enum ES_TrackerTemperatureRange temperatureRange ) = 0;
+    virtual HRESULT __stdcall raw_GetTemperatureRange (
+        enum ES_TrackerTemperatureRange * temperatureRange ) = 0;
+    virtual HRESULT __stdcall raw_SetEnvironmentParams (
+        double temperature,
+        double pressure,
+        double humidity ) = 0;
+    virtual HRESULT __stdcall raw_GetEnvironmentParams (
+        double * temperature,
+        double * pressure,
+        double * humidity ) = 0;
+    virtual HRESULT __stdcall raw_SetEnvironmentParamsEx (
+        struct EnvironmentDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetEnvironmentParamsEx (
+        struct EnvironmentDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetRefractionParams (
+        double ifmRefractionIndex,
+        double admRefractionIndex ) = 0;
+    virtual HRESULT __stdcall raw_GetRefractionParams (
+        double * ifmRefractionIndex,
+        double * admRefractionIndex ) = 0;
+    virtual HRESULT __stdcall raw_SetRefractionParamsEx (
+        struct RefractionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetRefractionParamsEx (
+        struct RefractionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetMeasurementMode (
+        enum ES_MeasMode measMode ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementMode (
+        enum ES_MeasMode * measMode ) = 0;
+    virtual HRESULT __stdcall raw_SetBoxRegionParams (
+        double pt1Val1,
+        double pt1Val2,
+        double pt1Val3,
+        double pt2Val1,
+        double pt2Val2,
+        double pt2Val3 ) = 0;
+    virtual HRESULT __stdcall raw_GetBoxRegionParams (
+        double * pt1Val1,
+        double * pt1Val2,
+        double * pt1Val3,
+        double * pt2Val1,
+        double * pt2Val2,
+        double * pt2Val3 ) = 0;
+    virtual HRESULT __stdcall raw_SetBoxRegionParamsEx (
+        struct BoxRegionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetBoxRegionParamsEx (
+        struct BoxRegionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereRegionParams (
+        double ptVal1,
+        double ptVal2,
+        double ptVal3,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereRegionParams (
+        double * ptVal1,
+        double * ptVal2,
+        double * ptVal3,
+        double * radius ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereRegionParamsEx (
+        struct SphereRegionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereRegionParamsEx (
+        struct SphereRegionDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetStationaryModeParams (
+        long time,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_GetStationaryModeParams (
+        long * time,
+        VARIANT_BOOL * useADM ) = 0;
+    virtual HRESULT __stdcall raw_SetStationaryModeParamsEx (
+        struct StationaryModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetStationaryModeParamsEx (
+        struct StationaryModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetGridModeParams (
+        double val1,
+        double val2,
+        double val3,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetGridModeParams (
+        double * val1,
+        double * val2,
+        double * val3,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType ) = 0;
+    virtual HRESULT __stdcall raw_SetGridModeParamsEx (
+        struct GridModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetGridModeParamsEx (
+        struct GridModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousTimeModeParams (
+        long timeSeparation,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousTimeModeParams (
+        long * timeSeparation,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousTimeModeParamsEx (
+        struct ContinuousTimeModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousTimeModeParamsEx (
+        struct ContinuousTimeModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousDistanceModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousDistanceModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * useRegion,
+        enum ES_RegionType * regionType ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousDistanceModeParamsEx (
+        struct ContinuousDistanceModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousDistanceModeParamsEx (
+        struct ContinuousDistanceModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereCenterModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * fixRadius,
+        double * radius ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereCenterModeParamsEx (
+        struct SphereCenterModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereCenterModeParamsEx (
+        struct SphereCenterModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetCircleCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetCircleCenterModeParams (
+        double * spatialDistance,
+        long * numberOfPoints,
+        VARIANT_BOOL * fixRadius,
+        double * radius ) = 0;
+    virtual HRESULT __stdcall raw_SetCircleCenterModeParamsEx (
+        struct CircleCenterModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetCircleCenterModeParamsEx (
+        struct CircleCenterModeDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetCoordinateSystemType (
+        enum ES_CoordinateSystemType coordSysType ) = 0;
+    virtual HRESULT __stdcall raw_GetCoordinateSystemType (
+        enum ES_CoordinateSystemType * coordSysType ) = 0;
+    virtual HRESULT __stdcall raw_LookForTarget (
+        double val1,
+        double val2,
+        double val3,
+        double searchRadius,
+        double * hzAngle,
+        double * vtAngle ) = 0;
+    virtual HRESULT __stdcall raw_GetDirection (
+        double * hzAngle,
+        double * vtAngle ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryPoint2 (
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * covar12,
+        double * covar13,
+        double * covar23,
+        double * pointingErrorH,
+        double * pointingErrorV,
+        double * pointingErrorD,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryPoint2Ex (
+        struct SingleMeasResult2T * result ) = 0;
+    virtual HRESULT __stdcall raw_CallOrientToGravity (
+        double * omega,
+        double * phi ) = 0;
+    virtual HRESULT __stdcall raw_ClearTransformationNominalPointList ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearTransformationActualPointList ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationNominalPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationNominalPointEx (
+        struct TransformationPointT * data ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationActualPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationActualPointEx (
+        struct TransformationPointT * data ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationInputParams (
+        enum ES_TransResultType transResultType,
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationInputParams (
+        enum ES_TransResultType * transResultType,
+        double * transVal1,
+        double * transVal2,
+        double * transVal3,
+        double * rotVal1,
+        double * rotVal2,
+        double * rotVal3,
+        double * scale,
+        double * transStdVal1,
+        double * transStdVal2,
+        double * transStdVal3,
+        double * rotStdVal1,
+        double * rotStdVal2,
+        double * rotStdVal3,
+        double * scaleStd ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationInputParamsEx (
+        struct TransformationInputDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationInputParamsEx (
+        struct TransformationInputDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_CallTransformation (
+        double * transVal1,
+        double * transVal2,
+        double * transVal3,
+        double * rotVal1,
+        double * rotVal2,
+        double * rotVal3,
+        double * scale,
+        double * transStdVal1,
+        double * transStdVal2,
+        double * transStdVal3,
+        double * rotStdVal1,
+        double * rotStdVal2,
+        double * rotStdVal3,
+        double * scaleStd,
+        double * RMS,
+        double * maxDev,
+        double * varianceFactor ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformedPoints ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearDrivePointList ( ) = 0;
+    virtual HRESULT __stdcall raw_AddDrivePoint (
+        long reflectorID,
+        double val1,
+        double val2,
+        double val3 ) = 0;
+    virtual HRESULT __stdcall raw_CallIntermediateCompensation (
+        double * totalRMS,
+        double * maxDev,
+        long * warningFlags ) = 0;
+    virtual HRESULT __stdcall raw_SetCompensation (
+        long compensationId ) = 0;
+    virtual HRESULT __stdcall raw_SetStatisticMode (
+        enum ES_StatisticMode stationaryMeasurements,
+        enum ES_StatisticMode continuousMeasurements ) = 0;
+    virtual HRESULT __stdcall raw_GetStatisticMode (
+        enum ES_StatisticMode * stationaryMeasurements,
+        enum ES_StatisticMode * continuousMeasurements ) = 0;
+    virtual HRESULT __stdcall raw_SetCameraParams (
+        long contrast,
+        long brightness,
+        long saturation ) = 0;
+    virtual HRESULT __stdcall raw_GetCameraParams (
+        long * contrast,
+        long * brightness,
+        long * saturation ) = 0;
+    virtual HRESULT __stdcall raw_SetCameraParamsEx (
+        struct CameraParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetCameraParamsEx (
+        struct CameraParamsDataT * data ) = 0;
+    virtual HRESULT __stdcall raw_GetStillImage (
+        enum ES_StillImageFileType imageFileType,
+        long * fileSize,
+        VARIANT * fileData ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensation (
+        long * compensationId ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensations2 ( ) = 0;
+    virtual HRESULT __stdcall raw_CheckBirdBath (
+        double * initialHzAngle,
+        double * initialVtAngle,
+        double * initialDistance,
+        double * hzAngleDiff,
+        double * vtAngleDiff,
+        double * distanceDiff ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerDiagnostics (
+        double * trkPhotoSensorXVal,
+        double * trkPhotoSensorYVal,
+        double * trkPhotoSensorIVal,
+        double * refPhotoSensorXVal,
+        double * refPhotoSensorYVal,
+        double * refPhotoSensorIVal,
+        double * ADConverterRange,
+        double * servoControlPointX,
+        double * servoControlPointY,
+        double * laserLightRatio,
+        long * laserControlMode,
+        double * sensorInsideTemperature,
+        long * LCPRunTime,
+        long * laserTubeRunTime ) = 0;
+    virtual HRESULT __stdcall raw_GetADMInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber ) = 0;
+    virtual HRESULT __stdcall raw_GetTPInfo (
+        long * TPBootMajorVersionNumber,
+        long * TPBootMinorVersionNumber,
+        long * TPFirmWareMajorVersionNumber,
+        long * TPFirmWareMinorVersionNumber,
+        long * LCPFirmWareMajorVersionNumber,
+        long * LCPFirmWareMinorVersionNumber,
+        enum ES_TrackerProcessorType * trackerprocessorType,
+        enum ES_TPMicroProcessorType * microProcessorType,
+        long * microProcessorClockSpeed,
+        enum ES_LTSensorType * laserTrackerSensorType ) = 0;
+    virtual HRESULT __stdcall raw_GetNivelInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber ) = 0;
+    virtual HRESULT __stdcall raw_SetLaserOnTimer (
+        long timeOffsetHour,
+        long timeOffsetMinute ) = 0;
+    virtual HRESULT __stdcall raw_GetLaserOnTimer (
+        long * timeOffsetHour,
+        long * timeOffsetMinute ) = 0;
+    virtual HRESULT __stdcall raw_ConvertDisplayCoordinates (
+        enum ES_DisplayCoordinateConversionType conversionType,
+        double val1,
+        double val2,
+        double val3,
+        double * resVal1,
+        double * resVal2,
+        double * resVal3 ) = 0;
+    virtual HRESULT __stdcall raw_GoBirdBath2 (
+        VARIANT_BOOL clockwise ) = 0;
+    virtual HRESULT __stdcall raw_SetTriggerSource (
+        enum ES_TriggerSource triggerSource ) = 0;
+    virtual HRESULT __stdcall raw_GetTriggerSource (
+        enum ES_TriggerSource * triggerSource ) = 0;
+    virtual HRESULT __stdcall raw_GetFace (
+        enum ES_TrackerFace * trackerFace ) = 0;
+    virtual HRESULT __stdcall raw_GetCameras ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCamera (
+        long * cameraID,
+        VARIANT_BOOL * isMeasCameraMounted ) = 0;
+    virtual HRESULT __stdcall raw_SetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode cameraMode ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode * cameraMode ) = 0;
+    virtual HRESULT __stdcall raw_GetProbes ( ) = 0;
+    virtual HRESULT __stdcall raw_GetProbe (
+        long * probeID ) = 0;
+    virtual HRESULT __stdcall raw_GetTipAdapters ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipAdapter (
+        long * tipAdapterID,
+        long * tipAdapterInterface ) = 0;
+    virtual HRESULT __stdcall raw_GetTCamToTrackerCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTCamToTrackerCompensation (
+        long tCamToTrackerCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetTCamToTrackerCompensation (
+        long * tCamToTrackerCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetProbeCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_SetProbeCompensation (
+        long probeCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetProbeCompensation (
+        long * probeCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensation (
+        long * tipToProbeCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_SetExternTriggerParams (
+        enum ES_ClockTransition clockTransition,
+        enum ES_TriggerMode triggerMode,
+        enum ES_TriggerStartSignal startSignal,
+        long minimalTimeDelay ) = 0;
+    virtual HRESULT __stdcall raw_GetExternTriggerParams (
+        enum ES_ClockTransition * clockTransition,
+        enum ES_TriggerMode * triggerMode,
+        enum ES_TriggerStartSignal * startSignal,
+        long * minimalTimeDelay ) = 0;
+    virtual HRESULT __stdcall raw_SetExternTriggerParamsEx (
+        struct ExternTriggerParamsT * extTriggerPrams ) = 0;
+    virtual HRESULT __stdcall raw_GetExternTriggerParamsEx (
+        struct ExternTriggerParamsT * extTriggerPrams ) = 0;
+    virtual HRESULT __stdcall raw_GetErrorEllipsoid (
+        double coord1,
+        double coord2,
+        double coord3,
+        double stdDev1,
+        double stdDev2,
+        double stdDev3,
+        double covar12,
+        double covar13,
+        double covar23,
+        double * stdDevX,
+        double * stdDevY,
+        double * stdDevZ,
+        double * rotationAngleX,
+        double * rotationAngleY,
+        double * rotationAngleZ ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementCameraInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber,
+        enum ES_MeasurementCameraType * cameraType,
+        BSTR * cameraName,
+        long * compensationIdNumber,
+        long * zoomSerialNumber,
+        long * zoomAdjustmentIdNumber,
+        long * zoom2DCompensationIdNumber,
+        long * zoomProjCenterCompIdNumber,
+        double * maxDistance,
+        double * minDistance,
+        long * nrOfPixelsX,
+        long * nrOfPixelsY,
+        double * pixelSizeX,
+        double * pixelSizeY,
+        long * maxDataRate ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementProbeInfo (
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        long * serialNumber,
+        enum ES_ProbeType * probeType,
+        long * compensationIdNumber,
+        long * activeField,
+        enum ES_ProbeConnectionType * connectionType,
+        long * numberOfTipAdapters,
+        enum ES_ProbeButtonType * probeButtonType,
+        long * numberOfFields,
+        VARIANT_BOOL * hasWideAngleReceiver,
+        long * numberOfTipDataSets,
+        long * numberOfMelodies,
+        long * numberOfLoudnesSteps ) = 0;
+    virtual HRESULT __stdcall raw_SetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long * parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementStatusInfo (
+        long * measurementStatusInfo ) = 0;
+    virtual HRESULT __stdcall raw_GetCurrentPrismPosition (
+        double * val1,
+        double * val2,
+        double * val3 ) = 0;
+    virtual HRESULT __stdcall raw_SetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double * parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetObjectTemperature (
+        double * objectTemperature ) = 0;
+    virtual HRESULT __stdcall raw_GetTriggerBoardInfo (
+        enum ES_TriggerCardType * triggerCardType,
+        long * FPGAVersion,
+        long * maxTriggerFrequency,
+        long * errorCode ) = 0;
+    virtual HRESULT __stdcall raw_GetOverviewCameraInfo (
+        enum ES_OverviewCameraType * cameraType,
+        BSTR * cameraName,
+        VARIANT_BOOL * isColorCamera,
+        double * focalLength,
+        double * horizontalChipSize,
+        double * verticalChipSize,
+        VARIANT_BOOL * mirrorImageHz,
+        VARIANT_BOOL * mirrorImageVt ) = 0;
+    virtual HRESULT __stdcall raw_ClearCommandQueue (
+        enum ES_ClearCommandQueueType __MIDL__ILTCommandSync0000 ) = 0;
+    virtual HRESULT __stdcall raw_GetADMInfo2 (
+        enum ES_ADMType * admType,
+        BSTR * ADMName,
+        long * serialNumber,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        double * maxDistance,
+        double * minDistance,
+        long * maxDataRate,
+        double * accuracyADMDistance ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerInfo (
+        enum ES_LTSensorType * trackerType,
+        BSTR * trackerName,
+        long * serialNumber,
+        long * compensationIdNumber,
+        VARIANT_BOOL * hasADM,
+        VARIANT_BOOL * hasOverviewCamera,
+        VARIANT_BOOL * hasNivel,
+        double * nivelMountOffset,
+        double * maxDistance,
+        double * minDistance,
+        long * maxDataRate,
+        long * numberOfFaces,
+        double * hzAngleRange,
+        double * vtAngleRange,
+        enum ES_TrkAccuracyModel * accuracyModel,
+        long * majLCPFirmwareVersion,
+        long * minLCPFirmwareVersion ) = 0;
+    virtual HRESULT __stdcall raw_GetNivelInfo2 (
+        enum ES_NivelType * nivelType,
+        BSTR * nivelName,
+        long * serialNumber,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber,
+        double * measurementRange,
+        double * measurementAccuracyOffset,
+        double * measurementAccuracyFactor ) = 0;
+    virtual HRESULT __stdcall raw_RestoreStartupConditions ( ) = 0;
+    virtual HRESULT __stdcall raw_GoAndMeasureStationaryPoint (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * pointingError1,
+        double * pointingError2,
+        double * pointingError3,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_GoAndMeasureStationaryPointEx (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        struct SingleMeasResultT * result ) = 0;
+    virtual HRESULT __stdcall raw_GoAndMeasureStationaryPoint2 (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        double * val1,
+        double * val2,
+        double * val3,
+        double * std1,
+        double * std2,
+        double * std3,
+        double * stdTotal,
+        double * covar12,
+        double * covar13,
+        double * covar23,
+        double * pointingErrorH,
+        double * pointingErrorV,
+        double * pointingErrorD,
+        double * aprioriStd1,
+        double * aprioriStd2,
+        double * aprioriStd3,
+        double * aprioriStdTotal,
+        double * aprioriCovar12,
+        double * aprioriCovar13,
+        double * aprioriCovar23,
+        double * temperature,
+        double * pressure,
+        double * humidity,
+        VARIANT_BOOL * isTryMode ) = 0;
+    virtual HRESULT __stdcall raw_GoAndMeasureStationaryPoint2Ex (
+        double refVal1,
+        double refVal2,
+        double refVal3,
+        struct SingleMeasResult2T * result ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensations2 ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTipAdapter (
+        long tipAdapterID ) = 0;
+    virtual HRESULT __stdcall raw_GetATRInfo (
+        enum ES_ATRType * atrType,
+        BSTR * atrName,
+        long * majorFirmwareVersion,
+        long * minorFirmwareVersion,
+        long * buildFirmwareVersion,
+        long * hardwareVersion,
+        long * errorCode,
+        long * FPGAVersion,
+        double * maxDistance,
+        double * minDistance,
+        double * fieldOfView,
+        double * maxTrackingSpeed ) = 0;
+    virtual HRESULT __stdcall raw_GetMeteoStationInfo (
+        enum ES_MeteoStationType * meteoStationType,
+        BSTR * identifier,
+        long * firmWareMajorVersionNumber,
+        long * firmWareMinorVersionNumber ) = 0;
+    virtual HRESULT __stdcall raw_GetAT4xxInfo (
+        enum ES_LTSensorType * trackerType,
+        BSTR * trackerName,
+        long * serialNumber,
+        long * majorFirmwareVersion,
+        long * minorFirmwareVersion,
+        long * processorBoardFWBuildNumber,
+        long * sensorBoardFWBuildNumber,
+        long * majorOSVersion,
+        long * minorOSVersion,
+        long * majorServerSoftwareVersion,
+        long * minorServerSoftwareVersion,
+        long * serverSoftwareBuildNumber,
+        enum ES_WLANType * wlanType,
+        enum ES_TPMicroProcessorType * xscaleType,
+        long * minMeasureTime,
+        double * minDistance,
+        double * maxDistance,
+        double * stdDevDistOffsetADM,
+        double * stdDevAngleConst,
+        double * stdDevAngleOffset,
+        double * stdDevAngleFactor ) = 0;
+    virtual HRESULT __stdcall raw_CallATRCompensation (
+        enum ES_ATR_Module atrModule,
+        double * X0,
+        double * Y0,
+        double * stdDevX0,
+        double * stdDevY0,
+        double * scale,
+        double * rollAngle,
+        double * asymmetry,
+        double * distance ) = 0;
+    virtual HRESULT __stdcall put_UseIncreasedTimeouts (
+        VARIANT_BOOL _arg1 ) = 0;
+};
+
+enum ES_NivelStatus
+{
+    ES_NS_AllOK = 0,
+    ES_NS_OutOfRangeOK = 1,
+    ES_NS_OutOfRangeNOK = 2,
+    ES_NS_NoNivel = 3
+};
+
+enum ES_DataType
+{
+    ES_DT_Command = 0,
+    ES_DT_Error = 1,
+    ES_DT_SingleMeasResult = 2,
+    ES_DT_MultiMeasResult = 3,
+    ES_DT_StationaryProbeMeasResult = 4,
+    ES_DT_ContinuousProbeMeasResult = 5,
+    ES_DT_NivelResult = 6,
+    ES_DT_ReflectorPosResult = 7,
+    ES_DT_SystemStatusChange = 8,
+    ES_DT_SingleMeasResult2 = 9,
+    ES_DT_MultiMeasResult2 = 10,
+    ES_DT_ProbePosResult = 11
+};
+
+struct PacketHeaderT
+{
+    long lPacketSize;
+    enum ES_DataType type;
+};
+
+struct ReturnDataT
+{
+    struct PacketHeaderT packetHeader;
+    enum ES_ResultStatus status;
+};
+
+struct NivelResultT
+{
+    struct ReturnDataT packetInfo;
+    enum ES_NivelStatus nivelStatus;
+    double dXTilt;
+    double dYTilt;
+    double dNivelTemperature;
+};
+
+struct SingleMeasResultT
+{
+    struct ReturnDataT packetInfo;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dStd1;
+    double dStd2;
+    double dStd3;
+    double dStdTotal;
+    double dPointingError1;
+    double dPointingError2;
+    double dPointingError3;
+    double dAprioriStd1;
+    double dAprioriStd2;
+    double dAprioriStd3;
+    double dAprioriStdTotal;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+};
+
+struct ProbeStationaryResultT
+{
+    struct ReturnDataT packetInfo;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    enum ES_TriggerStatus triggerStatus;
+    long lRotationStatus;
+    int iInternalProbeId;
+    int iFieldNumber;
+    enum ES_MeasurementTipStatus tipStatus;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+    double dPosition1;
+    double dPosition2;
+    double dPosition3;
+    double dStdDevPosition1;
+    double dStdDevPosition2;
+    double dStdDevPosition3;
+    double dStdDevPositionTotal;
+    double dCovarPosition12;
+    double dCovarPosition13;
+    double dCovarPosition23;
+    double dAprioriStdDevPosition1;
+    double dAprioriStdDevPosition2;
+    double dAprioriStdDevPosition3;
+    double dAprioriStdDevPositionTotal;
+    double dAprioriCovarPosition12;
+    double dAprioriCovarPosition13;
+    double dAprioriCovarPosition23;
+    double dQuaternion0;
+    double dQuaternion1;
+    double dQuaternion2;
+    double dQuaternion3;
+    double dRotationAngleX;
+    double dRotationAngleY;
+    double dRotationAngleZ;
+    double dStdDevRotationAngleX;
+    double dStdDevRotationAngleY;
+    double dStdDevRotationAngleZ;
+    double dStdDevRotationAngleTotal;
+    double dCovarRotationAngleXY;
+    double dCovarRotationAngleXZ;
+    double dCovarRotationAngleYZ;
+    double dAprioriStdDevRotationAngleX;
+    double dAprioriStdDevRotationAngleY;
+    double dAprioriStdDevRotationAngleZ;
+    double dAprioriStdDevRotationAngleTotal;
+    double dAprioriCovarRotationAngleXY;
+    double dAprioriCovarRotationAngleXZ;
+    double dAprioriCovarRotationAngleYZ;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+};
+
+enum ES_NivelPosition
+{
+    ES_NP_Pos1 = 0,
+    ES_NP_Pos2 = 1,
+    ES_NP_Pos3 = 2,
+    ES_NP_Pos4 = 3
+};
+
+enum ES_TrackerProcessorStatus
+{
+    ES_TPS_NoTPFound = 0,
+    ES_TPS_TPFound = 1,
+    ES_TPS_NBOpen = 2,
+    ES_TPS_Booted = 3,
+    ES_TPS_CompensationSet = 4,
+    ES_TPS_Initialized = 5
+};
+
+enum ES_LaserProcessorStatus
+{
+    ES_LPS_LCPCommFailed = 0,
+    ES_LPS_LCPNotAvail = 1,
+    ES_LPS_LaserHeatingUp = 2,
+    ES_LPS_LaserReady = 3,
+    ES_LPS_UnableToStabilize = 4,
+    ES_LPS_LaserOff = 5
+};
+
+enum ES_ADMStatus
+{
+    ES_AS_NoADM = 0,
+    ES_AS_ADMCommFailed = 1,
+    ES_AS_ADMReady = 2,
+    ES_AS_ADMBusy = 3,
+    ES_AS_HWError = 4,
+    ES_AS_SecurityLockActive = 5,
+    ES_AS_NotCompensated = 6
+};
+
+enum ES_WeatherMonitorStatus
+{
+    ES_WMS_NotConnected = 0,
+    ES_WMS_ReadOnly = 1,
+    ES_WMS_ReadAndCalculateRefractions = 2
+};
+
+enum ES_TrackerStatus
+{
+    ES_TS_NotReady = 0,
+    ES_TS_Busy = 1,
+    ES_TS_Ready = 2,
+    ES_TS_6DStatusInvalid = 3
+};
+
+struct SearchParamsDataT
+{
+    double dSearchRadius;
+    long lTimeOut;
+};
+
+struct AdmParamsDataT
+{
+    double dTargetStabilityTolerance;
+    long lRetryTimeFrame;
+    long lNumberOfRetrys;
+};
+
+struct SystemSettingsDataT
+{
+    enum ES_WeatherMonitorStatus weatherMonitorStatus;
+    int bApplyTransformationParams;
+    int bApplyStationOrientationParams;
+    int bKeepLastPosition;
+    int bSendUnsolicitedMessages;
+    int bSendReflectorPositionData;
+    int bTryMeasurementMode;
+    int bHasNivel;
+    int bHasVideoCamera;
+};
+
+enum ES_LengthUnit
+{
+    ES_LU_Meter = 0,
+    ES_LU_Millimeter = 1,
+    ES_LU_Micron = 2,
+    ES_LU_Foot = 3,
+    ES_LU_Yard = 4,
+    ES_LU_Inch = 5
+};
+
+enum ES_AngleUnit
+{
+    ES_AU_Radian = 0,
+    ES_AU_Degree = 1,
+    ES_AU_Gon = 2
+};
+
+enum ES_TemperatureUnit
+{
+    ES_TU_Celsius = 0,
+    ES_TU_Fahrenheit = 1
+};
+
+enum ES_PressureUnit
+{
+    ES_PU_Mbar = 0,
+    ES_PU_HPascal = 1,
+    ES_PU_KPascal = 2,
+    ES_PU_MmHg = 3,
+    ES_PU_Psi = 4,
+    ES_PU_InH2O = 5,
+    ES_PU_InHg = 6
+};
+
+enum ES_HumidityUnit
+{
+    ES_HU_RH = 0
+};
+
+struct SystemUnitsDataT
+{
+    enum ES_LengthUnit lenUnitType;
+    enum ES_AngleUnit angUnitType;
+    enum ES_TemperatureUnit tempUnitType;
+    enum ES_PressureUnit pressUnitType;
+    enum ES_HumidityUnit humUnitType;
+};
+
+struct StationOrientationDataT
+{
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dRot1;
+    double dRot2;
+    double dRot3;
+};
+
+struct TransformationDataT
+{
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dRot1;
+    double dRot2;
+    double dRot3;
+    double dScale;
+};
+
+enum ES_TrackerTemperatureRange
+{
+    ES_TR_Low = 0,
+    ES_TR_Medium = 1,
+    ES_TR_High = 2,
+    ES_TR_Automatic = 3
+};
+
+struct EnvironmentDataT
+{
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+};
+
+struct RefractionDataT
+{
+    double dIfmRefractionIndex;
+    double dAdmRefractionIndex;
+};
+
+struct BoxRegionDataT
+{
+    double dP1Val1;
+    double dP1Val2;
+    double dP1Val3;
+    double dP2Val1;
+    double dP2Val2;
+    double dP2Val3;
+};
+
+struct SphereRegionDataT
+{
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dRadius;
+};
+
+struct StationaryModeDataT
+{
+    long lMeasTime;
+    int bUseADM;
+};
+
+enum ES_RegionType
+{
+    ES_RT_Sphere = 0,
+    ES_RT_Box = 1
+};
+
+struct GridModeDataT
+{
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    long lNumberOfPoints;
+    int bUseRegion;
+    enum ES_RegionType regionType;
+};
+
+struct ContinuousTimeModeDataT
+{
+    long lTimeSeparation;
+    long lNumberOfPoints;
+    int bUseRegion;
+    enum ES_RegionType regionType;
+};
+
+struct ContinuousDistanceModeDataT
+{
+    double dSpatialDistance;
+    long lNumberOfPoints;
+    int bUseRegion;
+    enum ES_RegionType regionType;
+};
+
+struct SphereCenterModeDataT
+{
+    double dSpatialDistance;
+    long lNumberOfPoints;
+    int bFixRadius;
+    double dRadius;
+};
+
+struct CircleCenterModeDataT
+{
+    double dSpatialDistance;
+    long lNumberOfPoints;
+    int bFixRadius;
+    double dRadius;
+};
+
+enum ES_CoordinateSystemType
+{
+    ES_CS_RHR = 0,
+    ES_CS_LHRX = 1,
+    ES_CS_LHRY = 2,
+    ES_CS_LHRZ = 3,
+    ES_CS_CCW = 4,
+    ES_CS_CCC = 5,
+    ES_CS_SCW = 6,
+    ES_CS_SCC = 7
+};
+
+struct SingleMeasResult2T
+{
+    struct ReturnDataT packetInfo;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dStd1;
+    double dStd2;
+    double dStd3;
+    double dStdTotal;
+    double dCovar12;
+    double dCovar13;
+    double dCovar23;
+    double dPointingErrorH;
+    double dPointingErrorV;
+    double dPointingErrorD;
+    double dAprioriStd1;
+    double dAprioriStd2;
+    double dAprioriStd3;
+    double dAprioriStdTotal;
+    double dAprioriCovar12;
+    double dAprioriCovar13;
+    double dAprioriCovar23;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+};
+
+struct TransformationPointT
+{
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dStd1;
+    double dStd2;
+    double dStd3;
+    double dCovar12;
+    double dCovar13;
+    double dCovar23;
+};
+
+enum ES_TransResultType
+{
+    ES_TR_AsTransformation = 0,
+    ES_TR_AsOrientation = 1
+};
+
+struct TransformationInputDataT
+{
+    enum ES_TransResultType resultType;
+    double dTransVal1;
+    double dTransVal2;
+    double dTransVal3;
+    double dRotVal1;
+    double dRotVal2;
+    double dRotVal3;
+    double dScale;
+    double dTransStdVal1;
+    double dTransStdVal2;
+    double dTransStdVal3;
+    double dRotStdVal1;
+    double dRotStdVal2;
+    double dRotStdVal3;
+    double dScaleStd;
+};
+
+enum ES_StatisticMode
+{
+    ES_SM_Standard = 0,
+    ES_SM_Extended = 1
+};
+
+struct CameraParamsDataT
+{
+    int iContrast;
+    int iBrightness;
+    int iSaturation;
+};
+
+enum ES_StillImageFileType
+{
+    ES_SI_Bitmap = 0,
+    ES_SI_Jpeg = 1
+};
+
+enum ES_TrackerProcessorType
+{
+    ES_TT_Undefined = 0,
+    ES_TT_SMART310 = 1,
+    ES_TT_LT_Controller = 2,
+    ES_TT_EmbeddedController = 3,
+    ES_TT_EmbeddedController600 = 4,
+    ES_TT_ATC900 = 6,
+    ES_TT_ATC400 = 20
+};
+
+enum ES_TPMicroProcessorType
+{
+    ES_TPM_Undefined = 0,
+    ES_TPM_i486 = 1,
+    ES_TPM_686 = 2,
+    ES_TPM_PXA250 = 20
+};
+
+enum ES_LTSensorType
+{
+    ES_LTS_Undefined = 0,
+    ES_LTS_SMARTOptodyne = 1,
+    ES_LTS_SMARTLeica = 2,
+    ES_LTS_LT_D_500 = 3,
+    ES_LTS_LT300 = 4,
+    ES_LTS_LT301 = 5,
+    ES_LTS_LT_D_800 = 6,
+    ES_LTS_LT_D_700 = 7,
+    ES_LTS_LT_D_600 = 8,
+    ES_LTS_LT_D_640 = 9,
+    ES_LTS_LT_D_706 = 10,
+    ES_LTS_LT_D_709 = 11,
+    ES_LTS_LT_D_840 = 12,
+    ES_LTS_AT901_B = 13,
+    ES_LTS_AT901_MR = 14,
+    ES_LTS_AT901_LR = 15,
+    ES_LTS_AT401 = 70,
+    ES_LTS_NoSensor = 99
+};
+
+enum ES_DisplayCoordinateConversionType
+{
+    ES_DCC_BaseToCurrent = 0,
+    ES_DCC_CurrentToBase = 1
+};
+
+enum ES_TriggerSource
+{
+    ES_TS_Undefined = 0,
+    ES_TS_Internal_Application = 1,
+    ES_TS_External = 2,
+    ES_TS_External_EventMessage = 3
+};
+
+enum ES_TrackerFace
+{
+    ES_TF_Unknown = 0,
+    ES_TF_Face1 = 1,
+    ES_TF_Face2 = 2
+};
+
+enum ES_MeasurementCameraMode
+{
+    ES_MCM_Measure = 0,
+    ES_MCM_Overview = 1
+};
+
+enum ES_ClockTransition
+{
+    ES_CT_Positive = 1,
+    ES_CT_Negative = 0
+};
+
+enum ES_TriggerMode
+{
+    ES_TM_EventTrigger = 0,
+    ES_TM_ContinuousExternalClockWithStartStop = 1,
+    ES_TM_InternalClockWithExternalStartStop = 2
+};
+
+enum ES_TriggerStartSignal
+{
+    ES_TSS_High = 1,
+    ES_TSS_Low = 0
+};
+
+struct ExternTriggerParamsT
+{
+    enum ES_ClockTransition clockTransition;
+    enum ES_TriggerMode triggerMode;
+    enum ES_TriggerStartSignal startSignal;
+    long lMinimalTimeDelay;
+};
+
+enum ES_MeasurementCameraType
+{
+    ES_MC_None = 0,
+    ES_MC_TCam700 = 1,
+    ES_MC_TCam800 = 2,
+    ES_MC_TCam706 = 3,
+    ES_MC_TCam709 = 4,
+    ES_MC_TCam_LR = 5,
+    ES_MC_TCam_MR = 6
+};
+
+enum ES_ProbeType
+{
+    ES_PT_None = 0,
+    ES_PT_Reflector = 1,
+    ES_PT_TProbe = 2,
+    ES_PT_TScan = 3,
+    ES_PT_MachineControlProbe = 4,
+    ES_PT_MultiFaceProbe = 5,
+    ES_PT_TCamToTrackerTool = 100,
+    ES_PT_ZoomArtifactTool = 200
+};
+
+enum ES_ProbeConnectionType
+{
+    ES_PCT_None = 0,
+    ES_PCT_CableController = 1,
+    ES_PCT_CableSensor = 2,
+    ES_PCT_IRLaser = 3,
+    ES_PCT_IRWideAngle = 4
+};
+
+enum ES_ProbeButtonType
+{
+    ES_PBT_None = 0,
+    ES_PBT_Measurement = 1,
+    ES_PBT_4Button = 2
+};
+
+enum ES_SystemParameter
+{
+    ES_SP_KeepLastPositionFlag = 0,
+    ES_SP_WeatherMonitorSetting = 1,
+    ES_SP_ShowAll6DMeasurements = 2,
+    ES_SP_LaserPointerCaptureBeam = 3,
+    ES_SP_DisplayReflectorPosition = 10,
+    ES_SP_ProbeConfig_Button = 50,
+    ES_SP_ProbeConfig_ButtonEvent = 51,
+    ES_SP_ProbeConfig_Tip = 52,
+    ES_SP_ProbeConfig_SoundVolume = 53,
+    ES_SP_ProbeConfig_PowerOffTime = 54,
+    ES_SP_QuickReleaseStatus = 60,
+    ES_SP_TcpCommandQueueSize = 200,
+    ES_SP_SystemMax6DDataRate = 300,
+    ES_SP_TcpDataPacketRate = 400,
+    ES_SP_PowerLockFunctionAvailable = 410,
+    ES_SP_PowerLockFunctionActive = 411,
+    ES_SP_D_TemperatureThreshold = 1000,
+    ES_SP_D_PressureThreshold = 1001,
+    ES_SP_D_HumidityThreshold = 1002,
+    ES_SP_D_SystemLongest3DDistanceIFM = 1100,
+    ES_SP_D_SystemLongest3DDistanceADM = 1101,
+    ES_SP_D_SystemLongest6DDistance = 1102,
+    ES_SP_AT4xxControllerBatteryStatus = 5000,
+    ES_SP_AT4xxSensorBatteryStatus = 5001
+};
+
+enum ES_TriggerCardType
+{
+    ES_TCT_None = 0,
+    ES_TCT_SingleTracker = 1
+};
+
+enum ES_OverviewCameraType
+{
+    ES_OCT_Unknown = 0,
+    ES_OCT_Classic = 1,
+    ES_OCT_TCam_Integrated = 2
+};
+
+enum ES_ClearCommandQueueType
+{
+    ES_CCQ_ClearOwnOnly = 0,
+    ES_CCQ_ClearAll = 1
+};
+
+enum ES_ADMType
+{
+    ES_AMT_Unknown = 0,
+    ES_AMT_LeicaADM = 1,
+    ES_AMT_LeicaAIFM = 2
+};
+
+enum ES_TrkAccuracyModel
+{
+    ES_TAM_Unknown = 0,
+    ES_TAM_2005 = 1
+};
+
+enum ES_NivelType
+{
+    ES_NT_Unknown = 0,
+    ES_NT_Nivel20 = 1,
+    ES_NT_Nivel230 = 2
+};
+
+enum ES_ATRType
+{
+    ES_ATR_None = 0,
+    ES_ATR_4 = 1,
+    ES_ATR_5 = 2
+};
+
+enum ES_MeteoStationType
+{
+    ES_MST_None = 0,
+    ES_MST_Thommen = 1,
+    ES_MST_AT = 2
+};
+
+enum ES_WLANType
+{
+    ES_WLAN_None = 0,
+    ES_WLAN_OWL211 = 1,
+    ES_WLAN_OWL221 = 2
+};
+
+enum ES_ATR_Module
+{
+    AM_OnAxis = 0,
+    AM_WideAngle = 1
+};
+
+struct __declspec(uuid("05022814-3b56-11d5-929a-168cd7000000"))
+_ILTCommandSyncEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT ErrorEvent (
+        enum ES_Command command,
+        enum ES_ResultStatus status );
+    HRESULT ReflectorsData (
+        long reflectorID,
+        _bstr_t reflectorName,
+        enum ES_TargetType targetType,
+        double surfaceOffset,
+        long reflectorsTotal );
+    HRESULT ContinuousPointMeasDataReady (
+        long resultsTotal,
+        long bytesTotal );
+    HRESULT ContinuousProbeMeasDataReady (
+        long resultsTotal,
+        long bytesTotal );
+    HRESULT ReflectorPositionData (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT CenterPointData (
+        enum ES_MeasMode measMode,
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT StatusChangeEvent (
+        enum ES_SystemStatusChange statusChange );
+    HRESULT TransformedPointsData (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double covar12,
+        double covar13,
+        double covar23,
+        double residualVal1,
+        double residualVal2,
+        double residualVal3,
+        long totalPoints );
+    HRESULT CenterPoint2Data (
+        enum ES_MeasMode measMode,
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double covar12,
+        double covar13,
+        double covar23,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double aprioriCovar12,
+        double aprioriCovar13,
+        double aprioriCovar23,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT CompensationsData (
+        long compensationId,
+        _bstr_t trackerCompensationName,
+        _bstr_t trackerCompensationComment,
+        _bstr_t ADMCompensationName,
+        VARIANT_BOOL hasMeasurementCameraMounted,
+        long compensationsTotal );
+    HRESULT ProbePositionData (
+        long rotationStatus,
+        enum ES_MeasurementTipStatus tipStatus,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        double position1,
+        double position2,
+        double position3,
+        double quaternion0,
+        double quaternion1,
+        double quaternion2,
+        double quaternion3,
+        double rotationAngleX,
+        double rotationAngleY,
+        double rotationAngleZ );
+    HRESULT CamerasData (
+        long cameraID,
+        long serialNumber,
+        enum ES_MeasurementCameraType cameraType,
+        _bstr_t cameraName,
+        _bstr_t comment,
+        long camerasTotal );
+    HRESULT ProbesData (
+        long probeID,
+        long serialNumber,
+        _bstr_t probeName,
+        enum ES_ProbeType probeType,
+        long numberOfFields,
+        _bstr_t comment,
+        long probesTotal );
+    HRESULT TipAdaptersData (
+        long tipAdapterID,
+        long assemblyID,
+        long serialNumberLowPart,
+        long serialNumberHighPart,
+        _bstr_t tipName,
+        enum ES_TipType tipType,
+        double radius,
+        double length,
+        _bstr_t comment,
+        long tipAdaptersTotal );
+    HRESULT TCamToTrackerCompensationsData (
+        long tCamToTrackerCompensationID,
+        long trackerCompensationID,
+        long cameraID,
+        VARIANT_BOOL isActive,
+        long trackerSerialNumber,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        long compensationsTotal );
+    HRESULT ProbeCompensationsData (
+        long probeCompensationID,
+        long probeID,
+        long fieldNumber,
+        VARIANT_BOOL isActive,
+        VARIANT_BOOL markedForExport,
+        VARIANT_BOOL isPreliminary,
+        _bstr_t probeCompensationName,
+        _bstr_t probeCompensationComment,
+        long compensationsTotal );
+    HRESULT TipToProbeCompensationsData (
+        long tipToProbeCompensationID,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        long probeCompensationID,
+        VARIANT_BOOL markedForExport,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        long compensationsTotal );
+    HRESULT CenterPointProbeData (
+        enum ES_MeasMode measMode,
+        double position1,
+        double position2,
+        double position3,
+        double stdDevPosition1,
+        double stdDevPosition2,
+        double stdDevPosition3,
+        double stdDevPositionTotal,
+        double covarPosition12,
+        double covarPosition13,
+        double covarPosition23,
+        double aprioriStdDevPosition1,
+        double aprioriStdDevPosition2,
+        double aprioriStdDevPosition3,
+        double aprioriStdDevPositionTotal,
+        double aprioriCovarPosition12,
+        double aprioriCovarPosition13,
+        double aprioriCovarPosition23,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT Compensations2Data (
+        long compensationId,
+        _bstr_t trackerCompensationName,
+        _bstr_t trackerCompensationComment,
+        _bstr_t ADMCompensationName,
+        _bstr_t ADMCompensationComment,
+        VARIANT_BOOL hasMeasurementCameraMounted,
+        VARIANT_BOOL isActive,
+        long compensationsTotal );
+    HRESULT TipToProbeCompensations2Data (
+        long tipToProbeCompensationID,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        long probeCompensationID,
+        VARIANT_BOOL markedForExport,
+        enum ES_TipToProbeCompensationType compensationType,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        _bstr_t shankCompensationName,
+        long compensationsTotal );
+    HRESULT ExceptionEvent (
+        long errorNumber,
+        _bstr_t errorText );
+};
+
+enum ES_Command
+{
+    ES_C_ExitApplication = 0,
+    ES_C_GetSystemStatus = 1,
+    ES_C_GetTrackerStatus = 2,
+    ES_C_SetTemperatureRange = 3,
+    ES_C_GetTemperatureRange = 4,
+    ES_C_SetUnits = 5,
+    ES_C_GetUnits = 6,
+    ES_C_Initialize = 7,
+    ES_C_ReleaseMotors = 8,
+    ES_C_ActivateCameraView = 9,
+    ES_C_Park = 10,
+    ES_C_SwitchLaser = 11,
+    ES_C_SetStationOrientationParams = 12,
+    ES_C_GetStationOrientationParams = 13,
+    ES_C_SetTransformationParams = 14,
+    ES_C_GetTransformationParams = 15,
+    ES_C_SetBoxRegionParams = 16,
+    ES_C_GetBoxRegionParams = 17,
+    ES_C_SetSphereRegionParams = 18,
+    ES_C_GetSphereRegionParams = 19,
+    ES_C_SetEnvironmentParams = 20,
+    ES_C_GetEnvironmentParams = 21,
+    ES_C_SetRefractionParams = 22,
+    ES_C_GetRefractionParams = 23,
+    ES_C_SetMeasurementMode = 24,
+    ES_C_GetMeasurementMode = 25,
+    ES_C_SetCoordinateSystemType = 26,
+    ES_C_GetCoordinateSystemType = 27,
+    ES_C_SetStationaryModeParams = 28,
+    ES_C_GetStationaryModeParams = 29,
+    ES_C_SetContinuousTimeModeParams = 30,
+    ES_C_GetContinuousTimeModeParams = 31,
+    ES_C_SetContinuousDistanceModeParams = 32,
+    ES_C_GetContinuousDistanceModeParams = 33,
+    ES_C_SetSphereCenterModeParams = 34,
+    ES_C_GetSphereCenterModeParams = 35,
+    ES_C_SetCircleCenterModeParams = 36,
+    ES_C_GetCircleCenterModeParams = 37,
+    ES_C_SetGridModeParams = 38,
+    ES_C_GetGridModeParams = 39,
+    ES_C_SetReflector = 40,
+    ES_C_GetReflector = 41,
+    ES_C_GetReflectors = 42,
+    ES_C_SetSearchParams = 43,
+    ES_C_GetSearchParams = 44,
+    ES_C_SetAdmParams = 45,
+    ES_C_GetAdmParams = 46,
+    ES_C_SetSystemSettings = 47,
+    ES_C_GetSystemSettings = 48,
+    ES_C_StartMeasurement = 49,
+    ES_C_StartNivelMeasurement = 51,
+    ES_C_StopMeasurement = 52,
+    ES_C_ChangeFace = 53,
+    ES_C_GoBirdBath = 54,
+    ES_C_GoPosition = 55,
+    ES_C_GoPositionHVD = 56,
+    ES_C_PositionRelativeHV = 57,
+    ES_C_PointLaser = 58,
+    ES_C_PointLaserHVD = 59,
+    ES_C_MoveHV = 60,
+    ES_C_GoNivelPosition = 61,
+    ES_C_GoLastMeasuredPoint = 62,
+    ES_C_FindReflector = 63,
+    ES_C_Unknown = 64,
+    ES_C_LookForTarget = 65,
+    ES_C_GetDirection = 66,
+    ES_C_CallOrientToGravity = 67,
+    ES_C_ClearTransformationNominalPointList = 68,
+    ES_C_ClearTransformationActualPointList = 69,
+    ES_C_AddTransformationNominalPoint = 70,
+    ES_C_AddTransformationActualPoint = 71,
+    ES_C_SetTransformationInputParams = 72,
+    ES_C_GetTransformationInputParams = 73,
+    ES_C_CallTransformation = 74,
+    ES_C_GetTransformedPoints = 75,
+    ES_C_ClearDrivePointList = 76,
+    ES_C_AddDrivePoint = 77,
+    ES_C_CallIntermediateCompensation = 78,
+    ES_C_SetCompensation = 79,
+    ES_C_SetStatisticMode = 80,
+    ES_C_GetStatisticMode = 81,
+    ES_C_GetStillImage = 82,
+    ES_C_SetCameraParams = 83,
+    ES_C_GetCameraParams = 84,
+    ES_C_GetCompensation = 85,
+    ES_C_GetCompensations = 86,
+    ES_C_CheckBirdBath = 87,
+    ES_C_GetTrackerDiagnostics = 88,
+    ES_C_GetADMInfo = 89,
+    ES_C_GetTPInfo = 90,
+    ES_C_GetNivelInfo = 91,
+    ES_C_SetLaserOnTimer = 92,
+    ES_C_GetLaserOnTimer = 93,
+    ES_C_ConvertDisplayCoordinates = 94,
+    ES_C_GoBirdBath2 = 95,
+    ES_C_SetTriggerSource = 96,
+    ES_C_GetTriggerSource = 97,
+    ES_C_GetFace = 98,
+    ES_C_GetCameras = 99,
+    ES_C_GetCamera = 100,
+    ES_C_SetMeasurementCameraMode = 101,
+    ES_C_GetMeasurementCameraMode = 102,
+    ES_C_GetProbes = 103,
+    ES_C_GetProbe = 104,
+    ES_C_GetTipAdapters = 105,
+    ES_C_GetTipAdapter = 106,
+    ES_C_GetTCamToTrackerCompensations = 107,
+    ES_C_GetTCamToTrackerCompensation = 108,
+    ES_C_SetTCamToTrackerCompensation = 109,
+    ES_C_GetProbeCompensations = 110,
+    ES_C_GetProbeCompensation = 111,
+    ES_C_SetProbeCompensation = 112,
+    ES_C_GetTipToProbeCompensations = 113,
+    ES_C_GetTipToProbeCompensation = 114,
+    ES_C_SetExternTriggerParams = 115,
+    ES_C_GetExternTriggerParams = 116,
+    ES_C_GetErrorEllipsoid = 117,
+    ES_C_GetMeasurementCameraInfo = 118,
+    ES_C_GetMeasurementProbeInfo = 119,
+    ES_C_SetLongSystemParameter = 120,
+    ES_C_GetLongSystemParameter = 121,
+    ES_C_GetMeasurementStatusInfo = 122,
+    ES_C_GetCompensations2 = 123,
+    ES_C_GetCurrentPrismPosition = 124,
+    ES_C_SetDoubleSystemParameter = 125,
+    ES_C_GetDoubleSystemParameter = 126,
+    ES_C_GetObjectTemperature = 127,
+    ES_C_GetTriggerBoardInfo = 128,
+    ES_C_GetOverviewCameraInfo = 129,
+    ES_C_ClearCommandQueue = 130,
+    ES_C_GetADMInfo2 = 131,
+    ES_C_GetTrackerInfo = 132,
+    ES_C_GetNivelInfo2 = 133,
+    ES_C_RestoreStartupConditions = 134,
+    ES_C_GoAndMeasure = 135,
+    ES_C_GetTipToProbeCompensations2 = 136,
+    ES_C_SetTipAdapter = 137,
+    ES_C_GetATRInfo = 138,
+    ES_C_GetMeteoStationInfo = 139,
+    ES_C_GetAT4xxInfo = 140,
+    ES_C_CallATRCompensation = 141
+};
+
+enum ES_TargetType
+{
+    ES_TT_Unknown = 0,
+    ES_TT_CornerCube = 1,
+    ES_TT_CatsEye = 2,
+    ES_TT_GlassPrism = 3,
+    ES_TT_RFIPrism = 4
+};
+
+enum ES_SystemStatusChange
+{
+    ES_SSC_DistanceSet = 0,
+    ES_SSC_LaserWarmedUp = 1,
+    ES_SSC_EnvironmentParamsChanged = 2,
+    ES_SSC_RefractionParamsChanged = 3,
+    ES_SSC_SearchParamsChanged = 4,
+    ES_SSC_AdmParamsChanged = 5,
+    ES_SSC_UnitsChanged = 6,
+    ES_SSC_ReflectorChanged = 7,
+    ES_SSC_SystemSettingsChanged = 8,
+    ES_SSC_TemperatureRangeChanged = 9,
+    ES_SSC_CameraParamsChanged = 10,
+    ES_SSC_CompensationChanged = 11,
+    ES_SSC_CoordinateSystemTypeChanged = 12,
+    ES_SSC_BoxRegionParamsChanged = 13,
+    ES_SSC_SphereRegionParamsChanged = 14,
+    ES_SSC_StationOrientationParamsChanged = 15,
+    ES_SSC_TransformationParamsChanged = 16,
+    ES_SSC_MeasurementModeChanged = 17,
+    ES_SSC_StationaryModeParamsChanged = 18,
+    ES_SSC_ContinuousTimeModeParamsChanged = 19,
+    ES_SSC_ContinuousDistanceModeParamsChanged = 20,
+    ES_SSC_GridModeParamsChanged = 21,
+    ES_SSC_CircleCenterModeParamsChanged = 22,
+    ES_SSC_SphereCenterModeParamsChanged = 23,
+    ES_SSC_StatisticModeChanged = 24,
+    ES_SSC_MeasStatus_NotReady = 25,
+    ES_SSC_MeasStatus_Busy = 26,
+    ES_SSC_MeasStatus_Ready = 27,
+    ES_SSC_MeasurementCountReached = 28,
+    ES_SSC_TriggerSourceChanged = 29,
+    ES_SSC_IsFace1 = 30,
+    ES_SSC_IsFace2 = 31,
+    ES_SSC_ExternalControlActive = 32,
+    ES_SSC_ServiceSoftwareActive = 33,
+    ES_SSC_MeasurementCameraChanged = 34,
+    ES_SSC_MeasurementCameraModeChanged = 35,
+    ES_SSC_ProbeChanged = 36,
+    ES_SSC_TipChanged = 37,
+    ES_SSC_TCamToTrackerCompensationChanged = 38,
+    ES_SSC_ProbeCompensationChanged = 39,
+    ES_SSC_TipToProbeCompensationChanged = 40,
+    ES_SSC_ExternTriggerParamsChanged = 41,
+    ES_SSC_TCamToTrackerCompensationDeleted = 42,
+    ES_SSC_MeasurementProbeCompensationDeleted = 43,
+    ES_SSC_MeasurementTipCompensationDeleted = 44,
+    ES_SSC_ManyMechanicalCompensationsInDB = 45,
+    ES_SSC_MeasStatus_6DStatusInvalid = 99,
+    ES_SSC_MeasurementProbeButtonDown = 100,
+    ES_SSC_MeasurementProbeButtonUp = 101,
+    ES_SSC_ExternalTriggerEvent = 102,
+    ES_SSC_ExternalTriggerStartEvent = 103,
+    ES_SSC_ExternalTriggerStopEvent = 104,
+    ES_SSC_ObjectTemperatureChanged = 105,
+    ES_SSC_OverviewCameraChanged = 106,
+    ES_SSC_NivelSensorChanged = 107,
+    ES_SSC_ProbeButton1Down = 110,
+    ES_SSC_ProbeButton1Up = 111,
+    ES_SSC_ProbeButton1DoubleClick = 112,
+    ES_SSC_ProbeButton2Down = 120,
+    ES_SSC_ProbeButton2Up = 121,
+    ES_SSC_ProbeButton2DoubleClick = 122,
+    ES_SSC_ProbeButton3Down = 130,
+    ES_SSC_ProbeButton3Up = 131,
+    ES_SSC_ProbeButton3DoubleClick = 132,
+    ES_SSC_ProbeButton4Down = 140,
+    ES_SSC_ProbeButton4Up = 141,
+    ES_SSC_ProbeButton4DoubleClick = 142,
+    ES_SSC_QuickReleaseOpend = 143,
+    ES_SSC_QuickReleaseClosed = 144,
+    ES_SSC_LaserReachingLimit = 145,
+    ES_SSC_LaserNotStabilized = 146,
+    ES_SSC_MultipleTipAdapterConnected = 150,
+    ES_SSC_CompensationModeStart = 800,
+    ES_SSC_CompensationModeEnd = 801,
+    ES_SSC_EmsysFilesImported = 820,
+    ES_SSC_SensorDetected = 850,
+    ES_SSC_SensorDisconnected = 851,
+    ES_SSC_CopyProtectionRemoved = 996,
+    ES_SSC_TPConnectionClosing = 997,
+    ES_SSC_ServerClosing = 998,
+    ES_SSC_ServerStarted = 999
+};
+
+enum ES_TipType
+{
+    ES_TT_None = 0,
+    ES_TT_Fixed = 1,
+    ES_TT_Scanner = 2,
+    ES_TT_TouchTrigger = 3,
+    ES_TT_ThreadWithID_Fixed = 101,
+    ES_TT_ThreadWithID_Scanner = 102,
+    ES_TT_ThreadWithID_TouchTrigger = 103,
+    ES_TT_Thread = 200,
+    ES_TT_Virtual = 999
+};
+
+enum ES_TipToProbeCompensationType
+{
+    ES_TCT_Unknown = 0,
+    ES_TCT_TipOnly = 1,
+    ES_TCT_ShankEnabled = 2
+};
+
+struct __declspec(uuid("58db561f-0186-11d5-bbb6-00508b35b332"))
+ILTCommandAsync : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Initialize ( );
+    HRESULT ReleaseMotors ( );
+    HRESULT ActivateCameraView ( );
+    HRESULT Park ( );
+    HRESULT SwitchLaser (
+        VARIANT_BOOL isOn );
+    HRESULT ExitApplication ( );
+    HRESULT GoBirdBath ( );
+    HRESULT ChangeFace ( );
+    HRESULT GoPosition (
+        double val1,
+        double val2,
+        double val3,
+        VARIANT_BOOL useADM );
+    HRESULT GoPositionHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance,
+        VARIANT_BOOL useADM );
+    HRESULT PositionRelativeHV (
+        double hzAngle,
+        double vtAngle );
+    HRESULT PointLaser (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT PointLaserHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance );
+    HRESULT FindReflector (
+        double approxDist );
+    HRESULT StartNivelMeasurement ( );
+    HRESULT StartContinuousPointMeasurement ( );
+    HRESULT StartContinuousProbeMeasurement ( );
+    HRESULT MeasureStationaryPoint ( );
+    HRESULT MeasureStationaryProbeData ( );
+    HRESULT StopContinuousMeasurement ( );
+    HRESULT MoveHV (
+        long horizontalSpeed,
+        long verticalSpeed );
+    HRESULT MoveLeft ( );
+    HRESULT MoveRight ( );
+    HRESULT MoveUp ( );
+    HRESULT MoveDown ( );
+    HRESULT StopMove ( );
+    HRESULT GoNivelPosition (
+        enum ES_NivelPosition nivelPosition );
+    HRESULT GoLastMeasuredPoint ( );
+    HRESULT GetSystemStatus ( );
+    HRESULT GetTrackerStatus ( );
+    HRESULT GetReflectors ( );
+    HRESULT SetReflector (
+        long reflectorID );
+    HRESULT GetReflector ( );
+    HRESULT SetSearchParams (
+        double searchRadius,
+        long timeOut );
+    HRESULT GetSearchParams ( );
+    HRESULT SetAdmParams (
+        double targetStabilityTolerance,
+        long retryTimeFrame,
+        long numberOfRetrys );
+    HRESULT GetAdmParams ( );
+    HRESULT SetSystemSettings (
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        VARIANT_BOOL applyTransformationParams,
+        VARIANT_BOOL applyStationOrientationParams,
+        VARIANT_BOOL keepLastPosition,
+        VARIANT_BOOL sendUnsolicitedMessages,
+        VARIANT_BOOL sendReflectorPositionData,
+        VARIANT_BOOL tryMeasurementMode,
+        VARIANT_BOOL hasNivel,
+        VARIANT_BOOL hasVideoCamera );
+    HRESULT GetSystemSettings ( );
+    HRESULT SetUnits (
+        enum ES_LengthUnit lengthUnit,
+        enum ES_AngleUnit angleUnit,
+        enum ES_TemperatureUnit temperatureUnit,
+        enum ES_PressureUnit pressureUnit,
+        enum ES_HumidityUnit humidityUnit );
+    HRESULT GetUnits ( );
+    HRESULT SetStationOrientationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3 );
+    HRESULT GetStationOrientationParams ( );
+    HRESULT SetTransformationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3,
+        double scale );
+    HRESULT GetTransformationParams ( );
+    HRESULT SetTemperatureRange (
+        enum ES_TrackerTemperatureRange temperatureRange );
+    HRESULT GetTemperatureRange ( );
+    HRESULT SetEnvironmentParams (
+        double temperature,
+        double pressure,
+        double humidity );
+    HRESULT GetEnvironmentParams ( );
+    HRESULT SetRefractionParams (
+        double ifmRefractionIndex,
+        double admRefractionIndex );
+    HRESULT GetRefractionParams ( );
+    HRESULT SetMeasurementMode (
+        enum ES_MeasMode measMode );
+    HRESULT GetMeasurementMode ( );
+    HRESULT SetBoxRegionParams (
+        double pt1Val1,
+        double pt1Val2,
+        double pt1Val3,
+        double pt2Val1,
+        double pt2Val2,
+        double pt2Val3 );
+    HRESULT GetBoxRegionParams ( );
+    HRESULT SetSphereRegionParams (
+        double ptVal1,
+        double ptVal2,
+        double ptVal3,
+        double radius );
+    HRESULT GetSphereRegionParams ( );
+    HRESULT SetStationaryModeParams (
+        long time,
+        VARIANT_BOOL useADM );
+    HRESULT GetStationaryModeParams ( );
+    HRESULT SetGridModeParams (
+        double val1,
+        double val2,
+        double val3,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetGridModeParams ( );
+    HRESULT SetContinuousTimeModeParams (
+        long timeSeparation,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetContinuousTimeModeParams ( );
+    HRESULT SetContinuousDistanceModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT GetContinuousDistanceModeParams ( );
+    HRESULT SetSphereCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT GetSphereCenterModeParams ( );
+    HRESULT SetCircleCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT GetCircleCenterModeParams ( );
+    HRESULT SetCoordinateSystemType (
+        enum ES_CoordinateSystemType coordSysType );
+    HRESULT GetCoordinateSystemType ( );
+    HRESULT LookForTarget (
+        double val1,
+        double val2,
+        double val3,
+        double searchRadius );
+    HRESULT GetDirection ( );
+    HRESULT CallOrientToGravity ( );
+    HRESULT ClearTransformationNominalPointList ( );
+    HRESULT ClearTransformationActualPointList ( );
+    HRESULT AddTransformationNominalPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 );
+    HRESULT AddTransformationActualPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 );
+    HRESULT SetTransformationInputParams (
+        enum ES_TransResultType transResultType,
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd );
+    HRESULT GetTransformationInputParams ( );
+    HRESULT CallTransformation ( );
+    HRESULT GetTransformedPoints ( );
+    HRESULT ClearDrivePointList ( );
+    HRESULT AddDrivePoint (
+        long reflectorID,
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT CallIntermediateCompensation ( );
+    HRESULT SetCompensation (
+        long compensationId );
+    HRESULT SetStatisticMode (
+        enum ES_StatisticMode stationaryMeasurements,
+        enum ES_StatisticMode continuousMeasurements );
+    HRESULT GetStatisticMode ( );
+    HRESULT SetCameraParams (
+        long contrast,
+        long brightness,
+        long saturation );
+    HRESULT GetCameraParams ( );
+    HRESULT GetStillImage (
+        enum ES_StillImageFileType imageFileType );
+    HRESULT GetCompensation ( );
+    HRESULT GetCompensations ( );
+    HRESULT GetCompensations2 ( );
+    HRESULT CheckBirdBath ( );
+    HRESULT GetTrackerDiagnostics ( );
+    HRESULT GetADMInfo ( );
+    HRESULT GetTPInfo ( );
+    HRESULT GetNivelInfo ( );
+    HRESULT SetLaserOnTimer (
+        long timeOffsetHour,
+        long timeOffsetMinute );
+    HRESULT GetLaserOnTimer ( );
+    HRESULT ConvertDisplayCoordinates (
+        enum ES_DisplayCoordinateConversionType conversionType,
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT GoBirdBath2 (
+        VARIANT_BOOL clockwise );
+    HRESULT SetTriggerSource (
+        enum ES_TriggerSource triggerSource );
+    HRESULT GetTriggerSource ( );
+    HRESULT GetFace ( );
+    HRESULT GetCameras ( );
+    HRESULT GetCamera ( );
+    HRESULT SetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode cameraMode );
+    HRESULT GetMeasurementCameraMode ( );
+    HRESULT GetProbes ( );
+    HRESULT GetProbe ( );
+    HRESULT GetTipAdapters ( );
+    HRESULT GetTipAdapter ( );
+    HRESULT GetTCamToTrackerCompensations ( );
+    HRESULT SetTCamToTrackerCompensation (
+        long tCamToTrackerCompensationID );
+    HRESULT GetTCamToTrackerCompensation ( );
+    HRESULT GetProbeCompensations ( );
+    HRESULT SetProbeCompensation (
+        long probeCompensationID );
+    HRESULT GetProbeCompensation ( );
+    HRESULT GetTipToProbeCompensations ( );
+    HRESULT GetTipToProbeCompensation ( );
+    HRESULT SetExternTriggerParams (
+        enum ES_ClockTransition clockTransition,
+        enum ES_TriggerMode triggerMode,
+        enum ES_TriggerStartSignal startSignal,
+        long minimalTimeDelay );
+    HRESULT GetExternTriggerParams ( );
+    HRESULT GetErrorEllipsoid (
+        double coord1,
+        double coord2,
+        double coord3,
+        double stdDev1,
+        double stdDev2,
+        double stdDev3,
+        double covar12,
+        double covar13,
+        double covar23 );
+    HRESULT GetMeasurementCameraInfo ( );
+    HRESULT GetMeasurementProbeInfo ( );
+    HRESULT SetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long parameter );
+    HRESULT GetLongSystemParameter (
+        enum ES_SystemParameter systemParam );
+    HRESULT GetMeasurementStatusInfo ( );
+    HRESULT GetCurrentPrismPosition ( );
+    HRESULT SetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double parameter );
+    HRESULT GetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam );
+    HRESULT GetObjectTemperature ( );
+    HRESULT GetTriggerBoardInfo ( );
+    HRESULT GetOverviewCameraInfo ( );
+    HRESULT ClearCommandQueue (
+        enum ES_ClearCommandQueueType __MIDL__ILTCommandAsync0000 );
+    HRESULT GetADMInfo2 ( );
+    HRESULT GetTrackerInfo ( );
+    HRESULT GetNivelInfo2 ( );
+    HRESULT RestoreStartupConditions ( );
+    HRESULT GoAndMeasureStationaryPoint (
+        double refVal1,
+        double refVal2,
+        double refVal3 );
+    HRESULT GetTipToProbeCompensations2 ( );
+    HRESULT SetTipAdapter (
+        long tipAdapterID );
+    HRESULT GetATRInfo ( );
+    HRESULT GetMeteoStationInfo ( );
+    HRESULT GetAT4xxInfo ( );
+    HRESULT CallATRCompensation (
+        enum ES_ATR_Module atrModule );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_Initialize ( ) = 0;
+    virtual HRESULT __stdcall raw_ReleaseMotors ( ) = 0;
+    virtual HRESULT __stdcall raw_ActivateCameraView ( ) = 0;
+    virtual HRESULT __stdcall raw_Park ( ) = 0;
+    virtual HRESULT __stdcall raw_SwitchLaser (
+        VARIANT_BOOL isOn ) = 0;
+    virtual HRESULT __stdcall raw_ExitApplication ( ) = 0;
+    virtual HRESULT __stdcall raw_GoBirdBath ( ) = 0;
+    virtual HRESULT __stdcall raw_ChangeFace ( ) = 0;
+    virtual HRESULT __stdcall raw_GoPosition (
+        double val1,
+        double val2,
+        double val3,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_GoPositionHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_PositionRelativeHV (
+        double hzAngle,
+        double vtAngle ) = 0;
+    virtual HRESULT __stdcall raw_PointLaser (
+        double val1,
+        double val2,
+        double val3 ) = 0;
+    virtual HRESULT __stdcall raw_PointLaserHVD (
+        double hzAngle,
+        double vtAngle,
+        double distance ) = 0;
+    virtual HRESULT __stdcall raw_FindReflector (
+        double approxDist ) = 0;
+    virtual HRESULT __stdcall raw_StartNivelMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_StartContinuousPointMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_StartContinuousProbeMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryPoint ( ) = 0;
+    virtual HRESULT __stdcall raw_MeasureStationaryProbeData ( ) = 0;
+    virtual HRESULT __stdcall raw_StopContinuousMeasurement ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveHV (
+        long horizontalSpeed,
+        long verticalSpeed ) = 0;
+    virtual HRESULT __stdcall raw_MoveLeft ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveRight ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveUp ( ) = 0;
+    virtual HRESULT __stdcall raw_MoveDown ( ) = 0;
+    virtual HRESULT __stdcall raw_StopMove ( ) = 0;
+    virtual HRESULT __stdcall raw_GoNivelPosition (
+        enum ES_NivelPosition nivelPosition ) = 0;
+    virtual HRESULT __stdcall raw_GoLastMeasuredPoint ( ) = 0;
+    virtual HRESULT __stdcall raw_GetSystemStatus ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerStatus ( ) = 0;
+    virtual HRESULT __stdcall raw_GetReflectors ( ) = 0;
+    virtual HRESULT __stdcall raw_SetReflector (
+        long reflectorID ) = 0;
+    virtual HRESULT __stdcall raw_GetReflector ( ) = 0;
+    virtual HRESULT __stdcall raw_SetSearchParams (
+        double searchRadius,
+        long timeOut ) = 0;
+    virtual HRESULT __stdcall raw_GetSearchParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetAdmParams (
+        double targetStabilityTolerance,
+        long retryTimeFrame,
+        long numberOfRetrys ) = 0;
+    virtual HRESULT __stdcall raw_GetAdmParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetSystemSettings (
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        VARIANT_BOOL applyTransformationParams,
+        VARIANT_BOOL applyStationOrientationParams,
+        VARIANT_BOOL keepLastPosition,
+        VARIANT_BOOL sendUnsolicitedMessages,
+        VARIANT_BOOL sendReflectorPositionData,
+        VARIANT_BOOL tryMeasurementMode,
+        VARIANT_BOOL hasNivel,
+        VARIANT_BOOL hasVideoCamera ) = 0;
+    virtual HRESULT __stdcall raw_GetSystemSettings ( ) = 0;
+    virtual HRESULT __stdcall raw_SetUnits (
+        enum ES_LengthUnit lengthUnit,
+        enum ES_AngleUnit angleUnit,
+        enum ES_TemperatureUnit temperatureUnit,
+        enum ES_PressureUnit pressureUnit,
+        enum ES_HumidityUnit humidityUnit ) = 0;
+    virtual HRESULT __stdcall raw_GetUnits ( ) = 0;
+    virtual HRESULT __stdcall raw_SetStationOrientationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3 ) = 0;
+    virtual HRESULT __stdcall raw_GetStationOrientationParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationParams (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3,
+        double scale ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTemperatureRange (
+        enum ES_TrackerTemperatureRange temperatureRange ) = 0;
+    virtual HRESULT __stdcall raw_GetTemperatureRange ( ) = 0;
+    virtual HRESULT __stdcall raw_SetEnvironmentParams (
+        double temperature,
+        double pressure,
+        double humidity ) = 0;
+    virtual HRESULT __stdcall raw_GetEnvironmentParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetRefractionParams (
+        double ifmRefractionIndex,
+        double admRefractionIndex ) = 0;
+    virtual HRESULT __stdcall raw_GetRefractionParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetMeasurementMode (
+        enum ES_MeasMode measMode ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementMode ( ) = 0;
+    virtual HRESULT __stdcall raw_SetBoxRegionParams (
+        double pt1Val1,
+        double pt1Val2,
+        double pt1Val3,
+        double pt2Val1,
+        double pt2Val2,
+        double pt2Val3 ) = 0;
+    virtual HRESULT __stdcall raw_GetBoxRegionParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereRegionParams (
+        double ptVal1,
+        double ptVal2,
+        double ptVal3,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereRegionParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetStationaryModeParams (
+        long time,
+        VARIANT_BOOL useADM ) = 0;
+    virtual HRESULT __stdcall raw_GetStationaryModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetGridModeParams (
+        double val1,
+        double val2,
+        double val3,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetGridModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousTimeModeParams (
+        long timeSeparation,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousTimeModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetContinuousDistanceModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType ) = 0;
+    virtual HRESULT __stdcall raw_GetContinuousDistanceModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetSphereCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetSphereCenterModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetCircleCenterModeParams (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius ) = 0;
+    virtual HRESULT __stdcall raw_GetCircleCenterModeParams ( ) = 0;
+    virtual HRESULT __stdcall raw_SetCoordinateSystemType (
+        enum ES_CoordinateSystemType coordSysType ) = 0;
+    virtual HRESULT __stdcall raw_GetCoordinateSystemType ( ) = 0;
+    virtual HRESULT __stdcall raw_LookForTarget (
+        double val1,
+        double val2,
+        double val3,
+        double searchRadius ) = 0;
+    virtual HRESULT __stdcall raw_GetDirection ( ) = 0;
+    virtual HRESULT __stdcall raw_CallOrientToGravity ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearTransformationNominalPointList ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearTransformationActualPointList ( ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationNominalPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 ) = 0;
+    virtual HRESULT __stdcall raw_AddTransformationActualPoint (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double covar12,
+        double covar13,
+        double covar23 ) = 0;
+    virtual HRESULT __stdcall raw_SetTransformationInputParams (
+        enum ES_TransResultType transResultType,
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformationInputParams ( ) = 0;
+    virtual HRESULT __stdcall raw_CallTransformation ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTransformedPoints ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearDrivePointList ( ) = 0;
+    virtual HRESULT __stdcall raw_AddDrivePoint (
+        long reflectorID,
+        double val1,
+        double val2,
+        double val3 ) = 0;
+    virtual HRESULT __stdcall raw_CallIntermediateCompensation ( ) = 0;
+    virtual HRESULT __stdcall raw_SetCompensation (
+        long compensationId ) = 0;
+    virtual HRESULT __stdcall raw_SetStatisticMode (
+        enum ES_StatisticMode stationaryMeasurements,
+        enum ES_StatisticMode continuousMeasurements ) = 0;
+    virtual HRESULT __stdcall raw_GetStatisticMode ( ) = 0;
+    virtual HRESULT __stdcall raw_SetCameraParams (
+        long contrast,
+        long brightness,
+        long saturation ) = 0;
+    virtual HRESULT __stdcall raw_GetCameraParams ( ) = 0;
+    virtual HRESULT __stdcall raw_GetStillImage (
+        enum ES_StillImageFileType imageFileType ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensation ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCompensations2 ( ) = 0;
+    virtual HRESULT __stdcall raw_CheckBirdBath ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerDiagnostics ( ) = 0;
+    virtual HRESULT __stdcall raw_GetADMInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTPInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetNivelInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_SetLaserOnTimer (
+        long timeOffsetHour,
+        long timeOffsetMinute ) = 0;
+    virtual HRESULT __stdcall raw_GetLaserOnTimer ( ) = 0;
+    virtual HRESULT __stdcall raw_ConvertDisplayCoordinates (
+        enum ES_DisplayCoordinateConversionType conversionType,
+        double val1,
+        double val2,
+        double val3 ) = 0;
+    virtual HRESULT __stdcall raw_GoBirdBath2 (
+        VARIANT_BOOL clockwise ) = 0;
+    virtual HRESULT __stdcall raw_SetTriggerSource (
+        enum ES_TriggerSource triggerSource ) = 0;
+    virtual HRESULT __stdcall raw_GetTriggerSource ( ) = 0;
+    virtual HRESULT __stdcall raw_GetFace ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCameras ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCamera ( ) = 0;
+    virtual HRESULT __stdcall raw_SetMeasurementCameraMode (
+        enum ES_MeasurementCameraMode cameraMode ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementCameraMode ( ) = 0;
+    virtual HRESULT __stdcall raw_GetProbes ( ) = 0;
+    virtual HRESULT __stdcall raw_GetProbe ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipAdapters ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipAdapter ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTCamToTrackerCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTCamToTrackerCompensation (
+        long tCamToTrackerCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetTCamToTrackerCompensation ( ) = 0;
+    virtual HRESULT __stdcall raw_GetProbeCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_SetProbeCompensation (
+        long probeCompensationID ) = 0;
+    virtual HRESULT __stdcall raw_GetProbeCompensation ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensations ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensation ( ) = 0;
+    virtual HRESULT __stdcall raw_SetExternTriggerParams (
+        enum ES_ClockTransition clockTransition,
+        enum ES_TriggerMode triggerMode,
+        enum ES_TriggerStartSignal startSignal,
+        long minimalTimeDelay ) = 0;
+    virtual HRESULT __stdcall raw_GetExternTriggerParams ( ) = 0;
+    virtual HRESULT __stdcall raw_GetErrorEllipsoid (
+        double coord1,
+        double coord2,
+        double coord3,
+        double stdDev1,
+        double stdDev2,
+        double stdDev3,
+        double covar12,
+        double covar13,
+        double covar23 ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementCameraInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementProbeInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_SetLongSystemParameter (
+        enum ES_SystemParameter systemParam,
+        long parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetLongSystemParameter (
+        enum ES_SystemParameter systemParam ) = 0;
+    virtual HRESULT __stdcall raw_GetMeasurementStatusInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetCurrentPrismPosition ( ) = 0;
+    virtual HRESULT __stdcall raw_SetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam,
+        double parameter ) = 0;
+    virtual HRESULT __stdcall raw_GetDoubleSystemParameter (
+        enum ES_SystemParameter systemParam ) = 0;
+    virtual HRESULT __stdcall raw_GetObjectTemperature ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTriggerBoardInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetOverviewCameraInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_ClearCommandQueue (
+        enum ES_ClearCommandQueueType __MIDL__ILTCommandAsync0000 ) = 0;
+    virtual HRESULT __stdcall raw_GetADMInfo2 ( ) = 0;
+    virtual HRESULT __stdcall raw_GetTrackerInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetNivelInfo2 ( ) = 0;
+    virtual HRESULT __stdcall raw_RestoreStartupConditions ( ) = 0;
+    virtual HRESULT __stdcall raw_GoAndMeasureStationaryPoint (
+        double refVal1,
+        double refVal2,
+        double refVal3 ) = 0;
+    virtual HRESULT __stdcall raw_GetTipToProbeCompensations2 ( ) = 0;
+    virtual HRESULT __stdcall raw_SetTipAdapter (
+        long tipAdapterID ) = 0;
+    virtual HRESULT __stdcall raw_GetATRInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetMeteoStationInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_GetAT4xxInfo ( ) = 0;
+    virtual HRESULT __stdcall raw_CallATRCompensation (
+        enum ES_ATR_Module atrModule ) = 0;
+};
+
+struct __declspec(uuid("58db5621-0186-11d5-bbb6-00508b35b332"))
+_ILTCommandAsyncEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT ErrorEvent (
+        enum ES_Command command,
+        enum ES_ResultStatus status );
+    HRESULT ReflectorsData (
+        long reflectorID,
+        _bstr_t reflectorName,
+        enum ES_TargetType targetType,
+        double surfaceOffset,
+        long reflectorsTotal );
+    HRESULT ContinuousPointMeasDataReady (
+        long resultsTotal,
+        long bytesTotal );
+    HRESULT ContinuousProbeMeasDataReady (
+        long resultsTotal,
+        long bytesTotal );
+    HRESULT ReflectorPositionData (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT CenterPointData (
+        enum ES_MeasMode measMode,
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT StatusChangeEvent (
+        enum ES_SystemStatusChange statusChange );
+    HRESULT CommandCompletedData (
+        enum ES_Command command );
+    HRESULT NivelMeasurementData (
+        enum ES_NivelStatus nivelStatus,
+        double xTilt,
+        double yTilt,
+        double nivelTemperature );
+    HRESULT StationaryPointMeasData (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double pointingError1,
+        double pointingError2,
+        double pointingError3,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT StationaryProbeMeasData (
+        enum ES_TriggerStatus triggerStatus,
+        long rotationStatus,
+        long probeID,
+        long fieldNumber,
+        enum ES_MeasurementTipStatus tipStatus,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        double position1,
+        double position2,
+        double position3,
+        double stdDevPosition1,
+        double stdDevPosition2,
+        double stdDevPosition3,
+        double stdDevPositionTotal,
+        double covarPosition12,
+        double covarPosition13,
+        double covarPosition23,
+        double aprioriStdDevPosition1,
+        double aprioriStdDevPosition2,
+        double aprioriStdDevPosition3,
+        double aprioriStdDevPositionTotal,
+        double aprioriCovarPosition12,
+        double aprioriCovarPosition13,
+        double aprioriCovarPosition23,
+        double quaternion0,
+        double quaternion1,
+        double quaternion2,
+        double quaternion3,
+        double rotationAngleX,
+        double rotationAngleY,
+        double rotationAngleZ,
+        double stdDevRotationAngleX,
+        double stdDevRotationAngleY,
+        double stdDevRotationAngleZ,
+        double stdDevRotationAngleTotal,
+        double covarRotationAngleXY,
+        double covarRotationAngleXZ,
+        double covarRotationAngleYZ,
+        double aprioriStdDevRotationAngleX,
+        double aprioriStdDevRotationAngleY,
+        double aprioriStdDevRotationAngleZ,
+        double aprioriStdDevRotationAngleTotal,
+        double aprioriCovarRotationAngleXY,
+        double aprioriCovarRotationAngleXZ,
+        double aprioriCovarRotationAngleYZ,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT AdmParamsData (
+        double targetStabilityTolerance,
+        long retryTimeFrame,
+        long numberOfRetrys );
+    HRESULT SearchParamsData (
+        double searchRadius,
+        long timeOut );
+    HRESULT SystemStatusData (
+        enum ES_ResultStatus LastResultStatus,
+        enum ES_TrackerProcessorStatus trackerProcessorStatus,
+        enum ES_LaserProcessorStatus laserStatus,
+        enum ES_ADMStatus admStatus,
+        long majorVersionNumber,
+        long minorVersionNumber,
+        long BuildNumber,
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        long flagsValue,
+        long trackerSerialNumber );
+    HRESULT TrackerStatusData (
+        enum ES_TrackerStatus trackerStatus );
+    HRESULT ReflectorData (
+        long reflectorID );
+    HRESULT SystemSettingsData (
+        enum ES_WeatherMonitorStatus weatherMonitorStatus,
+        VARIANT_BOOL applyTransformationParams,
+        VARIANT_BOOL applyStationOrientationParams,
+        VARIANT_BOOL keepLastPosition,
+        VARIANT_BOOL sendUnsolicitedMessages,
+        VARIANT_BOOL sendReflectorPositionData,
+        VARIANT_BOOL tryMeasurementMode,
+        VARIANT_BOOL hasNivel,
+        VARIANT_BOOL hasVideoCamera );
+    HRESULT UnitsData (
+        enum ES_LengthUnit lengthUnit,
+        enum ES_AngleUnit angleUnit,
+        enum ES_TemperatureUnit temperatureUnit,
+        enum ES_PressureUnit pressureUnit,
+        enum ES_HumidityUnit humidityUnit );
+    HRESULT StationOrientationParamsData (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3 );
+    HRESULT TransformationParamsData (
+        double val1,
+        double val2,
+        double val3,
+        double rot1,
+        double rot2,
+        double rot3,
+        double scale );
+    HRESULT TemperatureRangeData (
+        enum ES_TrackerTemperatureRange temperatureRange );
+    HRESULT EnvironmentParamsData (
+        double temperature,
+        double pressure,
+        double humidity );
+    HRESULT RefractionParamsData (
+        double ifmRefractionIndex,
+        double admRefractionIndex );
+    HRESULT MeasurementModeData (
+        enum ES_MeasMode measMode );
+    HRESULT BoxRegionParamsData (
+        double pt1Val1,
+        double pt1Val2,
+        double pt1Val3,
+        double pt2Val1,
+        double pt2Val2,
+        double pt2Val3 );
+    HRESULT SphereRegionParamsData (
+        double ptVal1,
+        double ptVal2,
+        double ptVal3,
+        double radius );
+    HRESULT StationaryModeParamsData (
+        long time,
+        VARIANT_BOOL useADM );
+    HRESULT GridModeParamsData (
+        double val1,
+        double val2,
+        double val3,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT ContinuousTimeModeParamsData (
+        long timeSeparation,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT ContinuousDistanceModeParamsData (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL useRegion,
+        enum ES_RegionType regionType );
+    HRESULT SphereCenterModeParamsData (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT CircleCenterModeParamsData (
+        double spatialDistance,
+        long numberOfPoints,
+        VARIANT_BOOL fixRadius,
+        double radius );
+    HRESULT CoordinateSystemTypeData (
+        enum ES_CoordinateSystemType coordSysType );
+    HRESULT TargetData (
+        double hzAngle,
+        double vtAngle );
+    HRESULT DirectionData (
+        double hzAngle,
+        double vtAngle );
+    HRESULT OrientToGravityData (
+        double omega,
+        double phi );
+    HRESULT IntermediateCompensationData (
+        double totalRMS,
+        double maxDev,
+        long warningFlags );
+    HRESULT TransformationInputParamsData (
+        enum ES_TransResultType transResultType,
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd );
+    HRESULT TransformationData (
+        double transVal1,
+        double transVal2,
+        double transVal3,
+        double rotVal1,
+        double rotVal2,
+        double rotVal3,
+        double scale,
+        double transStdVal1,
+        double transStdVal2,
+        double transStdVal3,
+        double rotStdVal1,
+        double rotStdVal2,
+        double rotStdVal3,
+        double scaleStd,
+        double RMS,
+        double maxDev,
+        double varianceFactor );
+    HRESULT TransformedPointsData (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double covar12,
+        double covar13,
+        double covar23,
+        double residualVal1,
+        double residualVal2,
+        double residualVal3,
+        long totalPoints );
+    HRESULT StatisticModeData (
+        enum ES_StatisticMode stationaryMeasurements,
+        enum ES_StatisticMode continuousMeasurements );
+    HRESULT StationaryPoint2MeasData (
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double covar12,
+        double covar13,
+        double covar23,
+        double pointingErrorH,
+        double pointingErrorV,
+        double pointingErrorD,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double aprioriCovar12,
+        double aprioriCovar13,
+        double aprioriCovar23,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT CenterPoint2Data (
+        enum ES_MeasMode measMode,
+        double val1,
+        double val2,
+        double val3,
+        double std1,
+        double std2,
+        double std3,
+        double stdTotal,
+        double covar12,
+        double covar13,
+        double covar23,
+        double aprioriStd1,
+        double aprioriStd2,
+        double aprioriStd3,
+        double aprioriStdTotal,
+        double aprioriCovar12,
+        double aprioriCovar13,
+        double aprioriCovar23,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT CameraParamsData (
+        long contrast,
+        long brightness,
+        long saturation );
+    HRESULT StillImageDataReady (
+        enum ES_StillImageFileType imageFileType,
+        long fileSize,
+        long bytesTotal );
+    HRESULT CompensationsData (
+        long compensationId,
+        _bstr_t trackerCompensationName,
+        _bstr_t trackerCompensationComment,
+        _bstr_t ADMCompensationName,
+        VARIANT_BOOL hasMeasurementCameraMounted,
+        long compensationsTotal );
+    HRESULT CompensationData (
+        long compensationId );
+    HRESULT CheckBirdBathData (
+        double initialHzAngle,
+        double initialVtAngle,
+        double initialDistance,
+        double hzAngleDiff,
+        double vtAngleDiff,
+        double distanceDiff );
+    HRESULT TrackerDiagnosticsData (
+        double trkPhotoSensorXVal,
+        double trkPhotoSensorYVal,
+        double trkPhotoSensorIVal,
+        double refPhotoSensorXVal,
+        double refPhotoSensorYVal,
+        double refPhotoSensorIVal,
+        double ADConverterRange,
+        double servoControlPointX,
+        double servoControlPointY,
+        double laserLightRatio,
+        long laserControlMode,
+        double sensorInsideTemperature,
+        long LCPRunTime,
+        long laserTubeRunTime );
+    HRESULT ADMInfoData (
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        long serialNumber );
+    HRESULT TPInfoData (
+        long TPBootMajorVersionNumber,
+        long TPBootMinorVersionNumber,
+        long TPFirmWareMajorVersionNumber,
+        long TPFirmWareMinorVersionNumber,
+        long LCPFirmWareMajorVersionNumber,
+        long LCPFirmWareMinorVersionNumber,
+        enum ES_TrackerProcessorType trackerprocessorType,
+        enum ES_TPMicroProcessorType microProcessorType,
+        long microProcessorClockSpeed,
+        enum ES_LTSensorType laserTrackerSensorType );
+    HRESULT NivelInfoData (
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        long serialNumber );
+    HRESULT LaserOnTimerData (
+        long timeOffsetHour,
+        long timeOffsetMinute );
+    HRESULT ProbePositionData (
+        long rotationStatus,
+        enum ES_MeasurementTipStatus tipStatus,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        double position1,
+        double position2,
+        double position3,
+        double quaternion0,
+        double quaternion1,
+        double quaternion2,
+        double quaternion3,
+        double rotationAngleX,
+        double rotationAngleY,
+        double rotationAngleZ );
+    HRESULT DisplayCoordinatesData (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT TriggerSourceData (
+        enum ES_TriggerSource triggerSource );
+    HRESULT FaceData (
+        enum ES_TrackerFace trackerFace );
+    HRESULT CamerasData (
+        long cameraID,
+        long serialNumber,
+        enum ES_MeasurementCameraType cameraType,
+        _bstr_t cameraName,
+        _bstr_t comment,
+        long camerasTotal );
+    HRESULT ProbesData (
+        long probeID,
+        long serialNumber,
+        _bstr_t probeName,
+        enum ES_ProbeType probeType,
+        long iNumberOfFields,
+        _bstr_t comment,
+        long probesTotal );
+    HRESULT TipAdaptersData (
+        long tipAdapterID,
+        long assemblyID,
+        long serialNumberLowPart,
+        long serialNumberHighPart,
+        _bstr_t tipName,
+        enum ES_TipType tipType,
+        double radius,
+        double length,
+        _bstr_t comment,
+        long tipAdaptersTotal );
+    HRESULT TCamToTrackerCompensationsData (
+        long tCamToTrackerCompensationID,
+        long trackerCompensationID,
+        long cameraID,
+        VARIANT_BOOL isActive,
+        long trackerSerialNumber,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        long compensationsTotal );
+    HRESULT ProbeCompensationsData (
+        long probeCompensationID,
+        long probeID,
+        long fieldNumber,
+        VARIANT_BOOL isActive,
+        VARIANT_BOOL markedForExport,
+        VARIANT_BOOL isPreliminary,
+        _bstr_t probeCompensationName,
+        _bstr_t probeCompensationComment,
+        long compensationsTotal );
+    HRESULT TipToProbeCompensationsData (
+        long tipToProbeCompensationID,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        long probeCompensationID,
+        VARIANT_BOOL markedForExport,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        long compensationsTotal );
+    HRESULT CameraData (
+        long cameraID,
+        VARIANT_BOOL isMeasurementCameraMounted );
+    HRESULT MeasurementCameraModeData (
+        enum ES_MeasurementCameraMode cameraMode );
+    HRESULT ProbeData (
+        long probeID );
+    HRESULT TipAdapterData (
+        long tipAdapterID,
+        long tipAdapterInterface );
+    HRESULT TCamToTrackerCompensationData (
+        long tCamToTrackerCompensationID );
+    HRESULT ProbeCompensationData (
+        long probeCompensationID );
+    HRESULT ExternTriggerParamsData (
+        enum ES_ClockTransition clockTransition,
+        enum ES_TriggerMode triggerMode,
+        enum ES_TriggerStartSignal startSignal,
+        long minimalTimeDelay );
+    HRESULT ErrorEllipsoidData (
+        double stdDevX,
+        double stdDevY,
+        double stdDevZ,
+        double rotationAngleX,
+        double rotationAngleY,
+        double rotationAngleZ );
+    HRESULT TipToProbeCompensationData (
+        long tipToProbeCompensationID );
+    HRESULT CenterPointProbeData (
+        enum ES_MeasMode measMode,
+        double position1,
+        double position2,
+        double position3,
+        double stdDevPosition1,
+        double stdDevPosition2,
+        double stdDevPosition3,
+        double stdDevPositionTotal,
+        double covarPosition12,
+        double covarPosition13,
+        double covarPosition23,
+        double aprioriStdDevPosition1,
+        double aprioriStdDevPosition2,
+        double aprioriStdDevPosition3,
+        double aprioriStdDevPositionTotal,
+        double aprioriCovarPosition12,
+        double aprioriCovarPosition13,
+        double aprioriCovarPosition23,
+        double temperature,
+        double pressure,
+        double humidity,
+        VARIANT_BOOL isTryMode );
+    HRESULT MeasurementCameraInfoData (
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        long serialNumber,
+        enum ES_MeasurementCameraType cameraType,
+        _bstr_t cameraName,
+        long compensationIdNumber,
+        long zoomSerialNumber,
+        long zoomAdjustmentIdNumber,
+        long zoom2DCompensationIdNumber,
+        long zoomProjCenterCompIdNumber,
+        double maxDistance,
+        double minDistance,
+        long nrOfPixelsX,
+        long nrOfPixelsY,
+        double pixelSizeX,
+        double pixelSizeY,
+        long maxDataRate );
+    HRESULT MeasurementProbeInfoData (
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        long serialNumber,
+        enum ES_ProbeType probeType,
+        long compensationIdNumber,
+        long activeField,
+        enum ES_ProbeConnectionType connectionType,
+        long numberOfTipMounts,
+        enum ES_ProbeButtonType probeButtonType,
+        long numberOfFields,
+        VARIANT_BOOL hasWideAngleReceiver,
+        long numberOfTipDataSets,
+        long numberOfMelodies,
+        long numberOfLoudnesSteps );
+    HRESULT SystemParameterData (
+        enum ES_SystemParameter systemParam,
+        long parameter );
+    HRESULT MeasurementStatusInfoData (
+        long measurementStatusInfo );
+    HRESULT Compensations2Data (
+        long compensationId,
+        _bstr_t trackerCompensationName,
+        _bstr_t trackerCompensationComment,
+        _bstr_t ADMCompensationName,
+        _bstr_t ADMCompensationComment,
+        VARIANT_BOOL hasMeasurementCameraMounted,
+        VARIANT_BOOL isActive,
+        long compensationsTotal );
+    HRESULT CurrentPrismPositionData (
+        double val1,
+        double val2,
+        double val3 );
+    HRESULT LongSystemParameterData (
+        enum ES_SystemParameter systemParam,
+        long parameter );
+    HRESULT DoubleSystemParameterData (
+        enum ES_SystemParameter systemParam,
+        double parameter );
+    HRESULT ObjectTemperatureData (
+        double objectTemperature );
+    HRESULT TriggerBoardInfoData (
+        enum ES_TriggerCardType triggerCardType,
+        long FPGAVersion,
+        long maxTriggerFrequency,
+        long errorCode );
+    HRESULT OverviewCameraInfoData (
+        enum ES_OverviewCameraType cameraType,
+        _bstr_t cameraName,
+        VARIANT_BOOL isColorCamera,
+        double focalLength,
+        double horizontalChipSize,
+        double verticalChipSize,
+        VARIANT_BOOL mirrorImageHz,
+        VARIANT_BOOL mirrorImageVt );
+    HRESULT ADMInfo2Data (
+        enum ES_ADMType admType,
+        _bstr_t ADMName,
+        long serialNumber,
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        double maxDistance,
+        double minDistance,
+        long maxDataRate,
+        double accuracyADMDistance );
+    HRESULT TrackerInfoData (
+        enum ES_LTSensorType trackerType,
+        _bstr_t trackerName,
+        long serialNumber,
+        long compensationIdNumber,
+        VARIANT_BOOL hasADM,
+        VARIANT_BOOL hasOverviewCamera,
+        VARIANT_BOOL hasNivel,
+        double nivelMountOffset,
+        double maxDistance,
+        double minDistance,
+        long maxDataRate,
+        long numberOfFaces,
+        double hzAngleRange,
+        double vtAngleRange,
+        enum ES_TrkAccuracyModel accuracyModel,
+        long majLCPFirmwareVersion,
+        long minLCPFirmwareVersion );
+    HRESULT NivelInfo2Data (
+        enum ES_NivelType nivelType,
+        _bstr_t nivelName,
+        long serialNumber,
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber,
+        double measurementRange,
+        double measurementAccuracyOffset,
+        double measurementAccuracyFactor );
+    HRESULT TipToProbeCompensations2Data (
+        long tipToProbeCompensationID,
+        long tipAdapterID,
+        long tipAdapterInterface,
+        long probeCompensationID,
+        VARIANT_BOOL markedForExport,
+        enum ES_TipToProbeCompensationType compensationType,
+        _bstr_t compensationName,
+        _bstr_t comment,
+        _bstr_t shankCompensationName,
+        long compensationsTotal );
+    HRESULT ATRInfoData (
+        enum ES_ATRType atrType,
+        _bstr_t atrName,
+        long majFirmwareVersion,
+        long minFirmwareVersion,
+        long buildFirmwareVersion,
+        long hardwareVersion,
+        long errorCode,
+        long FPGAVersion,
+        double maxDistance,
+        double minDistance,
+        double fieldOfView,
+        double maxTrackingSpeed );
+    HRESULT ExceptionEvent (
+        long errorNumber,
+        _bstr_t errorText );
+    HRESULT MeteoStationInfoData (
+        enum ES_MeteoStationType meteoStationType,
+        _bstr_t identifier,
+        long firmWareMajorVersionNumber,
+        long firmWareMinorVersionNumber );
+    HRESULT AT4xxInfoData (
+        enum ES_LTSensorType trackerType,
+        _bstr_t trackerName,
+        long serialNumber,
+        long majorFirmwareVersion,
+        long minorFirmwareVersion,
+        long processorBoardFWBuildNumber,
+        long sensorBoardFWBuildNumber,
+        long majorOSVersion,
+        long minorOSVersion,
+        long majorServerSoftwareVersion,
+        long minorServerSoftwareVersion,
+        long serverSoftwareBuildNumber,
+        enum ES_WLANType wlanType,
+        enum ES_TPMicroProcessorType xscaleType,
+        long minMeasureTime,
+        double minDistance,
+        double maxDistance,
+        double stdDevDistOffsetADM,
+        double stdDevAngleConst,
+        double stdDevAngleOffset,
+        double stdDevAngleFactor );
+    HRESULT ATRCompensationData (
+        double X0,
+        double Y0,
+        double stdDevX0,
+        double stdDevY0,
+        double scale,
+        double rollAngle,
+        double asymmetry,
+        double distance );
+};
+
+struct ErrorResponseT
+{
+    struct PacketHeaderT packetHeader;
+    enum ES_Command command;
+    enum ES_ResultStatus status;
+};
+
+struct BasicCommandRT
+{
+    struct PacketHeaderT packetHeader;
+    enum ES_Command command;
+    enum ES_ResultStatus status;
+};
+
+struct ReflectorPosResultT
+{
+    struct ReturnDataT packetInfo;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+};
+
+struct MeasValueT
+{
+    enum ES_MeasurementStatus status;
+    long lTime1;
+    long lTime2;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+};
+
+struct MultiMeasResultT
+{
+    struct ReturnDataT packetInfo;
+    long lNumberOfResults;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+    struct MeasValueT data[1];
+};
+
+struct ProbeMeasValueT
+{
+    enum ES_MeasurementStatus status;
+    enum ES_TriggerStatus triggerStatus;
+    long lRotationStatus;
+    long lTime1;
+    long lTime2;
+    double dPosition1;
+    double dPosition2;
+    double dPosition3;
+    double dStdDevPosition1;
+    double dStdDevPosition2;
+    double dStdDevPosition3;
+    double dStdDevPositionTotal;
+    double dCovarPosition12;
+    double dCovarPosition13;
+    double dCovarPosition23;
+    double dQuaternion0;
+    double dQuaternion1;
+    double dQuaternion2;
+    double dQuaternion3;
+    double dRotationAngleX;
+    double dRotationAngleY;
+    double dRotationAngleZ;
+    double dStdDevRotationAngleX;
+    double dStdDevRotationAngleY;
+    double dStdDevRotationAngleZ;
+    double dStdDevRotationAngleTotal;
+    double dCovarRotationAngleXY;
+    double dCovarRotationAngleXZ;
+    double dCovarRotationAngleYZ;
+};
+
+struct ProbeContinuousResultT
+{
+    struct ReturnDataT packetInfo;
+    long lNumberOfResults;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    int iInternalProbeId;
+    int iFieldNumber;
+    enum ES_MeasurementTipStatus tipStatus;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+    struct ProbeMeasValueT data[1];
+};
+
+struct ESVersionNumberT
+{
+    int iMajorVersionNumber;
+    int iMinorVersionNumber;
+    int iBuildNumber;
+};
+
+struct GetCoordinateSystemTypeRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_CoordinateSystemType coordSysType;
+};
+
+struct GetTemperatureRangeRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_TrackerTemperatureRange temperatureRange;
+};
+
+struct GetMeasurementModeRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_MeasMode measMode;
+};
+
+struct GetStationaryModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct StationaryModeDataT stationaryModeData;
+};
+
+struct GetContinuousTimeModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct ContinuousTimeModeDataT continuousTimeModeData;
+};
+
+struct GetContinuousDistanceModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct ContinuousDistanceModeDataT continuousDistanceModeData;
+};
+
+struct GetSphereCenterModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct SphereCenterModeDataT sphereCenterModeData;
+};
+
+struct GetCircleCenterModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct CircleCenterModeDataT circleCenterModeData;
+};
+
+struct GetGridModeParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct GridModeDataT gridModeData;
+};
+
+struct GetSystemSettingsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct SystemSettingsDataT systemSettings;
+};
+
+struct GetUnitsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct SystemUnitsDataT unitsSettings;
+};
+
+struct GetSystemStatusRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_ResultStatus LastResultStatus;
+    enum ES_TrackerProcessorStatus trackerProcessorStatus;
+    enum ES_LaserProcessorStatus laserStatus;
+    enum ES_ADMStatus admStatus;
+    struct ESVersionNumberT esVersionNumber;
+    enum ES_WeatherMonitorStatus weatherMonitorStatus;
+    long lFlagsValue;
+    long lTrackerSerialNumber;
+};
+
+struct GetTrackerStatusRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_TrackerStatus trackerStatus;
+};
+
+struct GetReflectorsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalReflectors;
+    int iInternalReflectorId;
+    enum ES_TargetType targetType;
+    double dSurfaceOffset;
+    unsigned short cReflectorName[32];
+};
+
+struct GetReflectorRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalReflectorId;
+};
+
+struct GetEnvironmentParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct EnvironmentDataT environmentData;
+};
+
+struct GetRefractionParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct RefractionDataT refractionData;
+};
+
+struct GetStationOrientationParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct StationOrientationDataT stationOrientation;
+};
+
+struct GetTransformationParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct TransformationDataT TransformationData;
+};
+
+struct GetBoxRegionParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct BoxRegionDataT boxRegionData;
+};
+
+struct GetSphereRegionParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct SphereRegionDataT sphereRegionData;
+};
+
+struct SystemStatusChangeT
+{
+    struct PacketHeaderT packetHeader;
+    enum ES_SystemStatusChange systemStatusChange;
+};
+
+struct LookForTargetRT
+{
+    struct BasicCommandRT packetInfo;
+    double dHzAngle;
+    double dVtAngle;
+};
+
+struct GetDirectionRT
+{
+    struct BasicCommandRT packetInfo;
+    double dHzAngle;
+    double dVtAngle;
+};
+
+struct GetSearchParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct SearchParamsDataT searchParams;
+};
+
+struct GetAdmParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct AdmParamsDataT admParams;
+};
+
+struct CallOrientToGravityRT
+{
+    struct BasicCommandRT packetInfo;
+    double dOmega;
+    double dPhi;
+};
+
+struct CallIntermediateCompensationRT
+{
+    struct BasicCommandRT packetInfo;
+    double dTotalRMS;
+    double dMaxDev;
+    long lWarningFlags;
+};
+
+struct CallTransformationRT
+{
+    struct BasicCommandRT packetInfo;
+    double dTransVal1;
+    double dTransVal2;
+    double dTransVal3;
+    double dRotVal1;
+    double dRotVal2;
+    double dRotVal3;
+    double dScale;
+    double dTransStdVal1;
+    double dTransStdVal2;
+    double dTransStdVal3;
+    double dRotStdVal1;
+    double dRotStdVal2;
+    double dRotStdVal3;
+    double dScaleStd;
+    double dRMS;
+    double dMaxDev;
+    double dVarianceFactor;
+};
+
+struct GetTransformationInputParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct TransformationInputDataT TransformationData;
+};
+
+struct GetTransformedPointsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalPoints;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dStd1;
+    double dStd2;
+    double dStd3;
+    double dStdTotal;
+    double dCovar12;
+    double dCovar13;
+    double dCovar23;
+    double dResidualVal1;
+    double dResidualVal2;
+    double dResidualVal3;
+};
+
+struct GetStatisticModeRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_StatisticMode stationaryMeasurements;
+    enum ES_StatisticMode continuousMeasurements;
+};
+
+struct MeasValue2T
+{
+    enum ES_MeasurementStatus status;
+    long lTime1;
+    long lTime2;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+    double dAprioriStd1;
+    double dAprioriStd2;
+    double dAprioriStd3;
+    double dAprioriStdTotal;
+    double dAprioriCovar12;
+    double dAprioriCovar13;
+    double dAprioriCovar23;
+};
+
+struct MultiMeasResult2T
+{
+    struct ReturnDataT packetInfo;
+    long lNumberOfResults;
+    enum ES_MeasMode measMode;
+    int bIsTryMode;
+    double dTemperature;
+    double dPressure;
+    double dHumidity;
+    struct MeasValue2T data[1];
+};
+
+struct GetStillImageRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_StillImageFileType imageFileType;
+    long lFileSize;
+    char cFileStart;
+};
+
+struct GetCameraParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct CameraParamsDataT cameraParams;
+};
+
+struct GetCompensationRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalCompensationId;
+};
+
+struct GetCompensationsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalCompensationId;
+    unsigned short cTrackerCompensationName[32];
+    unsigned short cTrackerCompensationComment[128];
+    unsigned short cADMCompensationName[32];
+    int bHasMeasurementCameraMounted;
+};
+
+struct CheckBirdBathRT
+{
+    struct BasicCommandRT packetInfo;
+    double dInitialHzAngle;
+    double dInitialVtAngle;
+    double dInitialDistance;
+    double dHzAngleDiff;
+    double dVtAngleDiff;
+    double dDistanceDiff;
+};
+
+struct GetTrackerDiagnosticsRT
+{
+    struct BasicCommandRT packetInfo;
+    double dTrkPhotoSensorXVal;
+    double dTrkPhotoSensorYVal;
+    double dTrkPhotoSensorIVal;
+    double dRefPhotoSensorXVal;
+    double dRefPhotoSensorYVal;
+    double dRefPhotoSensorIVal;
+    double dADConverterRange;
+    double dServoControlPointX;
+    double dServoControlPointY;
+    double dLaserLightRatio;
+    int iLaserControlMode;
+    double dSensorInsideTemperature;
+    int iLCPRunTime;
+    int iLaserTubeRunTime;
+};
+
+struct GetADMInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    long lSerialNumber;
+};
+
+struct GetNivelInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    long lSerialNumber;
+};
+
+struct GetTPInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTPBootMajorVersionNumber;
+    int iTPBootMinorVersionNumber;
+    int iTPFirmwareMajorVersionNumber;
+    int iTPFirmwareMinorVersionNumber;
+    int iLCPFirmwareMajorVersionNumber;
+    int iLCPFirmwareMinorVersionNumber;
+    enum ES_TrackerProcessorType trackerprocessorType;
+    enum ES_TPMicroProcessorType microProcessorType;
+    int iMicroProcessorClockSpeed;
+    enum ES_LTSensorType laserTrackerSensorType;
+};
+
+struct GetLaserOnTimerRT
+{
+    struct BasicCommandRT packetInfo;
+    int iLaserOnTimeOffsetHour;
+    int iLaserOnTimeOffsetMinute;
+};
+
+struct ProbePosResultT
+{
+    struct ReturnDataT packetInfo;
+    long lRotationStatus;
+    enum ES_MeasurementTipStatus tipStatus;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+    double dPosition1;
+    double dPosition2;
+    double dPosition3;
+    double dQuaternion0;
+    double dQuaternion1;
+    double dQuaternion2;
+    double dQuaternion3;
+    double dRotationAngleX;
+    double dRotationAngleY;
+    double dRotationAngleZ;
+};
+
+struct ConvertDisplayCoordinatesRT
+{
+    struct BasicCommandRT packetInfo;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+};
+
+struct GetTriggerSourceRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_TriggerSource triggerSource;
+};
+
+struct GetFaceRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_TrackerFace trackerFace;
+};
+
+struct GetCamerasRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCameras;
+    int iInternalCameraId;
+    long lSerialNumber;
+    enum ES_MeasurementCameraType cameraType;
+    unsigned short cName[32];
+    unsigned short cComment[128];
+};
+
+struct GetCameraRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalCameraId;
+    int bMeasurementCameraIsMounted;
+};
+
+struct GetMeasurementCameraModeRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_MeasurementCameraMode cameraMode;
+};
+
+struct GetProbesRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalProbes;
+    int iInternalProbeId;
+    long lSerialNumber;
+    enum ES_ProbeType probeType;
+    int iNumberOfFields;
+    unsigned short cName[32];
+    unsigned short cComment[128];
+};
+
+struct GetProbeRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalProbeId;
+};
+
+struct GetTipAdaptersRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalTipAdapters;
+    int iInternalTipAdapterId;
+    long lAssemblyId;
+    long lSerialNumberLowPart;
+    long lSerialNumberHighPart;
+    enum ES_TipType tipType;
+    double dRadius;
+    double dLength;
+    unsigned short cName[32];
+    unsigned short cComment[128];
+};
+
+struct GetTipAdapterRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+};
+
+struct GetTCamToTrackerCompensationsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalTCamToTrackerCompensationId;
+    int iInternalTrackerCompensationId;
+    int iInternalCameraId;
+    int bIsActive;
+    long lTrackerSerialNumber;
+    unsigned short cTCamToTrackerCompensationName[32];
+    unsigned short cTCamToTrackerCompensationComment[128];
+};
+
+struct GetTCamToTrackerCompensationRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalTCamToTrackerCompensationId;
+};
+
+struct GetProbeCompensationsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalProbeCompensationId;
+    int iInternalProbeId;
+    int iFieldNumber;
+    int bIsActive;
+    int bMarkedForExport;
+    int bPreliminary;
+    unsigned short cProbeCompensationName[32];
+    unsigned short cProbeCompensationComment[128];
+};
+
+struct GetProbeCompensationRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalProbeCompensationId;
+};
+
+struct GetTipToProbeCompensationsRT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalTipToProbeCompensationId;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+    int iInternalProbeCompensationId;
+    int bMarkedForExport;
+    unsigned short cTipToProbeCompensationName[32];
+    unsigned short cTipToProbeCompensationComment[128];
+};
+
+struct GetTipToProbeCompensationRT
+{
+    struct BasicCommandRT packetInfo;
+    int iInternalTipToProbeCompensationId;
+};
+
+struct GetExternTriggerParamsRT
+{
+    struct BasicCommandRT packetInfo;
+    struct ExternTriggerParamsT triggerParams;
+};
+
+struct GetErrorEllipsoidRT
+{
+    struct BasicCommandRT packetInfo;
+    double dStdDevX;
+    double dStdDevY;
+    double dStdDevZ;
+    double dRotationAngleX;
+    double dRotationAngleY;
+    double dRotationAngleZ;
+};
+
+struct GetMeasurementCameraInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    long lSerialNumber;
+    enum ES_MeasurementCameraType cameraType;
+    unsigned short cName[32];
+    long lCompensationIdNumber;
+    long lZoomSerialNumber;
+    long lZoomAdjustmentIdNumber;
+    long lZoom2DCompensationIdNumber;
+    long lZoomProjCenterCompIdNumber;
+    double dMaxDistance;
+    double dMinDistance;
+    long lNrOfPixelsX;
+    long lNrOfPixelsY;
+    double dPixelSizeX;
+    double dPixelSizeY;
+    long lMaxDataRate;
+};
+
+struct GetMeasurementProbeInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    long lSerialNumber;
+    enum ES_ProbeType probeType;
+    long lCompensationIdNumber;
+    long lActiveField;
+    enum ES_ProbeConnectionType connectionType;
+    long lNumberOfTipAdapters;
+    enum ES_ProbeButtonType probeButtonType;
+    long lNumberOfFields;
+    int bHasWideAngleReceiver;
+    long lNumberOfTipDataSets;
+    long lNumberOfMelodies;
+    long lNumberOfLoudnesSteps;
+};
+
+enum ES_ProbeConfigButton
+{
+    ES_PCB_SingleClick = 0,
+    ES_PCB_StartStop = 1,
+    ES_PCB_4ButtonMode = 2
+};
+
+enum ES_ProbeConfigTip
+{
+    ES_PCT_OnlyWithTip = 0,
+    ES_PCT_NoTipAllowed = 1,
+    ES_PCT_OnlyWithShankCompensation = 2
+};
+
+enum ES_MeasurementStatusInfo
+{
+    ES_MSI_Unknown = 0,
+    ES_MSI_TrackerFound = 1,
+    ES_MSI_TrackerCompensationFound = 2,
+    ES_MSI_ADMFound = 4,
+    ES_MSI_ADMCompensationFound = 8,
+    ES_MSI_MeasurementCameraFound = 16,
+    ES_MSI_InternalCameraParamsOK = 32,
+    ES_MSI_CameraToTrackerParamsFound = 64,
+    ES_MSI_MeasurementProbeFound = 128,
+    ES_MSI_ProbeParamsFound = 256,
+    ES_MSI_MeasurementTipFound = 512,
+    ES_MSI_TipParamsFound = 1024,
+    ES_MSI_ReflectorFound = 2048,
+    ES_MSI_InFace1 = 4096,
+    ES_MSI_ShankParamsFound = 8192
+};
+
+struct GetCompensations2RT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalCompensationId;
+    unsigned short cTrackerCompensationName[32];
+    unsigned short cTrackerCompensationComment[128];
+    unsigned short cADMCompensationName[32];
+    unsigned short cADMCompensationComment[128];
+    int bHasMeasurementCameraMounted;
+    int bIsActive;
+};
+
+struct GetCurrentPrismPositionRT
+{
+    struct BasicCommandRT packetInfo;
+    double dVal1;
+    double dVal2;
+    double dVal3;
+};
+
+struct GetOverviewCameraInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_OverviewCameraType cameraType;
+    unsigned short cCameraName[32];
+    int bIsColorCamera;
+    double dFocalLength;
+    double dHorizontalChipSize;
+    double dVerticalChipSize;
+    int bMirrorImageHz;
+    int bMirrorImageVt;
+};
+
+struct GetTriggerBoardInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_TriggerCardType triggerCardType;
+    long lFPGAVersion;
+    long lMaxTriggerFrequency;
+    long lErrorCode;
+};
+
+struct GetADMInfo2RT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_ADMType admType;
+    unsigned short cADMName[32];
+    long lSerialNumber;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    double dMaxDistance;
+    double dMinDistance;
+    int iMaxDataRate;
+    double dAccuracyADMDistance;
+};
+
+struct GetTrackerInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_LTSensorType trackerType;
+    unsigned short cTrackerName[32];
+    long lSerialNumber;
+    long lCompensationIdNumber;
+    int bHasADM;
+    int bHasOverviewCamera;
+    int bHasNivel;
+    double dNivelMountOffset;
+    double dMaxDistance;
+    double dMinDistance;
+    int iMaxDataRate;
+    int iNumberOfFaces;
+    double dHzAngleRange;
+    double dVtAngleRange;
+    enum ES_TrkAccuracyModel accuracyModel;
+    int iMajLCPFirmwareVersion;
+    int iMinLCPFirmwareVersion;
+};
+
+struct GetNivelInfo2RT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_NivelType nivelType;
+    unsigned short cNivelName[32];
+    long lSerialNumber;
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+    double dMeasurementRange;
+    double dMeasurementAccuracyOffset;
+    double dMeasurementAccuracyFactor;
+};
+
+struct GetTipToProbeCompensations2RT
+{
+    struct BasicCommandRT packetInfo;
+    int iTotalCompensations;
+    int iInternalTipToProbeCompensationId;
+    int iInternalTipAdapterId;
+    int iTipAdapterInterface;
+    int iInternalProbeCompensationId;
+    int bMarkedForExport;
+    enum ES_TipToProbeCompensationType compensationType;
+    unsigned short cTipToProbeCompensationName[32];
+    unsigned short cTipToProbeCompensationComment[128];
+    unsigned short cShankCompensationName[32];
+};
+
+enum ES_QuickReleaseStatus
+{
+    ES_QRS_NotExisting = -1,
+    ES_QRS_Closed = 0,
+    ES_QRS_Open = 1
+};
+
+struct GetATRInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_ATRType atrType;
+    unsigned short cATRName[32];
+    long lMajFirmwareVersion;
+    long lMinFirmwareVersion;
+    long lBuildFirmwareVersion;
+    long lHardwareVersion;
+    long lErrorCode;
+    long lFPGAVersion;
+    double dMaxDistance;
+    double dMinDistance;
+    double dFieldOfView;
+    double dMaxTrackingSpeed;
+};
+
+struct GetMeteoStationInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_MeteoStationType meteoStationType;
+    unsigned short cIdentifier[32];
+    int iFirmwareMajorVersionNumber;
+    int iFirmwareMinorVersionNumber;
+};
+
+struct GetAT4xxInfoRT
+{
+    struct BasicCommandRT packetInfo;
+    enum ES_LTSensorType trackerType;
+    unsigned short cTrackerName[32];
+    long lSerialNumber;
+    long lMajorFirmwareVersion;
+    long lMinorFirmwareVersion;
+    long lProcessorBoardFWBuildNumber;
+    long lSensorBoardFWBuildNumber;
+    long lMajorOSVersion;
+    long lMinorOSVersion;
+    long lMajorServerSoftwareVersion;
+    long lMinorServerSoftwareVersion;
+    long lServerSoftwareBuildNumber;
+    enum ES_WLANType wlanType;
+    enum ES_TPMicroProcessorType xscaleType;
+    long lMinMeasureTime;
+    double dMinDistance;
+    double dMaxDistance;
+    double dStdDevDistOffsetADM;
+    double dStdDevAngleConst;
+    double dStdDevAngleOffset;
+    double dStdDevAngleFactor;
+};
+
+struct __declspec(uuid("e73780a3-025c-11d5-bbb7-00508b35b332"))
+LTConnect;
+    // [ default ] interface ILTConnect
+
+struct __declspec(uuid("58db561e-0186-11d5-bbb6-00508b35b332"))
+LTCommandSync;
+    // [ default ] interface ILTCommandSync
+    // [ default, source ] dispinterface _ILTCommandSyncEvents
+
+struct __declspec(uuid("58db5620-0186-11d5-bbb6-00508b35b332"))
+LTCommandAsync;
+    // [ default ] interface ILTCommandAsync
+    // [ default, source ] dispinterface _ILTCommandAsyncEvents
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_LTCONTROLLib =
+    {0x58db560b,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) IID_ILTConnect =
+    {0xe73780a2,0x025c,0x11d5,{0xbb,0xb7,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) IID_ILTCommandSync =
+    {0x58db561d,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) DIID__ILTCommandSyncEvents =
+    {0x05022814,0x3b56,0x11d5,{0x92,0x9a,0x16,0x8c,0xd7,0x00,0x00,0x00}};
+extern "C" const GUID __declspec(selectany) IID_ILTCommandAsync =
+    {0x58db561f,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) DIID__ILTCommandAsyncEvents =
+    {0x58db5621,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) CLSID_LTConnect =
+    {0xe73780a3,0x025c,0x11d5,{0xbb,0xb7,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) CLSID_LTCommandSync =
+    {0x58db561e,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+extern "C" const GUID __declspec(selectany) CLSID_LTCommandAsync =
+    {0x58db5620,0x0186,0x11d5,{0xbb,0xb6,0x00,0x50,0x8b,0x35,0xb3,0x32}};
+
+//
+// Wrapper method implementations
+//
+
+#include "LTControl.tli"
+
+#pragma pack(pop)

@@ -1,0 +1,2806 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (29258bf5).
+//
+// LTControl.tli
+//
+// Wrapper implementations for Win32 type library ..\..\lib\LTControl.tlb
+// compiler-generated file created 11/28/12 at 15:56:32 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ILTConnect wrapper method implementations
+//
+
+inline IUnknownPtr ILTConnect::GetILTCommandAsync ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_ILTCommandAsync(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IUnknownPtr ILTConnect::GetILTCommandSync ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_ILTCommandSync(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline enum ES_ResultStatus ILTConnect::GetLastResultStatus ( ) {
+    enum ES_ResultStatus _result;
+    HRESULT _hr = get_LastResultStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ILTConnect::ConnectEmbeddedSystem ( _bstr_t address, long port ) {
+    HRESULT _hr = raw_ConnectEmbeddedSystem(address, port);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::DisconnectEmbeddedSystem ( ) {
+    HRESULT _hr = raw_DisconnectEmbeddedSystem();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::SelectNotificationMethod ( enum LTC_NotifyMethod notifyMethod, long targetHandle, long cookie ) {
+    HRESULT _hr = raw_SelectNotificationMethod(notifyMethod, targetHandle, cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::GetData ( VARIANT * data ) {
+    HRESULT _hr = raw_GetData(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::ContinuousDataGetHeaderInfo ( VARIANT * data, long * numberOfResults, enum ES_MeasMode * measMode, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_ContinuousDataGetHeaderInfo(data, numberOfResults, measMode, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::ContinuousPointGetAt ( VARIANT * data, long index, enum ES_MeasurementStatus * status, long * time1, long * time2, double * val1, double * val2, double * val3 ) {
+    HRESULT _hr = raw_ContinuousPointGetAt(data, index, status, time1, time2, val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::ContinuousProbeDataGetAt ( VARIANT * data, long index, enum ES_MeasurementStatus * status, enum ES_TriggerStatus * triggerStatus, long * rotationStatus, long * time1, long * time2, double * position1, double * position2, double * position3, double * stdDevPosition1, double * stdDevPosition2, double * stdDevPosition3, double * stdDevPositionTotal, double * covarPosition12, double * covarPosition13, double * covarPosition23, double * quaternion0, double * quaternion1, double * quaternion2, double * quaternion3, double * rotationAngleX, double * rotationAngleY, double * rotationAngleZ, double * stdDevRotationAngleX, double * stdDevRotationAngleY, double * stdDevRotationAngleZ, double * stdDevRotationAngleTotal, double * covarRotationAngleXY, double * covarRotationAngleXZ, double * covarRotationAngleYZ ) {
+    HRESULT _hr = raw_ContinuousProbeDataGetAt(data, index, status, triggerStatus, rotationStatus, time1, time2, position1, position2, position3, stdDevPosition1, stdDevPosition2, stdDevPosition3, stdDevPositionTotal, covarPosition12, covarPosition13, covarPosition23, quaternion0, quaternion1, quaternion2, quaternion3, rotationAngleX, rotationAngleY, rotationAngleZ, stdDevRotationAngleX, stdDevRotationAngleY, stdDevRotationAngleZ, stdDevRotationAngleTotal, covarRotationAngleXY, covarRotationAngleXZ, covarRotationAngleYZ);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::ContinuousPoint2GetAt ( VARIANT * data, long index, enum ES_MeasurementStatus * status, long * time1, long * time2, double * val1, double * val2, double * val3, double * aprioriStd1, double * aprioriStd2, double * aprioriStd3, double * aprioriStdTotal, double * aprioriCovar12, double * aprioriCovar13, double * aprioriCovar23 ) {
+    HRESULT _hr = raw_ContinuousPoint2GetAt(data, index, status, time1, time2, val1, val2, val3, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::StillImageGetFile ( VARIANT * packetData, long * fileSize, VARIANT * fileData ) {
+    HRESULT _hr = raw_StillImageGetFile(packetData, fileSize, fileData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTConnect::WriteDiskFile ( VARIANT * fileData, _bstr_t diskFileName ) {
+    HRESULT _hr = raw_WriteDiskFile(fileData, diskFileName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ILTConnect::GetVersion ( ) {
+    long _result;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double ILTConnect::GetConstant ( enum LTC_Constant constant ) {
+    double _result;
+    HRESULT _hr = raw_GetConstant(constant, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ILTConnect::ContinuousProbeDataGetHeaderInfo ( VARIANT * data, long * numberOfResults, enum ES_MeasMode * measMode, long * probeID, long * fieldNumber, enum ES_MeasurementTipStatus * tipStatus, long * tipAdpaterID, long * tipAdapterInterafce, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_ContinuousProbeDataGetHeaderInfo(data, numberOfResults, measMode, probeID, fieldNumber, tipStatus, tipAdpaterID, tipAdapterInterafce, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline void ILTConnect::PutExceptionHandlingPolicy ( long _arg1 ) {
+    HRESULT _hr = put_ExceptionHandlingPolicy(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ILTConnect::GetBuildNumber ( ) {
+    long _result;
+    HRESULT _hr = get_BuildNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ILTConnect::GetMajorVersion ( ) {
+    long _result;
+    HRESULT _hr = get_MajorVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ILTConnect::GetMinorVersion ( ) {
+    long _result;
+    HRESULT _hr = get_MinorVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ILTConnect::GetIsConnected ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsConnected(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ILTConnect::PutForceSingleConnection ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_ForceSingleConnection(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ILTCommandSync wrapper method implementations
+//
+
+inline HRESULT ILTCommandSync::Initialize ( ) {
+    HRESULT _hr = raw_Initialize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ReleaseMotors ( ) {
+    HRESULT _hr = raw_ReleaseMotors();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ActivateCameraView ( ) {
+    HRESULT _hr = raw_ActivateCameraView();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::Park ( ) {
+    HRESULT _hr = raw_Park();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SwitchLaser ( VARIANT_BOOL isOn ) {
+    HRESULT _hr = raw_SwitchLaser(isOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ExitApplication ( ) {
+    HRESULT _hr = raw_ExitApplication();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoBirdBath ( ) {
+    HRESULT _hr = raw_GoBirdBath();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ChangeFace ( ) {
+    HRESULT _hr = raw_ChangeFace();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoPosition ( double val1, double val2, double val3, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_GoPosition(val1, val2, val3, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoPositionHVD ( double hzAngle, double vtAngle, double distance, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_GoPositionHVD(hzAngle, vtAngle, distance, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::PositionRelativeHV ( double hzAngle, double vtAngle ) {
+    HRESULT _hr = raw_PositionRelativeHV(hzAngle, vtAngle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::PointLaser ( double val1, double val2, double val3 ) {
+    HRESULT _hr = raw_PointLaser(val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::PointLaserHVD ( double hzAngle, double vtAngle, double distance ) {
+    HRESULT _hr = raw_PointLaserHVD(hzAngle, vtAngle, distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::FindReflector ( double approxDist ) {
+    HRESULT _hr = raw_FindReflector(approxDist);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StartNivelMeasurement ( enum ES_NivelStatus * nivelStatus, double * xTilt, double * yTilt, double * nivelTemperature ) {
+    HRESULT _hr = raw_StartNivelMeasurement(nivelStatus, xTilt, yTilt, nivelTemperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StartNivelMeasurementEx ( struct NivelResultT * result ) {
+    HRESULT _hr = raw_StartNivelMeasurementEx(result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StartContinuousPointMeasurement ( ) {
+    HRESULT _hr = raw_StartContinuousPointMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StartContinuousProbeMeasurement ( ) {
+    HRESULT _hr = raw_StartContinuousProbeMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryPoint ( double * val1, double * val2, double * val3, double * std1, double * std2, double * std3, double * stdTotal, double * pointingError1, double * pointingError2, double * pointingError3, double * aprioriStd1, double * aprioriStd2, double * aprioriStd3, double * aprioriStdTotal, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_MeasureStationaryPoint(val1, val2, val3, std1, std2, std3, stdTotal, pointingError1, pointingError2, pointingError3, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryPointEx ( struct SingleMeasResultT * result ) {
+    HRESULT _hr = raw_MeasureStationaryPointEx(result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryProbeData ( enum ES_TriggerStatus * triggerStatus, long * rotationStatus, long * probeID, long * fieldNumber, enum ES_MeasurementTipStatus * tipStatus, long * tipAdapterID, long * tipAdapterInterface, double * position1, double * position2, double * position3, double * stdDevPosition1, double * stdDevPosition2, double * stdDevPosition3, double * stdDevPositionTotal, double * covarPosition12, double * covarPosition13, double * covarPosition23, double * aprioriStdDevPosition1, double * aprioriStdDevPosition2, double * aprioriStdDevPosition3, double * aprioriStdDevPositionTotal, double * aprioriCovarPosition12, double * aprioriCovarPosition13, double * aprioriCovarPosition23, double * quaternion0, double * quaternion1, double * quaternion2, double * quaternion3, double * rotationAngleX, double * rotationAngleY, double * rotationAngleZ, double * stdDevRotationAngleX, double * stdDevRotationAngleY, double * stdDevRotationAngleZ, double * stdDevRotationAngleTotal, double * covarRotationAngleXY, double * covarRotationAngleXZ, double * covarRotationAngleYZ, double * aprioriStdDevRotationAngleX, double * aprioriStdDevRotationAngleY, double * aprioriStdDevRotationAngleZ, double * aprioriStdDevRotationAngleTotal, double * aprioriCovarRotationAngleXY, double * aprioriCovarRotationAngleXZ, double * aprioriCovarRotationAngleYZ, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_MeasureStationaryProbeData(triggerStatus, rotationStatus, probeID, fieldNumber, tipStatus, tipAdapterID, tipAdapterInterface, position1, position2, position3, stdDevPosition1, stdDevPosition2, stdDevPosition3, stdDevPositionTotal, covarPosition12, covarPosition13, covarPosition23, aprioriStdDevPosition1, aprioriStdDevPosition2, aprioriStdDevPosition3, aprioriStdDevPositionTotal, aprioriCovarPosition12, aprioriCovarPosition13, aprioriCovarPosition23, quaternion0, quaternion1, quaternion2, quaternion3, rotationAngleX, rotationAngleY, rotationAngleZ, stdDevRotationAngleX, stdDevRotationAngleY, stdDevRotationAngleZ, stdDevRotationAngleTotal, covarRotationAngleXY, covarRotationAngleXZ, covarRotationAngleYZ, aprioriStdDevRotationAngleX, aprioriStdDevRotationAngleY, aprioriStdDevRotationAngleZ, aprioriStdDevRotationAngleTotal, aprioriCovarRotationAngleXY, aprioriCovarRotationAngleXZ, aprioriCovarRotationAngleYZ, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryProbeDataEx ( struct ProbeStationaryResultT * result ) {
+    HRESULT _hr = raw_MeasureStationaryProbeDataEx(result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StopContinuousMeasurement ( ) {
+    HRESULT _hr = raw_StopContinuousMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MoveHV ( long horizontalSpeed, long verticalSpeed ) {
+    HRESULT _hr = raw_MoveHV(horizontalSpeed, verticalSpeed);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MoveLeft ( ) {
+    HRESULT _hr = raw_MoveLeft();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MoveRight ( ) {
+    HRESULT _hr = raw_MoveRight();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MoveUp ( ) {
+    HRESULT _hr = raw_MoveUp();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MoveDown ( ) {
+    HRESULT _hr = raw_MoveDown();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::StopMove ( ) {
+    HRESULT _hr = raw_StopMove();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoNivelPosition ( enum ES_NivelPosition nivelPosition ) {
+    HRESULT _hr = raw_GoNivelPosition(nivelPosition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoLastMeasuredPoint ( ) {
+    HRESULT _hr = raw_GoLastMeasuredPoint();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSystemStatus ( enum ES_ResultStatus * LastResultStatus, enum ES_TrackerProcessorStatus * trackerProcessorStatus, enum ES_LaserProcessorStatus * laserStatus, enum ES_ADMStatus * admStatus, long * majorVersionNumber, long * minorVersionNumber, long * BuildNumber, enum ES_WeatherMonitorStatus * weatherMonitorStatus, long * flagsValue, long * trackerSerialNumber ) {
+    HRESULT _hr = raw_GetSystemStatus(LastResultStatus, trackerProcessorStatus, laserStatus, admStatus, majorVersionNumber, minorVersionNumber, BuildNumber, weatherMonitorStatus, flagsValue, trackerSerialNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTrackerStatus ( enum ES_TrackerStatus * trackerStatus ) {
+    HRESULT _hr = raw_GetTrackerStatus(trackerStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetReflectors ( ) {
+    HRESULT _hr = raw_GetReflectors();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetReflector ( long reflectorID ) {
+    HRESULT _hr = raw_SetReflector(reflectorID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetReflector ( long * reflectorID ) {
+    HRESULT _hr = raw_GetReflector(reflectorID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSearchParams ( double searchRadius, long timeOut ) {
+    HRESULT _hr = raw_SetSearchParams(searchRadius, timeOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSearchParams ( double * searchRadius, long * timeOut ) {
+    HRESULT _hr = raw_GetSearchParams(searchRadius, timeOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSearchParamsEx ( struct SearchParamsDataT * data ) {
+    HRESULT _hr = raw_SetSearchParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSearchParamsEx ( struct SearchParamsDataT * data ) {
+    HRESULT _hr = raw_GetSearchParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetAdmParams ( double targetStabilityTolerance, long retryTimeFrame, long numberOfRetrys ) {
+    HRESULT _hr = raw_SetAdmParams(targetStabilityTolerance, retryTimeFrame, numberOfRetrys);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetAdmParams ( double * targetStabilityTolerance, long * retryTimeFrame, long * numberOfRetrys ) {
+    HRESULT _hr = raw_GetAdmParams(targetStabilityTolerance, retryTimeFrame, numberOfRetrys);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetAdmParamsEx ( struct AdmParamsDataT * data ) {
+    HRESULT _hr = raw_SetAdmParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetAdmParamsEx ( struct AdmParamsDataT * data ) {
+    HRESULT _hr = raw_GetAdmParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSystemSettings ( enum ES_WeatherMonitorStatus weatherMonitorStatus, VARIANT_BOOL applyTransformationParams, VARIANT_BOOL applyStationOrientationParams, VARIANT_BOOL keepLastPosition, VARIANT_BOOL sendUnsolicitedMessages, VARIANT_BOOL sendReflectorPositionData, VARIANT_BOOL tryMeasurementMode, VARIANT_BOOL hasNivel, VARIANT_BOOL hasVideoCamera ) {
+    HRESULT _hr = raw_SetSystemSettings(weatherMonitorStatus, applyTransformationParams, applyStationOrientationParams, keepLastPosition, sendUnsolicitedMessages, sendReflectorPositionData, tryMeasurementMode, hasNivel, hasVideoCamera);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSystemSettings ( enum ES_WeatherMonitorStatus * weatherMonitorStatus, VARIANT_BOOL * applyTransformationParams, VARIANT_BOOL * applyStationOrientationParams, VARIANT_BOOL * keepLastPosition, VARIANT_BOOL * sendUnsolicitedMessages, VARIANT_BOOL * sendReflectorPositionData, VARIANT_BOOL * tryMeasurementMode, VARIANT_BOOL * hasNivel, VARIANT_BOOL * hasVideoCamera ) {
+    HRESULT _hr = raw_GetSystemSettings(weatherMonitorStatus, applyTransformationParams, applyStationOrientationParams, keepLastPosition, sendUnsolicitedMessages, sendReflectorPositionData, tryMeasurementMode, hasNivel, hasVideoCamera);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSystemSettingsEx ( struct SystemSettingsDataT * data ) {
+    HRESULT _hr = raw_SetSystemSettingsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSystemSettingsEx ( struct SystemSettingsDataT * data ) {
+    HRESULT _hr = raw_GetSystemSettingsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetUnits ( enum ES_LengthUnit lengthUnit, enum ES_AngleUnit angleUnit, enum ES_TemperatureUnit temperatureUnit, enum ES_PressureUnit pressureUnit, enum ES_HumidityUnit humidityUnit ) {
+    HRESULT _hr = raw_SetUnits(lengthUnit, angleUnit, temperatureUnit, pressureUnit, humidityUnit);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetUnits ( enum ES_LengthUnit * lengthUnit, enum ES_AngleUnit * angleUnit, enum ES_TemperatureUnit * temperatureUnit, enum ES_PressureUnit * pressureUnit, enum ES_HumidityUnit * humidityUnit ) {
+    HRESULT _hr = raw_GetUnits(lengthUnit, angleUnit, temperatureUnit, pressureUnit, humidityUnit);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetUnitsEx ( struct SystemUnitsDataT * data ) {
+    HRESULT _hr = raw_SetUnitsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetUnitsEx ( struct SystemUnitsDataT * data ) {
+    HRESULT _hr = raw_GetUnitsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetStationOrientationParams ( double val1, double val2, double val3, double rot1, double rot2, double rot3 ) {
+    HRESULT _hr = raw_SetStationOrientationParams(val1, val2, val3, rot1, rot2, rot3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStationOrientationParams ( double * val1, double * val2, double * val3, double * rot1, double * rot2, double * rot3 ) {
+    HRESULT _hr = raw_GetStationOrientationParams(val1, val2, val3, rot1, rot2, rot3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetStationOrientationParamsEx ( struct StationOrientationDataT * data ) {
+    HRESULT _hr = raw_SetStationOrientationParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStationOrientationParamsEx ( struct StationOrientationDataT * data ) {
+    HRESULT _hr = raw_GetStationOrientationParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTransformationParams ( double val1, double val2, double val3, double rot1, double rot2, double rot3, double scale ) {
+    HRESULT _hr = raw_SetTransformationParams(val1, val2, val3, rot1, rot2, rot3, scale);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTransformationParams ( double * val1, double * val2, double * val3, double * rot1, double * rot2, double * rot3, double * scale ) {
+    HRESULT _hr = raw_GetTransformationParams(val1, val2, val3, rot1, rot2, rot3, scale);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTransformationParamsEx ( struct TransformationDataT * data ) {
+    HRESULT _hr = raw_SetTransformationParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTransformationParamsEx ( struct TransformationDataT * data ) {
+    HRESULT _hr = raw_GetTransformationParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTemperatureRange ( enum ES_TrackerTemperatureRange temperatureRange ) {
+    HRESULT _hr = raw_SetTemperatureRange(temperatureRange);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTemperatureRange ( enum ES_TrackerTemperatureRange * temperatureRange ) {
+    HRESULT _hr = raw_GetTemperatureRange(temperatureRange);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetEnvironmentParams ( double temperature, double pressure, double humidity ) {
+    HRESULT _hr = raw_SetEnvironmentParams(temperature, pressure, humidity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetEnvironmentParams ( double * temperature, double * pressure, double * humidity ) {
+    HRESULT _hr = raw_GetEnvironmentParams(temperature, pressure, humidity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetEnvironmentParamsEx ( struct EnvironmentDataT * data ) {
+    HRESULT _hr = raw_SetEnvironmentParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetEnvironmentParamsEx ( struct EnvironmentDataT * data ) {
+    HRESULT _hr = raw_GetEnvironmentParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetRefractionParams ( double ifmRefractionIndex, double admRefractionIndex ) {
+    HRESULT _hr = raw_SetRefractionParams(ifmRefractionIndex, admRefractionIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetRefractionParams ( double * ifmRefractionIndex, double * admRefractionIndex ) {
+    HRESULT _hr = raw_GetRefractionParams(ifmRefractionIndex, admRefractionIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetRefractionParamsEx ( struct RefractionDataT * data ) {
+    HRESULT _hr = raw_SetRefractionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetRefractionParamsEx ( struct RefractionDataT * data ) {
+    HRESULT _hr = raw_GetRefractionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetMeasurementMode ( enum ES_MeasMode measMode ) {
+    HRESULT _hr = raw_SetMeasurementMode(measMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeasurementMode ( enum ES_MeasMode * measMode ) {
+    HRESULT _hr = raw_GetMeasurementMode(measMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetBoxRegionParams ( double pt1Val1, double pt1Val2, double pt1Val3, double pt2Val1, double pt2Val2, double pt2Val3 ) {
+    HRESULT _hr = raw_SetBoxRegionParams(pt1Val1, pt1Val2, pt1Val3, pt2Val1, pt2Val2, pt2Val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetBoxRegionParams ( double * pt1Val1, double * pt1Val2, double * pt1Val3, double * pt2Val1, double * pt2Val2, double * pt2Val3 ) {
+    HRESULT _hr = raw_GetBoxRegionParams(pt1Val1, pt1Val2, pt1Val3, pt2Val1, pt2Val2, pt2Val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetBoxRegionParamsEx ( struct BoxRegionDataT * data ) {
+    HRESULT _hr = raw_SetBoxRegionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetBoxRegionParamsEx ( struct BoxRegionDataT * data ) {
+    HRESULT _hr = raw_GetBoxRegionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSphereRegionParams ( double ptVal1, double ptVal2, double ptVal3, double radius ) {
+    HRESULT _hr = raw_SetSphereRegionParams(ptVal1, ptVal2, ptVal3, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSphereRegionParams ( double * ptVal1, double * ptVal2, double * ptVal3, double * radius ) {
+    HRESULT _hr = raw_GetSphereRegionParams(ptVal1, ptVal2, ptVal3, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSphereRegionParamsEx ( struct SphereRegionDataT * data ) {
+    HRESULT _hr = raw_SetSphereRegionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSphereRegionParamsEx ( struct SphereRegionDataT * data ) {
+    HRESULT _hr = raw_GetSphereRegionParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetStationaryModeParams ( long time, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_SetStationaryModeParams(time, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStationaryModeParams ( long * time, VARIANT_BOOL * useADM ) {
+    HRESULT _hr = raw_GetStationaryModeParams(time, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetStationaryModeParamsEx ( struct StationaryModeDataT * data ) {
+    HRESULT _hr = raw_SetStationaryModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStationaryModeParamsEx ( struct StationaryModeDataT * data ) {
+    HRESULT _hr = raw_GetStationaryModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetGridModeParams ( double val1, double val2, double val3, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetGridModeParams(val1, val2, val3, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetGridModeParams ( double * val1, double * val2, double * val3, long * numberOfPoints, VARIANT_BOOL * useRegion, enum ES_RegionType * regionType ) {
+    HRESULT _hr = raw_GetGridModeParams(val1, val2, val3, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetGridModeParamsEx ( struct GridModeDataT * data ) {
+    HRESULT _hr = raw_SetGridModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetGridModeParamsEx ( struct GridModeDataT * data ) {
+    HRESULT _hr = raw_GetGridModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetContinuousTimeModeParams ( long timeSeparation, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetContinuousTimeModeParams(timeSeparation, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetContinuousTimeModeParams ( long * timeSeparation, long * numberOfPoints, VARIANT_BOOL * useRegion, enum ES_RegionType * regionType ) {
+    HRESULT _hr = raw_GetContinuousTimeModeParams(timeSeparation, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetContinuousTimeModeParamsEx ( struct ContinuousTimeModeDataT * data ) {
+    HRESULT _hr = raw_SetContinuousTimeModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetContinuousTimeModeParamsEx ( struct ContinuousTimeModeDataT * data ) {
+    HRESULT _hr = raw_GetContinuousTimeModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetContinuousDistanceModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetContinuousDistanceModeParams(spatialDistance, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetContinuousDistanceModeParams ( double * spatialDistance, long * numberOfPoints, VARIANT_BOOL * useRegion, enum ES_RegionType * regionType ) {
+    HRESULT _hr = raw_GetContinuousDistanceModeParams(spatialDistance, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetContinuousDistanceModeParamsEx ( struct ContinuousDistanceModeDataT * data ) {
+    HRESULT _hr = raw_SetContinuousDistanceModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetContinuousDistanceModeParamsEx ( struct ContinuousDistanceModeDataT * data ) {
+    HRESULT _hr = raw_GetContinuousDistanceModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSphereCenterModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    HRESULT _hr = raw_SetSphereCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSphereCenterModeParams ( double * spatialDistance, long * numberOfPoints, VARIANT_BOOL * fixRadius, double * radius ) {
+    HRESULT _hr = raw_GetSphereCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetSphereCenterModeParamsEx ( struct SphereCenterModeDataT * data ) {
+    HRESULT _hr = raw_SetSphereCenterModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetSphereCenterModeParamsEx ( struct SphereCenterModeDataT * data ) {
+    HRESULT _hr = raw_GetSphereCenterModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCircleCenterModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    HRESULT _hr = raw_SetCircleCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCircleCenterModeParams ( double * spatialDistance, long * numberOfPoints, VARIANT_BOOL * fixRadius, double * radius ) {
+    HRESULT _hr = raw_GetCircleCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCircleCenterModeParamsEx ( struct CircleCenterModeDataT * data ) {
+    HRESULT _hr = raw_SetCircleCenterModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCircleCenterModeParamsEx ( struct CircleCenterModeDataT * data ) {
+    HRESULT _hr = raw_GetCircleCenterModeParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCoordinateSystemType ( enum ES_CoordinateSystemType coordSysType ) {
+    HRESULT _hr = raw_SetCoordinateSystemType(coordSysType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCoordinateSystemType ( enum ES_CoordinateSystemType * coordSysType ) {
+    HRESULT _hr = raw_GetCoordinateSystemType(coordSysType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::LookForTarget ( double val1, double val2, double val3, double searchRadius, double * hzAngle, double * vtAngle ) {
+    HRESULT _hr = raw_LookForTarget(val1, val2, val3, searchRadius, hzAngle, vtAngle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetDirection ( double * hzAngle, double * vtAngle ) {
+    HRESULT _hr = raw_GetDirection(hzAngle, vtAngle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryPoint2 ( double * val1, double * val2, double * val3, double * std1, double * std2, double * std3, double * stdTotal, double * covar12, double * covar13, double * covar23, double * pointingErrorH, double * pointingErrorV, double * pointingErrorD, double * aprioriStd1, double * aprioriStd2, double * aprioriStd3, double * aprioriStdTotal, double * aprioriCovar12, double * aprioriCovar13, double * aprioriCovar23, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_MeasureStationaryPoint2(val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, pointingErrorH, pointingErrorV, pointingErrorD, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::MeasureStationaryPoint2Ex ( struct SingleMeasResult2T * result ) {
+    HRESULT _hr = raw_MeasureStationaryPoint2Ex(result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::CallOrientToGravity ( double * omega, double * phi ) {
+    HRESULT _hr = raw_CallOrientToGravity(omega, phi);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ClearTransformationNominalPointList ( ) {
+    HRESULT _hr = raw_ClearTransformationNominalPointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ClearTransformationActualPointList ( ) {
+    HRESULT _hr = raw_ClearTransformationActualPointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::AddTransformationNominalPoint ( double val1, double val2, double val3, double std1, double std2, double std3, double covar12, double covar13, double covar23 ) {
+    HRESULT _hr = raw_AddTransformationNominalPoint(val1, val2, val3, std1, std2, std3, covar12, covar13, covar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::AddTransformationNominalPointEx ( struct TransformationPointT * data ) {
+    HRESULT _hr = raw_AddTransformationNominalPointEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::AddTransformationActualPoint ( double val1, double val2, double val3, double std1, double std2, double std3, double covar12, double covar13, double covar23 ) {
+    HRESULT _hr = raw_AddTransformationActualPoint(val1, val2, val3, std1, std2, std3, covar12, covar13, covar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::AddTransformationActualPointEx ( struct TransformationPointT * data ) {
+    HRESULT _hr = raw_AddTransformationActualPointEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTransformationInputParams ( enum ES_TransResultType transResultType, double transVal1, double transVal2, double transVal3, double rotVal1, double rotVal2, double rotVal3, double scale, double transStdVal1, double transStdVal2, double transStdVal3, double rotStdVal1, double rotStdVal2, double rotStdVal3, double scaleStd ) {
+    HRESULT _hr = raw_SetTransformationInputParams(transResultType, transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTransformationInputParams ( enum ES_TransResultType * transResultType, double * transVal1, double * transVal2, double * transVal3, double * rotVal1, double * rotVal2, double * rotVal3, double * scale, double * transStdVal1, double * transStdVal2, double * transStdVal3, double * rotStdVal1, double * rotStdVal2, double * rotStdVal3, double * scaleStd ) {
+    HRESULT _hr = raw_GetTransformationInputParams(transResultType, transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTransformationInputParamsEx ( struct TransformationInputDataT * data ) {
+    HRESULT _hr = raw_SetTransformationInputParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTransformationInputParamsEx ( struct TransformationInputDataT * data ) {
+    HRESULT _hr = raw_GetTransformationInputParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::CallTransformation ( double * transVal1, double * transVal2, double * transVal3, double * rotVal1, double * rotVal2, double * rotVal3, double * scale, double * transStdVal1, double * transStdVal2, double * transStdVal3, double * rotStdVal1, double * rotStdVal2, double * rotStdVal3, double * scaleStd, double * RMS, double * maxDev, double * varianceFactor ) {
+    HRESULT _hr = raw_CallTransformation(transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd, RMS, maxDev, varianceFactor);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTransformedPoints ( ) {
+    HRESULT _hr = raw_GetTransformedPoints();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ClearDrivePointList ( ) {
+    HRESULT _hr = raw_ClearDrivePointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::AddDrivePoint ( long reflectorID, double val1, double val2, double val3 ) {
+    HRESULT _hr = raw_AddDrivePoint(reflectorID, val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::CallIntermediateCompensation ( double * totalRMS, double * maxDev, long * warningFlags ) {
+    HRESULT _hr = raw_CallIntermediateCompensation(totalRMS, maxDev, warningFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCompensation ( long compensationId ) {
+    HRESULT _hr = raw_SetCompensation(compensationId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetStatisticMode ( enum ES_StatisticMode stationaryMeasurements, enum ES_StatisticMode continuousMeasurements ) {
+    HRESULT _hr = raw_SetStatisticMode(stationaryMeasurements, continuousMeasurements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStatisticMode ( enum ES_StatisticMode * stationaryMeasurements, enum ES_StatisticMode * continuousMeasurements ) {
+    HRESULT _hr = raw_GetStatisticMode(stationaryMeasurements, continuousMeasurements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCameraParams ( long contrast, long brightness, long saturation ) {
+    HRESULT _hr = raw_SetCameraParams(contrast, brightness, saturation);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCameraParams ( long * contrast, long * brightness, long * saturation ) {
+    HRESULT _hr = raw_GetCameraParams(contrast, brightness, saturation);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetCameraParamsEx ( struct CameraParamsDataT * data ) {
+    HRESULT _hr = raw_SetCameraParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCameraParamsEx ( struct CameraParamsDataT * data ) {
+    HRESULT _hr = raw_GetCameraParamsEx(data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetStillImage ( enum ES_StillImageFileType imageFileType, long * fileSize, VARIANT * fileData ) {
+    HRESULT _hr = raw_GetStillImage(imageFileType, fileSize, fileData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCompensation ( long * compensationId ) {
+    HRESULT _hr = raw_GetCompensation(compensationId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCompensations ( ) {
+    HRESULT _hr = raw_GetCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCompensations2 ( ) {
+    HRESULT _hr = raw_GetCompensations2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::CheckBirdBath ( double * initialHzAngle, double * initialVtAngle, double * initialDistance, double * hzAngleDiff, double * vtAngleDiff, double * distanceDiff ) {
+    HRESULT _hr = raw_CheckBirdBath(initialHzAngle, initialVtAngle, initialDistance, hzAngleDiff, vtAngleDiff, distanceDiff);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTrackerDiagnostics ( double * trkPhotoSensorXVal, double * trkPhotoSensorYVal, double * trkPhotoSensorIVal, double * refPhotoSensorXVal, double * refPhotoSensorYVal, double * refPhotoSensorIVal, double * ADConverterRange, double * servoControlPointX, double * servoControlPointY, double * laserLightRatio, long * laserControlMode, double * sensorInsideTemperature, long * LCPRunTime, long * laserTubeRunTime ) {
+    HRESULT _hr = raw_GetTrackerDiagnostics(trkPhotoSensorXVal, trkPhotoSensorYVal, trkPhotoSensorIVal, refPhotoSensorXVal, refPhotoSensorYVal, refPhotoSensorIVal, ADConverterRange, servoControlPointX, servoControlPointY, laserLightRatio, laserControlMode, sensorInsideTemperature, LCPRunTime, laserTubeRunTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetADMInfo ( long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, long * serialNumber ) {
+    HRESULT _hr = raw_GetADMInfo(firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTPInfo ( long * TPBootMajorVersionNumber, long * TPBootMinorVersionNumber, long * TPFirmWareMajorVersionNumber, long * TPFirmWareMinorVersionNumber, long * LCPFirmWareMajorVersionNumber, long * LCPFirmWareMinorVersionNumber, enum ES_TrackerProcessorType * trackerprocessorType, enum ES_TPMicroProcessorType * microProcessorType, long * microProcessorClockSpeed, enum ES_LTSensorType * laserTrackerSensorType ) {
+    HRESULT _hr = raw_GetTPInfo(TPBootMajorVersionNumber, TPBootMinorVersionNumber, TPFirmWareMajorVersionNumber, TPFirmWareMinorVersionNumber, LCPFirmWareMajorVersionNumber, LCPFirmWareMinorVersionNumber, trackerprocessorType, microProcessorType, microProcessorClockSpeed, laserTrackerSensorType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetNivelInfo ( long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, long * serialNumber ) {
+    HRESULT _hr = raw_GetNivelInfo(firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetLaserOnTimer ( long timeOffsetHour, long timeOffsetMinute ) {
+    HRESULT _hr = raw_SetLaserOnTimer(timeOffsetHour, timeOffsetMinute);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetLaserOnTimer ( long * timeOffsetHour, long * timeOffsetMinute ) {
+    HRESULT _hr = raw_GetLaserOnTimer(timeOffsetHour, timeOffsetMinute);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ConvertDisplayCoordinates ( enum ES_DisplayCoordinateConversionType conversionType, double val1, double val2, double val3, double * resVal1, double * resVal2, double * resVal3 ) {
+    HRESULT _hr = raw_ConvertDisplayCoordinates(conversionType, val1, val2, val3, resVal1, resVal2, resVal3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoBirdBath2 ( VARIANT_BOOL clockwise ) {
+    HRESULT _hr = raw_GoBirdBath2(clockwise);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTriggerSource ( enum ES_TriggerSource triggerSource ) {
+    HRESULT _hr = raw_SetTriggerSource(triggerSource);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTriggerSource ( enum ES_TriggerSource * triggerSource ) {
+    HRESULT _hr = raw_GetTriggerSource(triggerSource);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetFace ( enum ES_TrackerFace * trackerFace ) {
+    HRESULT _hr = raw_GetFace(trackerFace);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCameras ( ) {
+    HRESULT _hr = raw_GetCameras();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCamera ( long * cameraID, VARIANT_BOOL * isMeasCameraMounted ) {
+    HRESULT _hr = raw_GetCamera(cameraID, isMeasCameraMounted);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetMeasurementCameraMode ( enum ES_MeasurementCameraMode cameraMode ) {
+    HRESULT _hr = raw_SetMeasurementCameraMode(cameraMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeasurementCameraMode ( enum ES_MeasurementCameraMode * cameraMode ) {
+    HRESULT _hr = raw_GetMeasurementCameraMode(cameraMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetProbes ( ) {
+    HRESULT _hr = raw_GetProbes();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetProbe ( long * probeID ) {
+    HRESULT _hr = raw_GetProbe(probeID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTipAdapters ( ) {
+    HRESULT _hr = raw_GetTipAdapters();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTipAdapter ( long * tipAdapterID, long * tipAdapterInterface ) {
+    HRESULT _hr = raw_GetTipAdapter(tipAdapterID, tipAdapterInterface);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTCamToTrackerCompensations ( ) {
+    HRESULT _hr = raw_GetTCamToTrackerCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTCamToTrackerCompensation ( long tCamToTrackerCompensationID ) {
+    HRESULT _hr = raw_SetTCamToTrackerCompensation(tCamToTrackerCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTCamToTrackerCompensation ( long * tCamToTrackerCompensationID ) {
+    HRESULT _hr = raw_GetTCamToTrackerCompensation(tCamToTrackerCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetProbeCompensations ( ) {
+    HRESULT _hr = raw_GetProbeCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetProbeCompensation ( long probeCompensationID ) {
+    HRESULT _hr = raw_SetProbeCompensation(probeCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetProbeCompensation ( long * probeCompensationID ) {
+    HRESULT _hr = raw_GetProbeCompensation(probeCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTipToProbeCompensations ( ) {
+    HRESULT _hr = raw_GetTipToProbeCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTipToProbeCompensation ( long * tipToProbeCompensationID ) {
+    HRESULT _hr = raw_GetTipToProbeCompensation(tipToProbeCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetExternTriggerParams ( enum ES_ClockTransition clockTransition, enum ES_TriggerMode triggerMode, enum ES_TriggerStartSignal startSignal, long minimalTimeDelay ) {
+    HRESULT _hr = raw_SetExternTriggerParams(clockTransition, triggerMode, startSignal, minimalTimeDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetExternTriggerParams ( enum ES_ClockTransition * clockTransition, enum ES_TriggerMode * triggerMode, enum ES_TriggerStartSignal * startSignal, long * minimalTimeDelay ) {
+    HRESULT _hr = raw_GetExternTriggerParams(clockTransition, triggerMode, startSignal, minimalTimeDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetExternTriggerParamsEx ( struct ExternTriggerParamsT * extTriggerPrams ) {
+    HRESULT _hr = raw_SetExternTriggerParamsEx(extTriggerPrams);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetExternTriggerParamsEx ( struct ExternTriggerParamsT * extTriggerPrams ) {
+    HRESULT _hr = raw_GetExternTriggerParamsEx(extTriggerPrams);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetErrorEllipsoid ( double coord1, double coord2, double coord3, double stdDev1, double stdDev2, double stdDev3, double covar12, double covar13, double covar23, double * stdDevX, double * stdDevY, double * stdDevZ, double * rotationAngleX, double * rotationAngleY, double * rotationAngleZ ) {
+    HRESULT _hr = raw_GetErrorEllipsoid(coord1, coord2, coord3, stdDev1, stdDev2, stdDev3, covar12, covar13, covar23, stdDevX, stdDevY, stdDevZ, rotationAngleX, rotationAngleY, rotationAngleZ);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeasurementCameraInfo ( long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, long * serialNumber, enum ES_MeasurementCameraType * cameraType, BSTR * cameraName, long * compensationIdNumber, long * zoomSerialNumber, long * zoomAdjustmentIdNumber, long * zoom2DCompensationIdNumber, long * zoomProjCenterCompIdNumber, double * maxDistance, double * minDistance, long * nrOfPixelsX, long * nrOfPixelsY, double * pixelSizeX, double * pixelSizeY, long * maxDataRate ) {
+    HRESULT _hr = raw_GetMeasurementCameraInfo(firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber, cameraType, cameraName, compensationIdNumber, zoomSerialNumber, zoomAdjustmentIdNumber, zoom2DCompensationIdNumber, zoomProjCenterCompIdNumber, maxDistance, minDistance, nrOfPixelsX, nrOfPixelsY, pixelSizeX, pixelSizeY, maxDataRate);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeasurementProbeInfo ( long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, long * serialNumber, enum ES_ProbeType * probeType, long * compensationIdNumber, long * activeField, enum ES_ProbeConnectionType * connectionType, long * numberOfTipAdapters, enum ES_ProbeButtonType * probeButtonType, long * numberOfFields, VARIANT_BOOL * hasWideAngleReceiver, long * numberOfTipDataSets, long * numberOfMelodies, long * numberOfLoudnesSteps ) {
+    HRESULT _hr = raw_GetMeasurementProbeInfo(firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber, probeType, compensationIdNumber, activeField, connectionType, numberOfTipAdapters, probeButtonType, numberOfFields, hasWideAngleReceiver, numberOfTipDataSets, numberOfMelodies, numberOfLoudnesSteps);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetLongSystemParameter ( enum ES_SystemParameter systemParam, long parameter ) {
+    HRESULT _hr = raw_SetLongSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetLongSystemParameter ( enum ES_SystemParameter systemParam, long * parameter ) {
+    HRESULT _hr = raw_GetLongSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeasurementStatusInfo ( long * measurementStatusInfo ) {
+    HRESULT _hr = raw_GetMeasurementStatusInfo(measurementStatusInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetCurrentPrismPosition ( double * val1, double * val2, double * val3 ) {
+    HRESULT _hr = raw_GetCurrentPrismPosition(val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetDoubleSystemParameter ( enum ES_SystemParameter systemParam, double parameter ) {
+    HRESULT _hr = raw_SetDoubleSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetDoubleSystemParameter ( enum ES_SystemParameter systemParam, double * parameter ) {
+    HRESULT _hr = raw_GetDoubleSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetObjectTemperature ( double * objectTemperature ) {
+    HRESULT _hr = raw_GetObjectTemperature(objectTemperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTriggerBoardInfo ( enum ES_TriggerCardType * triggerCardType, long * FPGAVersion, long * maxTriggerFrequency, long * errorCode ) {
+    HRESULT _hr = raw_GetTriggerBoardInfo(triggerCardType, FPGAVersion, maxTriggerFrequency, errorCode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetOverviewCameraInfo ( enum ES_OverviewCameraType * cameraType, BSTR * cameraName, VARIANT_BOOL * isColorCamera, double * focalLength, double * horizontalChipSize, double * verticalChipSize, VARIANT_BOOL * mirrorImageHz, VARIANT_BOOL * mirrorImageVt ) {
+    HRESULT _hr = raw_GetOverviewCameraInfo(cameraType, cameraName, isColorCamera, focalLength, horizontalChipSize, verticalChipSize, mirrorImageHz, mirrorImageVt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::ClearCommandQueue ( enum ES_ClearCommandQueueType __MIDL__ILTCommandSync0000 ) {
+    HRESULT _hr = raw_ClearCommandQueue(__MIDL__ILTCommandSync0000);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetADMInfo2 ( enum ES_ADMType * admType, BSTR * ADMName, long * serialNumber, long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, double * maxDistance, double * minDistance, long * maxDataRate, double * accuracyADMDistance ) {
+    HRESULT _hr = raw_GetADMInfo2(admType, ADMName, serialNumber, firmWareMajorVersionNumber, firmWareMinorVersionNumber, maxDistance, minDistance, maxDataRate, accuracyADMDistance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTrackerInfo ( enum ES_LTSensorType * trackerType, BSTR * trackerName, long * serialNumber, long * compensationIdNumber, VARIANT_BOOL * hasADM, VARIANT_BOOL * hasOverviewCamera, VARIANT_BOOL * hasNivel, double * nivelMountOffset, double * maxDistance, double * minDistance, long * maxDataRate, long * numberOfFaces, double * hzAngleRange, double * vtAngleRange, enum ES_TrkAccuracyModel * accuracyModel, long * majLCPFirmwareVersion, long * minLCPFirmwareVersion ) {
+    HRESULT _hr = raw_GetTrackerInfo(trackerType, trackerName, serialNumber, compensationIdNumber, hasADM, hasOverviewCamera, hasNivel, nivelMountOffset, maxDistance, minDistance, maxDataRate, numberOfFaces, hzAngleRange, vtAngleRange, accuracyModel, majLCPFirmwareVersion, minLCPFirmwareVersion);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetNivelInfo2 ( enum ES_NivelType * nivelType, BSTR * nivelName, long * serialNumber, long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber, double * measurementRange, double * measurementAccuracyOffset, double * measurementAccuracyFactor ) {
+    HRESULT _hr = raw_GetNivelInfo2(nivelType, nivelName, serialNumber, firmWareMajorVersionNumber, firmWareMinorVersionNumber, measurementRange, measurementAccuracyOffset, measurementAccuracyFactor);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::RestoreStartupConditions ( ) {
+    HRESULT _hr = raw_RestoreStartupConditions();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoAndMeasureStationaryPoint ( double refVal1, double refVal2, double refVal3, double * val1, double * val2, double * val3, double * std1, double * std2, double * std3, double * stdTotal, double * pointingError1, double * pointingError2, double * pointingError3, double * aprioriStd1, double * aprioriStd2, double * aprioriStd3, double * aprioriStdTotal, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_GoAndMeasureStationaryPoint(refVal1, refVal2, refVal3, val1, val2, val3, std1, std2, std3, stdTotal, pointingError1, pointingError2, pointingError3, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoAndMeasureStationaryPointEx ( double refVal1, double refVal2, double refVal3, struct SingleMeasResultT * result ) {
+    HRESULT _hr = raw_GoAndMeasureStationaryPointEx(refVal1, refVal2, refVal3, result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoAndMeasureStationaryPoint2 ( double refVal1, double refVal2, double refVal3, double * val1, double * val2, double * val3, double * std1, double * std2, double * std3, double * stdTotal, double * covar12, double * covar13, double * covar23, double * pointingErrorH, double * pointingErrorV, double * pointingErrorD, double * aprioriStd1, double * aprioriStd2, double * aprioriStd3, double * aprioriStdTotal, double * aprioriCovar12, double * aprioriCovar13, double * aprioriCovar23, double * temperature, double * pressure, double * humidity, VARIANT_BOOL * isTryMode ) {
+    HRESULT _hr = raw_GoAndMeasureStationaryPoint2(refVal1, refVal2, refVal3, val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, pointingErrorH, pointingErrorV, pointingErrorD, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23, temperature, pressure, humidity, isTryMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GoAndMeasureStationaryPoint2Ex ( double refVal1, double refVal2, double refVal3, struct SingleMeasResult2T * result ) {
+    HRESULT _hr = raw_GoAndMeasureStationaryPoint2Ex(refVal1, refVal2, refVal3, result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetTipToProbeCompensations2 ( ) {
+    HRESULT _hr = raw_GetTipToProbeCompensations2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::SetTipAdapter ( long tipAdapterID ) {
+    HRESULT _hr = raw_SetTipAdapter(tipAdapterID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetATRInfo ( enum ES_ATRType * atrType, BSTR * atrName, long * majorFirmwareVersion, long * minorFirmwareVersion, long * buildFirmwareVersion, long * hardwareVersion, long * errorCode, long * FPGAVersion, double * maxDistance, double * minDistance, double * fieldOfView, double * maxTrackingSpeed ) {
+    HRESULT _hr = raw_GetATRInfo(atrType, atrName, majorFirmwareVersion, minorFirmwareVersion, buildFirmwareVersion, hardwareVersion, errorCode, FPGAVersion, maxDistance, minDistance, fieldOfView, maxTrackingSpeed);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetMeteoStationInfo ( enum ES_MeteoStationType * meteoStationType, BSTR * identifier, long * firmWareMajorVersionNumber, long * firmWareMinorVersionNumber ) {
+    HRESULT _hr = raw_GetMeteoStationInfo(meteoStationType, identifier, firmWareMajorVersionNumber, firmWareMinorVersionNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::GetAT4xxInfo ( enum ES_LTSensorType * trackerType, BSTR * trackerName, long * serialNumber, long * majorFirmwareVersion, long * minorFirmwareVersion, long * processorBoardFWBuildNumber, long * sensorBoardFWBuildNumber, long * majorOSVersion, long * minorOSVersion, long * majorServerSoftwareVersion, long * minorServerSoftwareVersion, long * serverSoftwareBuildNumber, enum ES_WLANType * wlanType, enum ES_TPMicroProcessorType * xscaleType, long * minMeasureTime, double * minDistance, double * maxDistance, double * stdDevDistOffsetADM, double * stdDevAngleConst, double * stdDevAngleOffset, double * stdDevAngleFactor ) {
+    HRESULT _hr = raw_GetAT4xxInfo(trackerType, trackerName, serialNumber, majorFirmwareVersion, minorFirmwareVersion, processorBoardFWBuildNumber, sensorBoardFWBuildNumber, majorOSVersion, minorOSVersion, majorServerSoftwareVersion, minorServerSoftwareVersion, serverSoftwareBuildNumber, wlanType, xscaleType, minMeasureTime, minDistance, maxDistance, stdDevDistOffsetADM, stdDevAngleConst, stdDevAngleOffset, stdDevAngleFactor);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandSync::CallATRCompensation ( enum ES_ATR_Module atrModule, double * X0, double * Y0, double * stdDevX0, double * stdDevY0, double * scale, double * rollAngle, double * asymmetry, double * distance ) {
+    HRESULT _hr = raw_CallATRCompensation(atrModule, X0, Y0, stdDevX0, stdDevY0, scale, rollAngle, asymmetry, distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline void ILTCommandSync::PutUseIncreasedTimeouts ( VARIANT_BOOL _arg1 ) {
+    HRESULT _hr = put_UseIncreasedTimeouts(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// dispinterface _ILTCommandSyncEvents wrapper method implementations
+//
+
+inline HRESULT _ILTCommandSyncEvents::ErrorEvent ( enum ES_Command command, enum ES_ResultStatus status ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", command, status);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ReflectorsData ( long reflectorID, _bstr_t reflectorName, enum ES_TargetType targetType, double surfaceOffset, long reflectorsTotal ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0003", reflectorID, (BSTR)reflectorName, targetType, surfaceOffset, reflectorsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ContinuousPointMeasDataReady ( long resultsTotal, long bytesTotal ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", resultsTotal, bytesTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ContinuousProbeMeasDataReady ( long resultsTotal, long bytesTotal ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", resultsTotal, bytesTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ReflectorPositionData ( double val1, double val2, double val3 ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005", val1, val2, val3);
+}
+
+inline HRESULT _ILTCommandSyncEvents::CenterPointData ( enum ES_MeasMode measMode, double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, val1, val2, val3, std1, std2, std3, stdTotal, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandSyncEvents::StatusChangeEvent ( enum ES_SystemStatusChange statusChange ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", statusChange);
+}
+
+inline HRESULT _ILTCommandSyncEvents::TransformedPointsData ( double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double covar12, double covar13, double covar23, double residualVal1, double residualVal2, double residualVal3, long totalPoints ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0003", val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, residualVal1, residualVal2, residualVal3, totalPoints);
+}
+
+inline HRESULT _ILTCommandSyncEvents::CenterPoint2Data ( enum ES_MeasMode measMode, double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double covar12, double covar13, double covar23, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double aprioriCovar12, double aprioriCovar13, double aprioriCovar23, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandSyncEvents::CompensationsData ( long compensationId, _bstr_t trackerCompensationName, _bstr_t trackerCompensationComment, _bstr_t ADMCompensationName, VARIANT_BOOL hasMeasurementCameraMounted, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0xa, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0008\x0008\x000b\x0003", compensationId, (BSTR)trackerCompensationName, (BSTR)trackerCompensationComment, (BSTR)ADMCompensationName, hasMeasurementCameraMounted, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ProbePositionData ( long rotationStatus, enum ES_MeasurementTipStatus tipStatus, long tipAdapterID, long tipAdapterInterface, double position1, double position2, double position3, double quaternion0, double quaternion1, double quaternion2, double quaternion3, double rotationAngleX, double rotationAngleY, double rotationAngleZ ) {
+    return _com_dispatch_method(this, 0xb, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005", rotationStatus, tipStatus, tipAdapterID, tipAdapterInterface, position1, position2, position3, quaternion0, quaternion1, quaternion2, quaternion3, rotationAngleX, rotationAngleY, rotationAngleZ);
+}
+
+inline HRESULT _ILTCommandSyncEvents::CamerasData ( long cameraID, long serialNumber, enum ES_MeasurementCameraType cameraType, _bstr_t cameraName, _bstr_t comment, long camerasTotal ) {
+    return _com_dispatch_method(this, 0xc, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0008\x0008\x0003", cameraID, serialNumber, cameraType, (BSTR)cameraName, (BSTR)comment, camerasTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ProbesData ( long probeID, long serialNumber, _bstr_t probeName, enum ES_ProbeType probeType, long numberOfFields, _bstr_t comment, long probesTotal ) {
+    return _com_dispatch_method(this, 0xd, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0008\x0003\x0003\x0008\x0003", probeID, serialNumber, (BSTR)probeName, probeType, numberOfFields, (BSTR)comment, probesTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::TipAdaptersData ( long tipAdapterID, long assemblyID, long serialNumberLowPart, long serialNumberHighPart, _bstr_t tipName, enum ES_TipType tipType, double radius, double length, _bstr_t comment, long tipAdaptersTotal ) {
+    return _com_dispatch_method(this, 0xe, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0008\x0003\x0005\x0005\x0008\x0003", tipAdapterID, assemblyID, serialNumberLowPart, serialNumberHighPart, (BSTR)tipName, tipType, radius, length, (BSTR)comment, tipAdaptersTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::TCamToTrackerCompensationsData ( long tCamToTrackerCompensationID, long trackerCompensationID, long cameraID, VARIANT_BOOL isActive, long trackerSerialNumber, _bstr_t compensationName, _bstr_t comment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0xf, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x000b\x0003\x0008\x0008\x0003", tCamToTrackerCompensationID, trackerCompensationID, cameraID, isActive, trackerSerialNumber, (BSTR)compensationName, (BSTR)comment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ProbeCompensationsData ( long probeCompensationID, long probeID, long fieldNumber, VARIANT_BOOL isActive, VARIANT_BOOL markedForExport, VARIANT_BOOL isPreliminary, _bstr_t probeCompensationName, _bstr_t probeCompensationComment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x10, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x000b\x000b\x000b\x0008\x0008\x0003", probeCompensationID, probeID, fieldNumber, isActive, markedForExport, isPreliminary, (BSTR)probeCompensationName, (BSTR)probeCompensationComment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::TipToProbeCompensationsData ( long tipToProbeCompensationID, long tipAdapterID, long tipAdapterInterface, long probeCompensationID, VARIANT_BOOL markedForExport, _bstr_t compensationName, _bstr_t comment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x11, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x000b\x0008\x0008\x0003", tipToProbeCompensationID, tipAdapterID, tipAdapterInterface, probeCompensationID, markedForExport, (BSTR)compensationName, (BSTR)comment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::CenterPointProbeData ( enum ES_MeasMode measMode, double position1, double position2, double position3, double stdDevPosition1, double stdDevPosition2, double stdDevPosition3, double stdDevPositionTotal, double covarPosition12, double covarPosition13, double covarPosition23, double aprioriStdDevPosition1, double aprioriStdDevPosition2, double aprioriStdDevPosition3, double aprioriStdDevPositionTotal, double aprioriCovarPosition12, double aprioriCovarPosition13, double aprioriCovarPosition23, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x12, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, position1, position2, position3, stdDevPosition1, stdDevPosition2, stdDevPosition3, stdDevPositionTotal, covarPosition12, covarPosition13, covarPosition23, aprioriStdDevPosition1, aprioriStdDevPosition2, aprioriStdDevPosition3, aprioriStdDevPositionTotal, aprioriCovarPosition12, aprioriCovarPosition13, aprioriCovarPosition23, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandSyncEvents::Compensations2Data ( long compensationId, _bstr_t trackerCompensationName, _bstr_t trackerCompensationComment, _bstr_t ADMCompensationName, _bstr_t ADMCompensationComment, VARIANT_BOOL hasMeasurementCameraMounted, VARIANT_BOOL isActive, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x13, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0008\x0008\x0008\x000b\x000b\x0003", compensationId, (BSTR)trackerCompensationName, (BSTR)trackerCompensationComment, (BSTR)ADMCompensationName, (BSTR)ADMCompensationComment, hasMeasurementCameraMounted, isActive, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::TipToProbeCompensations2Data ( long tipToProbeCompensationID, long tipAdapterID, long tipAdapterInterface, long probeCompensationID, VARIANT_BOOL markedForExport, enum ES_TipToProbeCompensationType compensationType, _bstr_t compensationName, _bstr_t comment, _bstr_t shankCompensationName, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x14, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x000b\x0003\x0008\x0008\x0008\x0003", tipToProbeCompensationID, tipAdapterID, tipAdapterInterface, probeCompensationID, markedForExport, compensationType, (BSTR)compensationName, (BSTR)comment, (BSTR)shankCompensationName, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandSyncEvents::ExceptionEvent ( long errorNumber, _bstr_t errorText ) {
+    return _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", errorNumber, (BSTR)errorText);
+}
+
+//
+// interface ILTCommandAsync wrapper method implementations
+//
+
+inline HRESULT ILTCommandAsync::Initialize ( ) {
+    HRESULT _hr = raw_Initialize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ReleaseMotors ( ) {
+    HRESULT _hr = raw_ReleaseMotors();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ActivateCameraView ( ) {
+    HRESULT _hr = raw_ActivateCameraView();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::Park ( ) {
+    HRESULT _hr = raw_Park();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SwitchLaser ( VARIANT_BOOL isOn ) {
+    HRESULT _hr = raw_SwitchLaser(isOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ExitApplication ( ) {
+    HRESULT _hr = raw_ExitApplication();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoBirdBath ( ) {
+    HRESULT _hr = raw_GoBirdBath();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ChangeFace ( ) {
+    HRESULT _hr = raw_ChangeFace();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoPosition ( double val1, double val2, double val3, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_GoPosition(val1, val2, val3, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoPositionHVD ( double hzAngle, double vtAngle, double distance, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_GoPositionHVD(hzAngle, vtAngle, distance, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::PositionRelativeHV ( double hzAngle, double vtAngle ) {
+    HRESULT _hr = raw_PositionRelativeHV(hzAngle, vtAngle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::PointLaser ( double val1, double val2, double val3 ) {
+    HRESULT _hr = raw_PointLaser(val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::PointLaserHVD ( double hzAngle, double vtAngle, double distance ) {
+    HRESULT _hr = raw_PointLaserHVD(hzAngle, vtAngle, distance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::FindReflector ( double approxDist ) {
+    HRESULT _hr = raw_FindReflector(approxDist);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::StartNivelMeasurement ( ) {
+    HRESULT _hr = raw_StartNivelMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::StartContinuousPointMeasurement ( ) {
+    HRESULT _hr = raw_StartContinuousPointMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::StartContinuousProbeMeasurement ( ) {
+    HRESULT _hr = raw_StartContinuousProbeMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MeasureStationaryPoint ( ) {
+    HRESULT _hr = raw_MeasureStationaryPoint();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MeasureStationaryProbeData ( ) {
+    HRESULT _hr = raw_MeasureStationaryProbeData();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::StopContinuousMeasurement ( ) {
+    HRESULT _hr = raw_StopContinuousMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MoveHV ( long horizontalSpeed, long verticalSpeed ) {
+    HRESULT _hr = raw_MoveHV(horizontalSpeed, verticalSpeed);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MoveLeft ( ) {
+    HRESULT _hr = raw_MoveLeft();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MoveRight ( ) {
+    HRESULT _hr = raw_MoveRight();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MoveUp ( ) {
+    HRESULT _hr = raw_MoveUp();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::MoveDown ( ) {
+    HRESULT _hr = raw_MoveDown();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::StopMove ( ) {
+    HRESULT _hr = raw_StopMove();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoNivelPosition ( enum ES_NivelPosition nivelPosition ) {
+    HRESULT _hr = raw_GoNivelPosition(nivelPosition);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoLastMeasuredPoint ( ) {
+    HRESULT _hr = raw_GoLastMeasuredPoint();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetSystemStatus ( ) {
+    HRESULT _hr = raw_GetSystemStatus();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTrackerStatus ( ) {
+    HRESULT _hr = raw_GetTrackerStatus();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetReflectors ( ) {
+    HRESULT _hr = raw_GetReflectors();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetReflector ( long reflectorID ) {
+    HRESULT _hr = raw_SetReflector(reflectorID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetReflector ( ) {
+    HRESULT _hr = raw_GetReflector();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetSearchParams ( double searchRadius, long timeOut ) {
+    HRESULT _hr = raw_SetSearchParams(searchRadius, timeOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetSearchParams ( ) {
+    HRESULT _hr = raw_GetSearchParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetAdmParams ( double targetStabilityTolerance, long retryTimeFrame, long numberOfRetrys ) {
+    HRESULT _hr = raw_SetAdmParams(targetStabilityTolerance, retryTimeFrame, numberOfRetrys);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetAdmParams ( ) {
+    HRESULT _hr = raw_GetAdmParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetSystemSettings ( enum ES_WeatherMonitorStatus weatherMonitorStatus, VARIANT_BOOL applyTransformationParams, VARIANT_BOOL applyStationOrientationParams, VARIANT_BOOL keepLastPosition, VARIANT_BOOL sendUnsolicitedMessages, VARIANT_BOOL sendReflectorPositionData, VARIANT_BOOL tryMeasurementMode, VARIANT_BOOL hasNivel, VARIANT_BOOL hasVideoCamera ) {
+    HRESULT _hr = raw_SetSystemSettings(weatherMonitorStatus, applyTransformationParams, applyStationOrientationParams, keepLastPosition, sendUnsolicitedMessages, sendReflectorPositionData, tryMeasurementMode, hasNivel, hasVideoCamera);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetSystemSettings ( ) {
+    HRESULT _hr = raw_GetSystemSettings();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetUnits ( enum ES_LengthUnit lengthUnit, enum ES_AngleUnit angleUnit, enum ES_TemperatureUnit temperatureUnit, enum ES_PressureUnit pressureUnit, enum ES_HumidityUnit humidityUnit ) {
+    HRESULT _hr = raw_SetUnits(lengthUnit, angleUnit, temperatureUnit, pressureUnit, humidityUnit);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetUnits ( ) {
+    HRESULT _hr = raw_GetUnits();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetStationOrientationParams ( double val1, double val2, double val3, double rot1, double rot2, double rot3 ) {
+    HRESULT _hr = raw_SetStationOrientationParams(val1, val2, val3, rot1, rot2, rot3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetStationOrientationParams ( ) {
+    HRESULT _hr = raw_GetStationOrientationParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTransformationParams ( double val1, double val2, double val3, double rot1, double rot2, double rot3, double scale ) {
+    HRESULT _hr = raw_SetTransformationParams(val1, val2, val3, rot1, rot2, rot3, scale);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTransformationParams ( ) {
+    HRESULT _hr = raw_GetTransformationParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTemperatureRange ( enum ES_TrackerTemperatureRange temperatureRange ) {
+    HRESULT _hr = raw_SetTemperatureRange(temperatureRange);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTemperatureRange ( ) {
+    HRESULT _hr = raw_GetTemperatureRange();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetEnvironmentParams ( double temperature, double pressure, double humidity ) {
+    HRESULT _hr = raw_SetEnvironmentParams(temperature, pressure, humidity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetEnvironmentParams ( ) {
+    HRESULT _hr = raw_GetEnvironmentParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetRefractionParams ( double ifmRefractionIndex, double admRefractionIndex ) {
+    HRESULT _hr = raw_SetRefractionParams(ifmRefractionIndex, admRefractionIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetRefractionParams ( ) {
+    HRESULT _hr = raw_GetRefractionParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetMeasurementMode ( enum ES_MeasMode measMode ) {
+    HRESULT _hr = raw_SetMeasurementMode(measMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeasurementMode ( ) {
+    HRESULT _hr = raw_GetMeasurementMode();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetBoxRegionParams ( double pt1Val1, double pt1Val2, double pt1Val3, double pt2Val1, double pt2Val2, double pt2Val3 ) {
+    HRESULT _hr = raw_SetBoxRegionParams(pt1Val1, pt1Val2, pt1Val3, pt2Val1, pt2Val2, pt2Val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetBoxRegionParams ( ) {
+    HRESULT _hr = raw_GetBoxRegionParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetSphereRegionParams ( double ptVal1, double ptVal2, double ptVal3, double radius ) {
+    HRESULT _hr = raw_SetSphereRegionParams(ptVal1, ptVal2, ptVal3, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetSphereRegionParams ( ) {
+    HRESULT _hr = raw_GetSphereRegionParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetStationaryModeParams ( long time, VARIANT_BOOL useADM ) {
+    HRESULT _hr = raw_SetStationaryModeParams(time, useADM);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetStationaryModeParams ( ) {
+    HRESULT _hr = raw_GetStationaryModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetGridModeParams ( double val1, double val2, double val3, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetGridModeParams(val1, val2, val3, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetGridModeParams ( ) {
+    HRESULT _hr = raw_GetGridModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetContinuousTimeModeParams ( long timeSeparation, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetContinuousTimeModeParams(timeSeparation, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetContinuousTimeModeParams ( ) {
+    HRESULT _hr = raw_GetContinuousTimeModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetContinuousDistanceModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    HRESULT _hr = raw_SetContinuousDistanceModeParams(spatialDistance, numberOfPoints, useRegion, regionType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetContinuousDistanceModeParams ( ) {
+    HRESULT _hr = raw_GetContinuousDistanceModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetSphereCenterModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    HRESULT _hr = raw_SetSphereCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetSphereCenterModeParams ( ) {
+    HRESULT _hr = raw_GetSphereCenterModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetCircleCenterModeParams ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    HRESULT _hr = raw_SetCircleCenterModeParams(spatialDistance, numberOfPoints, fixRadius, radius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCircleCenterModeParams ( ) {
+    HRESULT _hr = raw_GetCircleCenterModeParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetCoordinateSystemType ( enum ES_CoordinateSystemType coordSysType ) {
+    HRESULT _hr = raw_SetCoordinateSystemType(coordSysType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCoordinateSystemType ( ) {
+    HRESULT _hr = raw_GetCoordinateSystemType();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::LookForTarget ( double val1, double val2, double val3, double searchRadius ) {
+    HRESULT _hr = raw_LookForTarget(val1, val2, val3, searchRadius);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetDirection ( ) {
+    HRESULT _hr = raw_GetDirection();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::CallOrientToGravity ( ) {
+    HRESULT _hr = raw_CallOrientToGravity();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ClearTransformationNominalPointList ( ) {
+    HRESULT _hr = raw_ClearTransformationNominalPointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ClearTransformationActualPointList ( ) {
+    HRESULT _hr = raw_ClearTransformationActualPointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::AddTransformationNominalPoint ( double val1, double val2, double val3, double std1, double std2, double std3, double covar12, double covar13, double covar23 ) {
+    HRESULT _hr = raw_AddTransformationNominalPoint(val1, val2, val3, std1, std2, std3, covar12, covar13, covar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::AddTransformationActualPoint ( double val1, double val2, double val3, double std1, double std2, double std3, double covar12, double covar13, double covar23 ) {
+    HRESULT _hr = raw_AddTransformationActualPoint(val1, val2, val3, std1, std2, std3, covar12, covar13, covar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTransformationInputParams ( enum ES_TransResultType transResultType, double transVal1, double transVal2, double transVal3, double rotVal1, double rotVal2, double rotVal3, double scale, double transStdVal1, double transStdVal2, double transStdVal3, double rotStdVal1, double rotStdVal2, double rotStdVal3, double scaleStd ) {
+    HRESULT _hr = raw_SetTransformationInputParams(transResultType, transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTransformationInputParams ( ) {
+    HRESULT _hr = raw_GetTransformationInputParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::CallTransformation ( ) {
+    HRESULT _hr = raw_CallTransformation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTransformedPoints ( ) {
+    HRESULT _hr = raw_GetTransformedPoints();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ClearDrivePointList ( ) {
+    HRESULT _hr = raw_ClearDrivePointList();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::AddDrivePoint ( long reflectorID, double val1, double val2, double val3 ) {
+    HRESULT _hr = raw_AddDrivePoint(reflectorID, val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::CallIntermediateCompensation ( ) {
+    HRESULT _hr = raw_CallIntermediateCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetCompensation ( long compensationId ) {
+    HRESULT _hr = raw_SetCompensation(compensationId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetStatisticMode ( enum ES_StatisticMode stationaryMeasurements, enum ES_StatisticMode continuousMeasurements ) {
+    HRESULT _hr = raw_SetStatisticMode(stationaryMeasurements, continuousMeasurements);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetStatisticMode ( ) {
+    HRESULT _hr = raw_GetStatisticMode();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetCameraParams ( long contrast, long brightness, long saturation ) {
+    HRESULT _hr = raw_SetCameraParams(contrast, brightness, saturation);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCameraParams ( ) {
+    HRESULT _hr = raw_GetCameraParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetStillImage ( enum ES_StillImageFileType imageFileType ) {
+    HRESULT _hr = raw_GetStillImage(imageFileType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCompensation ( ) {
+    HRESULT _hr = raw_GetCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCompensations ( ) {
+    HRESULT _hr = raw_GetCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCompensations2 ( ) {
+    HRESULT _hr = raw_GetCompensations2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::CheckBirdBath ( ) {
+    HRESULT _hr = raw_CheckBirdBath();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTrackerDiagnostics ( ) {
+    HRESULT _hr = raw_GetTrackerDiagnostics();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetADMInfo ( ) {
+    HRESULT _hr = raw_GetADMInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTPInfo ( ) {
+    HRESULT _hr = raw_GetTPInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetNivelInfo ( ) {
+    HRESULT _hr = raw_GetNivelInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetLaserOnTimer ( long timeOffsetHour, long timeOffsetMinute ) {
+    HRESULT _hr = raw_SetLaserOnTimer(timeOffsetHour, timeOffsetMinute);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetLaserOnTimer ( ) {
+    HRESULT _hr = raw_GetLaserOnTimer();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ConvertDisplayCoordinates ( enum ES_DisplayCoordinateConversionType conversionType, double val1, double val2, double val3 ) {
+    HRESULT _hr = raw_ConvertDisplayCoordinates(conversionType, val1, val2, val3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoBirdBath2 ( VARIANT_BOOL clockwise ) {
+    HRESULT _hr = raw_GoBirdBath2(clockwise);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTriggerSource ( enum ES_TriggerSource triggerSource ) {
+    HRESULT _hr = raw_SetTriggerSource(triggerSource);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTriggerSource ( ) {
+    HRESULT _hr = raw_GetTriggerSource();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetFace ( ) {
+    HRESULT _hr = raw_GetFace();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCameras ( ) {
+    HRESULT _hr = raw_GetCameras();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCamera ( ) {
+    HRESULT _hr = raw_GetCamera();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetMeasurementCameraMode ( enum ES_MeasurementCameraMode cameraMode ) {
+    HRESULT _hr = raw_SetMeasurementCameraMode(cameraMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeasurementCameraMode ( ) {
+    HRESULT _hr = raw_GetMeasurementCameraMode();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetProbes ( ) {
+    HRESULT _hr = raw_GetProbes();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetProbe ( ) {
+    HRESULT _hr = raw_GetProbe();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTipAdapters ( ) {
+    HRESULT _hr = raw_GetTipAdapters();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTipAdapter ( ) {
+    HRESULT _hr = raw_GetTipAdapter();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTCamToTrackerCompensations ( ) {
+    HRESULT _hr = raw_GetTCamToTrackerCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTCamToTrackerCompensation ( long tCamToTrackerCompensationID ) {
+    HRESULT _hr = raw_SetTCamToTrackerCompensation(tCamToTrackerCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTCamToTrackerCompensation ( ) {
+    HRESULT _hr = raw_GetTCamToTrackerCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetProbeCompensations ( ) {
+    HRESULT _hr = raw_GetProbeCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetProbeCompensation ( long probeCompensationID ) {
+    HRESULT _hr = raw_SetProbeCompensation(probeCompensationID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetProbeCompensation ( ) {
+    HRESULT _hr = raw_GetProbeCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTipToProbeCompensations ( ) {
+    HRESULT _hr = raw_GetTipToProbeCompensations();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTipToProbeCompensation ( ) {
+    HRESULT _hr = raw_GetTipToProbeCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetExternTriggerParams ( enum ES_ClockTransition clockTransition, enum ES_TriggerMode triggerMode, enum ES_TriggerStartSignal startSignal, long minimalTimeDelay ) {
+    HRESULT _hr = raw_SetExternTriggerParams(clockTransition, triggerMode, startSignal, minimalTimeDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetExternTriggerParams ( ) {
+    HRESULT _hr = raw_GetExternTriggerParams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetErrorEllipsoid ( double coord1, double coord2, double coord3, double stdDev1, double stdDev2, double stdDev3, double covar12, double covar13, double covar23 ) {
+    HRESULT _hr = raw_GetErrorEllipsoid(coord1, coord2, coord3, stdDev1, stdDev2, stdDev3, covar12, covar13, covar23);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeasurementCameraInfo ( ) {
+    HRESULT _hr = raw_GetMeasurementCameraInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeasurementProbeInfo ( ) {
+    HRESULT _hr = raw_GetMeasurementProbeInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetLongSystemParameter ( enum ES_SystemParameter systemParam, long parameter ) {
+    HRESULT _hr = raw_SetLongSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetLongSystemParameter ( enum ES_SystemParameter systemParam ) {
+    HRESULT _hr = raw_GetLongSystemParameter(systemParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeasurementStatusInfo ( ) {
+    HRESULT _hr = raw_GetMeasurementStatusInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetCurrentPrismPosition ( ) {
+    HRESULT _hr = raw_GetCurrentPrismPosition();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetDoubleSystemParameter ( enum ES_SystemParameter systemParam, double parameter ) {
+    HRESULT _hr = raw_SetDoubleSystemParameter(systemParam, parameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetDoubleSystemParameter ( enum ES_SystemParameter systemParam ) {
+    HRESULT _hr = raw_GetDoubleSystemParameter(systemParam);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetObjectTemperature ( ) {
+    HRESULT _hr = raw_GetObjectTemperature();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTriggerBoardInfo ( ) {
+    HRESULT _hr = raw_GetTriggerBoardInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetOverviewCameraInfo ( ) {
+    HRESULT _hr = raw_GetOverviewCameraInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::ClearCommandQueue ( enum ES_ClearCommandQueueType __MIDL__ILTCommandAsync0000 ) {
+    HRESULT _hr = raw_ClearCommandQueue(__MIDL__ILTCommandAsync0000);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetADMInfo2 ( ) {
+    HRESULT _hr = raw_GetADMInfo2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTrackerInfo ( ) {
+    HRESULT _hr = raw_GetTrackerInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetNivelInfo2 ( ) {
+    HRESULT _hr = raw_GetNivelInfo2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::RestoreStartupConditions ( ) {
+    HRESULT _hr = raw_RestoreStartupConditions();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GoAndMeasureStationaryPoint ( double refVal1, double refVal2, double refVal3 ) {
+    HRESULT _hr = raw_GoAndMeasureStationaryPoint(refVal1, refVal2, refVal3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetTipToProbeCompensations2 ( ) {
+    HRESULT _hr = raw_GetTipToProbeCompensations2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::SetTipAdapter ( long tipAdapterID ) {
+    HRESULT _hr = raw_SetTipAdapter(tipAdapterID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetATRInfo ( ) {
+    HRESULT _hr = raw_GetATRInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetMeteoStationInfo ( ) {
+    HRESULT _hr = raw_GetMeteoStationInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::GetAT4xxInfo ( ) {
+    HRESULT _hr = raw_GetAT4xxInfo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ILTCommandAsync::CallATRCompensation ( enum ES_ATR_Module atrModule ) {
+    HRESULT _hr = raw_CallATRCompensation(atrModule);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface _ILTCommandAsyncEvents wrapper method implementations
+//
+
+inline HRESULT _ILTCommandAsyncEvents::ErrorEvent ( enum ES_Command command, enum ES_ResultStatus status ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", command, status);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ReflectorsData ( long reflectorID, _bstr_t reflectorName, enum ES_TargetType targetType, double surfaceOffset, long reflectorsTotal ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0003", reflectorID, (BSTR)reflectorName, targetType, surfaceOffset, reflectorsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ContinuousPointMeasDataReady ( long resultsTotal, long bytesTotal ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", resultsTotal, bytesTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ContinuousProbeMeasDataReady ( long resultsTotal, long bytesTotal ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", resultsTotal, bytesTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ReflectorPositionData ( double val1, double val2, double val3 ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005", val1, val2, val3);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CenterPointData ( enum ES_MeasMode measMode, double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, val1, val2, val3, std1, std2, std3, stdTotal, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StatusChangeEvent ( enum ES_SystemStatusChange statusChange ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", statusChange);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CommandCompletedData ( enum ES_Command command ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", command);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::NivelMeasurementData ( enum ES_NivelStatus nivelStatus, double xTilt, double yTilt, double nivelTemperature ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005", nivelStatus, xTilt, yTilt, nivelTemperature);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StationaryPointMeasData ( double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double pointingError1, double pointingError2, double pointingError3, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0xa, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", val1, val2, val3, std1, std2, std3, stdTotal, pointingError1, pointingError2, pointingError3, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StationaryProbeMeasData ( enum ES_TriggerStatus triggerStatus, long rotationStatus, long probeID, long fieldNumber, enum ES_MeasurementTipStatus tipStatus, long tipAdapterID, long tipAdapterInterface, double position1, double position2, double position3, double stdDevPosition1, double stdDevPosition2, double stdDevPosition3, double stdDevPositionTotal, double covarPosition12, double covarPosition13, double covarPosition23, double aprioriStdDevPosition1, double aprioriStdDevPosition2, double aprioriStdDevPosition3, double aprioriStdDevPositionTotal, double aprioriCovarPosition12, double aprioriCovarPosition13, double aprioriCovarPosition23, double quaternion0, double quaternion1, double quaternion2, double quaternion3, double rotationAngleX, double rotationAngleY, double rotationAngleZ, double stdDevRotationAngleX, double stdDevRotationAngleY, double stdDevRotationAngleZ, double stdDevRotationAngleTotal, double covarRotationAngleXY, double covarRotationAngleXZ, double covarRotationAngleYZ, double aprioriStdDevRotationAngleX, double aprioriStdDevRotationAngleY, double aprioriStdDevRotationAngleZ, double aprioriStdDevRotationAngleTotal, double aprioriCovarRotationAngleXY, double aprioriCovarRotationAngleXZ, double aprioriCovarRotationAngleYZ, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0xb, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", triggerStatus, rotationStatus, probeID, fieldNumber, tipStatus, tipAdapterID, tipAdapterInterface, position1, position2, position3, stdDevPosition1, stdDevPosition2, stdDevPosition3, stdDevPositionTotal, covarPosition12, covarPosition13, covarPosition23, aprioriStdDevPosition1, aprioriStdDevPosition2, aprioriStdDevPosition3, aprioriStdDevPositionTotal, aprioriCovarPosition12, aprioriCovarPosition13, aprioriCovarPosition23, quaternion0, quaternion1, quaternion2, quaternion3, rotationAngleX, rotationAngleY, rotationAngleZ, stdDevRotationAngleX, stdDevRotationAngleY, stdDevRotationAngleZ, stdDevRotationAngleTotal, covarRotationAngleXY, covarRotationAngleXZ, covarRotationAngleYZ, aprioriStdDevRotationAngleX, aprioriStdDevRotationAngleY, aprioriStdDevRotationAngleZ, aprioriStdDevRotationAngleTotal, aprioriCovarRotationAngleXY, aprioriCovarRotationAngleXZ, aprioriCovarRotationAngleYZ, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::AdmParamsData ( double targetStabilityTolerance, long retryTimeFrame, long numberOfRetrys ) {
+    return _com_dispatch_method(this, 0xc, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0003\x0003", targetStabilityTolerance, retryTimeFrame, numberOfRetrys);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SearchParamsData ( double searchRadius, long timeOut ) {
+    return _com_dispatch_method(this, 0xd, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0003", searchRadius, timeOut);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SystemStatusData ( enum ES_ResultStatus LastResultStatus, enum ES_TrackerProcessorStatus trackerProcessorStatus, enum ES_LaserProcessorStatus laserStatus, enum ES_ADMStatus admStatus, long majorVersionNumber, long minorVersionNumber, long BuildNumber, enum ES_WeatherMonitorStatus weatherMonitorStatus, long flagsValue, long trackerSerialNumber ) {
+    return _com_dispatch_method(this, 0xe, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003", LastResultStatus, trackerProcessorStatus, laserStatus, admStatus, majorVersionNumber, minorVersionNumber, BuildNumber, weatherMonitorStatus, flagsValue, trackerSerialNumber);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TrackerStatusData ( enum ES_TrackerStatus trackerStatus ) {
+    return _com_dispatch_method(this, 0xf, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", trackerStatus);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ReflectorData ( long reflectorID ) {
+    return _com_dispatch_method(this, 0x10, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", reflectorID);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SystemSettingsData ( enum ES_WeatherMonitorStatus weatherMonitorStatus, VARIANT_BOOL applyTransformationParams, VARIANT_BOOL applyStationOrientationParams, VARIANT_BOOL keepLastPosition, VARIANT_BOOL sendUnsolicitedMessages, VARIANT_BOOL sendReflectorPositionData, VARIANT_BOOL tryMeasurementMode, VARIANT_BOOL hasNivel, VARIANT_BOOL hasVideoCamera ) {
+    return _com_dispatch_method(this, 0x11, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x000b\x000b\x000b\x000b\x000b\x000b\x000b\x000b", weatherMonitorStatus, applyTransformationParams, applyStationOrientationParams, keepLastPosition, sendUnsolicitedMessages, sendReflectorPositionData, tryMeasurementMode, hasNivel, hasVideoCamera);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::UnitsData ( enum ES_LengthUnit lengthUnit, enum ES_AngleUnit angleUnit, enum ES_TemperatureUnit temperatureUnit, enum ES_PressureUnit pressureUnit, enum ES_HumidityUnit humidityUnit ) {
+    return _com_dispatch_method(this, 0x12, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0003", lengthUnit, angleUnit, temperatureUnit, pressureUnit, humidityUnit);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StationOrientationParamsData ( double val1, double val2, double val3, double rot1, double rot2, double rot3 ) {
+    return _com_dispatch_method(this, 0x13, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005", val1, val2, val3, rot1, rot2, rot3);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TransformationParamsData ( double val1, double val2, double val3, double rot1, double rot2, double rot3, double scale ) {
+    return _com_dispatch_method(this, 0x14, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005", val1, val2, val3, rot1, rot2, rot3, scale);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TemperatureRangeData ( enum ES_TrackerTemperatureRange temperatureRange ) {
+    return _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", temperatureRange);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::EnvironmentParamsData ( double temperature, double pressure, double humidity ) {
+    return _com_dispatch_method(this, 0x16, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005", temperature, pressure, humidity);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::RefractionParamsData ( double ifmRefractionIndex, double admRefractionIndex ) {
+    return _com_dispatch_method(this, 0x17, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005", ifmRefractionIndex, admRefractionIndex);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeasurementModeData ( enum ES_MeasMode measMode ) {
+    return _com_dispatch_method(this, 0x18, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", measMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::BoxRegionParamsData ( double pt1Val1, double pt1Val2, double pt1Val3, double pt2Val1, double pt2Val2, double pt2Val3 ) {
+    return _com_dispatch_method(this, 0x19, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005", pt1Val1, pt1Val2, pt1Val3, pt2Val1, pt2Val2, pt2Val3);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SphereRegionParamsData ( double ptVal1, double ptVal2, double ptVal3, double radius ) {
+    return _com_dispatch_method(this, 0x1a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005", ptVal1, ptVal2, ptVal3, radius);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StationaryModeParamsData ( long time, VARIANT_BOOL useADM ) {
+    return _com_dispatch_method(this, 0x1b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x000b", time, useADM);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::GridModeParamsData ( double val1, double val2, double val3, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    return _com_dispatch_method(this, 0x1c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0003\x000b\x0003", val1, val2, val3, numberOfPoints, useRegion, regionType);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ContinuousTimeModeParamsData ( long timeSeparation, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    return _com_dispatch_method(this, 0x1d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b\x0003", timeSeparation, numberOfPoints, useRegion, regionType);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ContinuousDistanceModeParamsData ( double spatialDistance, long numberOfPoints, VARIANT_BOOL useRegion, enum ES_RegionType regionType ) {
+    return _com_dispatch_method(this, 0x1e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0003\x000b\x0003", spatialDistance, numberOfPoints, useRegion, regionType);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SphereCenterModeParamsData ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    return _com_dispatch_method(this, 0x1f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0003\x000b\x0005", spatialDistance, numberOfPoints, fixRadius, radius);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CircleCenterModeParamsData ( double spatialDistance, long numberOfPoints, VARIANT_BOOL fixRadius, double radius ) {
+    return _com_dispatch_method(this, 0x20, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0003\x000b\x0005", spatialDistance, numberOfPoints, fixRadius, radius);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CoordinateSystemTypeData ( enum ES_CoordinateSystemType coordSysType ) {
+    return _com_dispatch_method(this, 0x21, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", coordSysType);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TargetData ( double hzAngle, double vtAngle ) {
+    return _com_dispatch_method(this, 0x22, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005", hzAngle, vtAngle);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::DirectionData ( double hzAngle, double vtAngle ) {
+    return _com_dispatch_method(this, 0x23, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005", hzAngle, vtAngle);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::OrientToGravityData ( double omega, double phi ) {
+    return _com_dispatch_method(this, 0x24, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005", omega, phi);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::IntermediateCompensationData ( double totalRMS, double maxDev, long warningFlags ) {
+    return _com_dispatch_method(this, 0x25, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0003", totalRMS, maxDev, warningFlags);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TransformationInputParamsData ( enum ES_TransResultType transResultType, double transVal1, double transVal2, double transVal3, double rotVal1, double rotVal2, double rotVal3, double scale, double transStdVal1, double transStdVal2, double transStdVal3, double rotStdVal1, double rotStdVal2, double rotStdVal3, double scaleStd ) {
+    return _com_dispatch_method(this, 0x26, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005", transResultType, transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TransformationData ( double transVal1, double transVal2, double transVal3, double rotVal1, double rotVal2, double rotVal3, double scale, double transStdVal1, double transStdVal2, double transStdVal3, double rotStdVal1, double rotStdVal2, double rotStdVal3, double scaleStd, double RMS, double maxDev, double varianceFactor ) {
+    return _com_dispatch_method(this, 0x27, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005", transVal1, transVal2, transVal3, rotVal1, rotVal2, rotVal3, scale, transStdVal1, transStdVal2, transStdVal3, rotStdVal1, rotStdVal2, rotStdVal3, scaleStd, RMS, maxDev, varianceFactor);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TransformedPointsData ( double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double covar12, double covar13, double covar23, double residualVal1, double residualVal2, double residualVal3, long totalPoints ) {
+    return _com_dispatch_method(this, 0x28, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0003", val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, residualVal1, residualVal2, residualVal3, totalPoints);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StatisticModeData ( enum ES_StatisticMode stationaryMeasurements, enum ES_StatisticMode continuousMeasurements ) {
+    return _com_dispatch_method(this, 0x29, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", stationaryMeasurements, continuousMeasurements);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StationaryPoint2MeasData ( double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double covar12, double covar13, double covar23, double pointingErrorH, double pointingErrorV, double pointingErrorD, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double aprioriCovar12, double aprioriCovar13, double aprioriCovar23, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x2a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, pointingErrorH, pointingErrorV, pointingErrorD, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CenterPoint2Data ( enum ES_MeasMode measMode, double val1, double val2, double val3, double std1, double std2, double std3, double stdTotal, double covar12, double covar13, double covar23, double aprioriStd1, double aprioriStd2, double aprioriStd3, double aprioriStdTotal, double aprioriCovar12, double aprioriCovar13, double aprioriCovar23, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x2b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, val1, val2, val3, std1, std2, std3, stdTotal, covar12, covar13, covar23, aprioriStd1, aprioriStd2, aprioriStd3, aprioriStdTotal, aprioriCovar12, aprioriCovar13, aprioriCovar23, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CameraParamsData ( long contrast, long brightness, long saturation ) {
+    return _com_dispatch_method(this, 0x2c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", contrast, brightness, saturation);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::StillImageDataReady ( enum ES_StillImageFileType imageFileType, long fileSize, long bytesTotal ) {
+    return _com_dispatch_method(this, 0x2d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", imageFileType, fileSize, bytesTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CompensationsData ( long compensationId, _bstr_t trackerCompensationName, _bstr_t trackerCompensationComment, _bstr_t ADMCompensationName, VARIANT_BOOL hasMeasurementCameraMounted, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x2e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0008\x0008\x000b\x0003", compensationId, (BSTR)trackerCompensationName, (BSTR)trackerCompensationComment, (BSTR)ADMCompensationName, hasMeasurementCameraMounted, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CompensationData ( long compensationId ) {
+    return _com_dispatch_method(this, 0x2f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", compensationId);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CheckBirdBathData ( double initialHzAngle, double initialVtAngle, double initialDistance, double hzAngleDiff, double vtAngleDiff, double distanceDiff ) {
+    return _com_dispatch_method(this, 0x30, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005", initialHzAngle, initialVtAngle, initialDistance, hzAngleDiff, vtAngleDiff, distanceDiff);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TrackerDiagnosticsData ( double trkPhotoSensorXVal, double trkPhotoSensorYVal, double trkPhotoSensorIVal, double refPhotoSensorXVal, double refPhotoSensorYVal, double refPhotoSensorIVal, double ADConverterRange, double servoControlPointX, double servoControlPointY, double laserLightRatio, long laserControlMode, double sensorInsideTemperature, long LCPRunTime, long laserTubeRunTime ) {
+    return _com_dispatch_method(this, 0x31, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0003\x0005\x0003\x0003", trkPhotoSensorXVal, trkPhotoSensorYVal, trkPhotoSensorIVal, refPhotoSensorXVal, refPhotoSensorYVal, refPhotoSensorIVal, ADConverterRange, servoControlPointX, servoControlPointY, laserLightRatio, laserControlMode, sensorInsideTemperature, LCPRunTime, laserTubeRunTime);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ADMInfoData ( long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, long serialNumber ) {
+    return _com_dispatch_method(this, 0x32, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TPInfoData ( long TPBootMajorVersionNumber, long TPBootMinorVersionNumber, long TPFirmWareMajorVersionNumber, long TPFirmWareMinorVersionNumber, long LCPFirmWareMajorVersionNumber, long LCPFirmWareMinorVersionNumber, enum ES_TrackerProcessorType trackerprocessorType, enum ES_TPMicroProcessorType microProcessorType, long microProcessorClockSpeed, enum ES_LTSensorType laserTrackerSensorType ) {
+    return _com_dispatch_method(this, 0x33, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003", TPBootMajorVersionNumber, TPBootMinorVersionNumber, TPFirmWareMajorVersionNumber, TPFirmWareMinorVersionNumber, LCPFirmWareMajorVersionNumber, LCPFirmWareMinorVersionNumber, trackerprocessorType, microProcessorType, microProcessorClockSpeed, laserTrackerSensorType);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::NivelInfoData ( long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, long serialNumber ) {
+    return _com_dispatch_method(this, 0x34, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::LaserOnTimerData ( long timeOffsetHour, long timeOffsetMinute ) {
+    return _com_dispatch_method(this, 0x35, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", timeOffsetHour, timeOffsetMinute);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ProbePositionData ( long rotationStatus, enum ES_MeasurementTipStatus tipStatus, long tipAdapterID, long tipAdapterInterface, double position1, double position2, double position3, double quaternion0, double quaternion1, double quaternion2, double quaternion3, double rotationAngleX, double rotationAngleY, double rotationAngleZ ) {
+    return _com_dispatch_method(this, 0x36, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005", rotationStatus, tipStatus, tipAdapterID, tipAdapterInterface, position1, position2, position3, quaternion0, quaternion1, quaternion2, quaternion3, rotationAngleX, rotationAngleY, rotationAngleZ);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::DisplayCoordinatesData ( double val1, double val2, double val3 ) {
+    return _com_dispatch_method(this, 0x37, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005", val1, val2, val3);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TriggerSourceData ( enum ES_TriggerSource triggerSource ) {
+    return _com_dispatch_method(this, 0x38, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", triggerSource);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::FaceData ( enum ES_TrackerFace trackerFace ) {
+    return _com_dispatch_method(this, 0x39, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", trackerFace);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CamerasData ( long cameraID, long serialNumber, enum ES_MeasurementCameraType cameraType, _bstr_t cameraName, _bstr_t comment, long camerasTotal ) {
+    return _com_dispatch_method(this, 0x3a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0008\x0008\x0003", cameraID, serialNumber, cameraType, (BSTR)cameraName, (BSTR)comment, camerasTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ProbesData ( long probeID, long serialNumber, _bstr_t probeName, enum ES_ProbeType probeType, long iNumberOfFields, _bstr_t comment, long probesTotal ) {
+    return _com_dispatch_method(this, 0x3b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0008\x0003\x0003\x0008\x0003", probeID, serialNumber, (BSTR)probeName, probeType, iNumberOfFields, (BSTR)comment, probesTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TipAdaptersData ( long tipAdapterID, long assemblyID, long serialNumberLowPart, long serialNumberHighPart, _bstr_t tipName, enum ES_TipType tipType, double radius, double length, _bstr_t comment, long tipAdaptersTotal ) {
+    return _com_dispatch_method(this, 0x3c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0008\x0003\x0005\x0005\x0008\x0003", tipAdapterID, assemblyID, serialNumberLowPart, serialNumberHighPart, (BSTR)tipName, tipType, radius, length, (BSTR)comment, tipAdaptersTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TCamToTrackerCompensationsData ( long tCamToTrackerCompensationID, long trackerCompensationID, long cameraID, VARIANT_BOOL isActive, long trackerSerialNumber, _bstr_t compensationName, _bstr_t comment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x3d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x000b\x0003\x0008\x0008\x0003", tCamToTrackerCompensationID, trackerCompensationID, cameraID, isActive, trackerSerialNumber, (BSTR)compensationName, (BSTR)comment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ProbeCompensationsData ( long probeCompensationID, long probeID, long fieldNumber, VARIANT_BOOL isActive, VARIANT_BOOL markedForExport, VARIANT_BOOL isPreliminary, _bstr_t probeCompensationName, _bstr_t probeCompensationComment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x3e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x000b\x000b\x000b\x0008\x0008\x0003", probeCompensationID, probeID, fieldNumber, isActive, markedForExport, isPreliminary, (BSTR)probeCompensationName, (BSTR)probeCompensationComment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TipToProbeCompensationsData ( long tipToProbeCompensationID, long tipAdapterID, long tipAdapterInterface, long probeCompensationID, VARIANT_BOOL markedForExport, _bstr_t compensationName, _bstr_t comment, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x3f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x000b\x0008\x0008\x0003", tipToProbeCompensationID, tipAdapterID, tipAdapterInterface, probeCompensationID, markedForExport, (BSTR)compensationName, (BSTR)comment, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CameraData ( long cameraID, VARIANT_BOOL isMeasurementCameraMounted ) {
+    return _com_dispatch_method(this, 0x40, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x000b", cameraID, isMeasurementCameraMounted);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeasurementCameraModeData ( enum ES_MeasurementCameraMode cameraMode ) {
+    return _com_dispatch_method(this, 0x41, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", cameraMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ProbeData ( long probeID ) {
+    return _com_dispatch_method(this, 0x42, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", probeID);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TipAdapterData ( long tipAdapterID, long tipAdapterInterface ) {
+    return _com_dispatch_method(this, 0x43, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", tipAdapterID, tipAdapterInterface);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TCamToTrackerCompensationData ( long tCamToTrackerCompensationID ) {
+    return _com_dispatch_method(this, 0x44, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", tCamToTrackerCompensationID);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ProbeCompensationData ( long probeCompensationID ) {
+    return _com_dispatch_method(this, 0x45, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", probeCompensationID);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ExternTriggerParamsData ( enum ES_ClockTransition clockTransition, enum ES_TriggerMode triggerMode, enum ES_TriggerStartSignal startSignal, long minimalTimeDelay ) {
+    return _com_dispatch_method(this, 0x46, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003", clockTransition, triggerMode, startSignal, minimalTimeDelay);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ErrorEllipsoidData ( double stdDevX, double stdDevY, double stdDevZ, double rotationAngleX, double rotationAngleY, double rotationAngleZ ) {
+    return _com_dispatch_method(this, 0x47, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005", stdDevX, stdDevY, stdDevZ, rotationAngleX, rotationAngleY, rotationAngleZ);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TipToProbeCompensationData ( long tipToProbeCompensationID ) {
+    return _com_dispatch_method(this, 0x48, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", tipToProbeCompensationID);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CenterPointProbeData ( enum ES_MeasMode measMode, double position1, double position2, double position3, double stdDevPosition1, double stdDevPosition2, double stdDevPosition3, double stdDevPositionTotal, double covarPosition12, double covarPosition13, double covarPosition23, double aprioriStdDevPosition1, double aprioriStdDevPosition2, double aprioriStdDevPosition3, double aprioriStdDevPositionTotal, double aprioriCovarPosition12, double aprioriCovarPosition13, double aprioriCovarPosition23, double temperature, double pressure, double humidity, VARIANT_BOOL isTryMode ) {
+    return _com_dispatch_method(this, 0x49, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x000b", measMode, position1, position2, position3, stdDevPosition1, stdDevPosition2, stdDevPosition3, stdDevPositionTotal, covarPosition12, covarPosition13, covarPosition23, aprioriStdDevPosition1, aprioriStdDevPosition2, aprioriStdDevPosition3, aprioriStdDevPositionTotal, aprioriCovarPosition12, aprioriCovarPosition13, aprioriCovarPosition23, temperature, pressure, humidity, isTryMode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeasurementCameraInfoData ( long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, long serialNumber, enum ES_MeasurementCameraType cameraType, _bstr_t cameraName, long compensationIdNumber, long zoomSerialNumber, long zoomAdjustmentIdNumber, long zoom2DCompensationIdNumber, long zoomProjCenterCompIdNumber, double maxDistance, double minDistance, long nrOfPixelsX, long nrOfPixelsY, double pixelSizeX, double pixelSizeY, long maxDataRate ) {
+    return _com_dispatch_method(this, 0x4a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0008\x0003\x0003\x0003\x0003\x0003\x0005\x0005\x0003\x0003\x0005\x0005\x0003", firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber, cameraType, (BSTR)cameraName, compensationIdNumber, zoomSerialNumber, zoomAdjustmentIdNumber, zoom2DCompensationIdNumber, zoomProjCenterCompIdNumber, maxDistance, minDistance, nrOfPixelsX, nrOfPixelsY, pixelSizeX, pixelSizeY, maxDataRate);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeasurementProbeInfoData ( long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, long serialNumber, enum ES_ProbeType probeType, long compensationIdNumber, long activeField, enum ES_ProbeConnectionType connectionType, long numberOfTipMounts, enum ES_ProbeButtonType probeButtonType, long numberOfFields, VARIANT_BOOL hasWideAngleReceiver, long numberOfTipDataSets, long numberOfMelodies, long numberOfLoudnesSteps ) {
+    return _com_dispatch_method(this, 0x4b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x000b\x0003\x0003\x0003", firmWareMajorVersionNumber, firmWareMinorVersionNumber, serialNumber, probeType, compensationIdNumber, activeField, connectionType, numberOfTipMounts, probeButtonType, numberOfFields, hasWideAngleReceiver, numberOfTipDataSets, numberOfMelodies, numberOfLoudnesSteps);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::SystemParameterData ( enum ES_SystemParameter systemParam, long parameter ) {
+    return _com_dispatch_method(this, 0x4c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", systemParam, parameter);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeasurementStatusInfoData ( long measurementStatusInfo ) {
+    return _com_dispatch_method(this, 0x4d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", measurementStatusInfo);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::Compensations2Data ( long compensationId, _bstr_t trackerCompensationName, _bstr_t trackerCompensationComment, _bstr_t ADMCompensationName, _bstr_t ADMCompensationComment, VARIANT_BOOL hasMeasurementCameraMounted, VARIANT_BOOL isActive, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x4e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0008\x0008\x0008\x000b\x000b\x0003", compensationId, (BSTR)trackerCompensationName, (BSTR)trackerCompensationComment, (BSTR)ADMCompensationName, (BSTR)ADMCompensationComment, hasMeasurementCameraMounted, isActive, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::CurrentPrismPositionData ( double val1, double val2, double val3 ) {
+    return _com_dispatch_method(this, 0x4f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005", val1, val2, val3);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::LongSystemParameterData ( enum ES_SystemParameter systemParam, long parameter ) {
+    return _com_dispatch_method(this, 0x50, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", systemParam, parameter);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::DoubleSystemParameterData ( enum ES_SystemParameter systemParam, double parameter ) {
+    return _com_dispatch_method(this, 0x51, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005", systemParam, parameter);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ObjectTemperatureData ( double objectTemperature ) {
+    return _com_dispatch_method(this, 0x52, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", objectTemperature);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TriggerBoardInfoData ( enum ES_TriggerCardType triggerCardType, long FPGAVersion, long maxTriggerFrequency, long errorCode ) {
+    return _com_dispatch_method(this, 0x53, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003", triggerCardType, FPGAVersion, maxTriggerFrequency, errorCode);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::OverviewCameraInfoData ( enum ES_OverviewCameraType cameraType, _bstr_t cameraName, VARIANT_BOOL isColorCamera, double focalLength, double horizontalChipSize, double verticalChipSize, VARIANT_BOOL mirrorImageHz, VARIANT_BOOL mirrorImageVt ) {
+    return _com_dispatch_method(this, 0x54, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x000b\x0005\x0005\x0005\x000b\x000b", cameraType, (BSTR)cameraName, isColorCamera, focalLength, horizontalChipSize, verticalChipSize, mirrorImageHz, mirrorImageVt);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ADMInfo2Data ( enum ES_ADMType admType, _bstr_t ADMName, long serialNumber, long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, double maxDistance, double minDistance, long maxDataRate, double accuracyADMDistance ) {
+    return _com_dispatch_method(this, 0x55, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003\x0003\x0005\x0005\x0003\x0005", admType, (BSTR)ADMName, serialNumber, firmWareMajorVersionNumber, firmWareMinorVersionNumber, maxDistance, minDistance, maxDataRate, accuracyADMDistance);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TrackerInfoData ( enum ES_LTSensorType trackerType, _bstr_t trackerName, long serialNumber, long compensationIdNumber, VARIANT_BOOL hasADM, VARIANT_BOOL hasOverviewCamera, VARIANT_BOOL hasNivel, double nivelMountOffset, double maxDistance, double minDistance, long maxDataRate, long numberOfFaces, double hzAngleRange, double vtAngleRange, enum ES_TrkAccuracyModel accuracyModel, long majLCPFirmwareVersion, long minLCPFirmwareVersion ) {
+    return _com_dispatch_method(this, 0x56, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003\x000b\x000b\x000b\x0005\x0005\x0005\x0003\x0003\x0005\x0005\x0003\x0003\x0003", trackerType, (BSTR)trackerName, serialNumber, compensationIdNumber, hasADM, hasOverviewCamera, hasNivel, nivelMountOffset, maxDistance, minDistance, maxDataRate, numberOfFaces, hzAngleRange, vtAngleRange, accuracyModel, majLCPFirmwareVersion, minLCPFirmwareVersion);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::NivelInfo2Data ( enum ES_NivelType nivelType, _bstr_t nivelName, long serialNumber, long firmWareMajorVersionNumber, long firmWareMinorVersionNumber, double measurementRange, double measurementAccuracyOffset, double measurementAccuracyFactor ) {
+    return _com_dispatch_method(this, 0x57, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003\x0003\x0005\x0005\x0005", nivelType, (BSTR)nivelName, serialNumber, firmWareMajorVersionNumber, firmWareMinorVersionNumber, measurementRange, measurementAccuracyOffset, measurementAccuracyFactor);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::TipToProbeCompensations2Data ( long tipToProbeCompensationID, long tipAdapterID, long tipAdapterInterface, long probeCompensationID, VARIANT_BOOL markedForExport, enum ES_TipToProbeCompensationType compensationType, _bstr_t compensationName, _bstr_t comment, _bstr_t shankCompensationName, long compensationsTotal ) {
+    return _com_dispatch_method(this, 0x58, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003\x000b\x0003\x0008\x0008\x0008\x0003", tipToProbeCompensationID, tipAdapterID, tipAdapterInterface, probeCompensationID, markedForExport, compensationType, (BSTR)compensationName, (BSTR)comment, (BSTR)shankCompensationName, compensationsTotal);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ATRInfoData ( enum ES_ATRType atrType, _bstr_t atrName, long majFirmwareVersion, long minFirmwareVersion, long buildFirmwareVersion, long hardwareVersion, long errorCode, long FPGAVersion, double maxDistance, double minDistance, double fieldOfView, double maxTrackingSpeed ) {
+    return _com_dispatch_method(this, 0x59, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003\x0003\x0003\x0003\x0003\x0005\x0005\x0005\x0005", atrType, (BSTR)atrName, majFirmwareVersion, minFirmwareVersion, buildFirmwareVersion, hardwareVersion, errorCode, FPGAVersion, maxDistance, minDistance, fieldOfView, maxTrackingSpeed);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ExceptionEvent ( long errorNumber, _bstr_t errorText ) {
+    return _com_dispatch_method(this, 0x5a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", errorNumber, (BSTR)errorText);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::MeteoStationInfoData ( enum ES_MeteoStationType meteoStationType, _bstr_t identifier, long firmWareMajorVersionNumber, long firmWareMinorVersionNumber ) {
+    return _com_dispatch_method(this, 0x5b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003", meteoStationType, (BSTR)identifier, firmWareMajorVersionNumber, firmWareMinorVersionNumber);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::AT4xxInfoData ( enum ES_LTSensorType trackerType, _bstr_t trackerName, long serialNumber, long majorFirmwareVersion, long minorFirmwareVersion, long processorBoardFWBuildNumber, long sensorBoardFWBuildNumber, long majorOSVersion, long minorOSVersion, long majorServerSoftwareVersion, long minorServerSoftwareVersion, long serverSoftwareBuildNumber, enum ES_WLANType wlanType, enum ES_TPMicroProcessorType xscaleType, long minMeasureTime, double minDistance, double maxDistance, double stdDevDistOffsetADM, double stdDevAngleConst, double stdDevAngleOffset, double stdDevAngleFactor ) {
+    return _com_dispatch_method(this, 0x5c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0003\x0005\x0005\x0005\x0005\x0005\x0005", trackerType, (BSTR)trackerName, serialNumber, majorFirmwareVersion, minorFirmwareVersion, processorBoardFWBuildNumber, sensorBoardFWBuildNumber, majorOSVersion, minorOSVersion, majorServerSoftwareVersion, minorServerSoftwareVersion, serverSoftwareBuildNumber, wlanType, xscaleType, minMeasureTime, minDistance, maxDistance, stdDevDistOffsetADM, stdDevAngleConst, stdDevAngleOffset, stdDevAngleFactor);
+}
+
+inline HRESULT _ILTCommandAsyncEvents::ATRCompensationData ( double X0, double Y0, double stdDevX0, double stdDevY0, double scale, double rollAngle, double asymmetry, double distance ) {
+    return _com_dispatch_method(this, 0x5d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0005\x0005\x0005\x0005", X0, Y0, stdDevX0, stdDevY0, scale, rollAngle, asymmetry, distance);
+}
